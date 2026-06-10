@@ -1,0 +1,159 @@
+const imgVectorStroke = "https://www.figma.com/api/mcp/asset/ab9f9767-cb32-43bc-a716-1d548d52cd91";
+const imgSearch = "https://www.figma.com/api/mcp/asset/e1bd259c-9abd-46de-a2ff-f0b2e2355551";
+const imgClose = "https://www.figma.com/api/mcp/asset/4036e428-31da-4174-9a30-34a2fd8d2255";
+const imgAdd = "https://www.figma.com/api/mcp/asset/63259501-118c-4673-8e74-21e45bd149a3";
+
+export default function Frame1171275753() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative size-full" data-node-id="7929:29939">
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="7929:29940" data-name="Text input">
+        <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex flex-col gap-[24px] items-start px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="7929:29942" data-name="Input">
+          <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:29944">
+            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--form-field\/placeholder\/text-color\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="7929:29945">
+              Selecionar Gerentes de negócios
+            </p>
+            <div className="flex items-center justify-center relative shrink-0">
+              <div className="flex-none rotate-180">
+                <div className="overflow-clip relative size-[16px]" data-node-id="7929:29946" data-name="navigation/chevron-down">
+                  <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:29946;1077:114" data-name="_base/icon/chevron-down">
+                    <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7929:29946;1077:114;1028:1880" data-name="Vector (Stroke)">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="7929:29947">
+            <div className="content-stretch flex flex-col gap-[8px] h-[48px] items-start justify-center relative shrink-0 w-full" data-node-id="7929:29948" data-name="Text input">
+              <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex items-center justify-between px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I7929:29948;1147:1144" data-name="Input">
+                <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--form-field\/placeholder\/text-color\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="I7929:29948;1142:15">
+                  Buscar por gerente de negócio
+                </p>
+                <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:29948;1143:76" data-name="action/search">
+                  <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I7929:29948;1143:76;1077:160" data-name="_base/icon/search">
+                    <div className="absolute inset-[8.33%]" data-node-id="I7929:29948;1143:76;1077:160;1028:1908" data-name="search">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSearch} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="7929:29949">
+              <div className="content-stretch flex gap-[4px] items-start relative shrink-0" data-node-id="7929:29950">
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:29951">
+                  <div className="bg-[var(--badge\/container\/bg\/subtle\/grey,#eee)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[29px] items-center justify-center px-[var(--badge\/container\/padding-inline\/medium,8px)] py-[var(--badge\/container\/padding-block\/medium,4px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="7929:29952" data-name="Badges">
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I7929:29952;1960:510">
+                      <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Kaique Atene GC</p>
+                    </div>
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:29952;1960:511" data-name="navigation/close">
+                      <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:29952;1960:511;1077:72" data-name="_base/icon/close">
+                        <div className="absolute inset-[20.83%]" data-node-id="I7929:29952;1960:511;1077:72;1028:1858" data-name="close">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClose} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:29953">
+                  <div className="bg-[var(--badge\/container\/bg\/subtle\/grey,#eee)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[29px] items-center justify-center px-[var(--badge\/container\/padding-inline\/medium,8px)] py-[var(--badge\/container\/padding-block\/medium,4px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="7929:29954" data-name="Badges">
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I7929:29954;1960:510">
+                      <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Maria GC</p>
+                    </div>
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:29954;1960:511" data-name="navigation/close">
+                      <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:29954;1960:511;1077:72" data-name="_base/icon/close">
+                        <div className="absolute inset-[20.83%]" data-node-id="I7929:29954;1960:511;1077:72;1028:1858" data-name="close">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClose} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[12px] items-center relative shrink-0 w-full" data-node-id="7929:29955">
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="7929:29956" data-name="Date Group">
+                <div className="bg-[var(--table\/row\/default\/background-color,white)] content-stretch flex h-[45px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:29957" data-name="Table Cell">
+                  <div className="content-stretch flex gap-[var(--table\/cell\/link\/gap,8px)] items-center relative shrink-0" data-node-id="I7929:29957;2301:3082" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/none,0px)] py-[var(--button\/spacing\/padding-block\/none,0px)] relative rounded-[var(--radius\/md,6px)] shrink-0" data-node-id="I7929:29957;2301:3082;2300:3009" data-name="Button Text">
+                      <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:29957;2301:3082;2300:3009;1111:3110" data-name="action/add">
+                        <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I7929:29957;2301:3082;2300:3009;1111:3110;1077:136" data-name="_base/icon/add">
+                          <div className="absolute inset-[16.67%]" data-node-id="I7929:29957;2301:3082;2300:3009;1111:3110;1077:136;1028:1899" data-name="add">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAdd} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I7929:29957;2301:3082;2300:3009;1111:3111">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Kaique Atene GC</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[45px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:29958" data-name="Table Cell">
+                  <div className="content-stretch flex gap-[var(--table\/cell\/link\/gap,8px)] items-center relative shrink-0" data-node-id="I7929:29958;2301:3091" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/none,0px)] py-[var(--button\/spacing\/padding-block\/none,0px)] relative rounded-[var(--radius\/md,6px)] shrink-0" data-node-id="I7929:29958;2301:3091;2300:3009" data-name="Button Text">
+                      <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:29958;2301:3091;2300:3009;1111:3110" data-name="action/add">
+                        <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I7929:29958;2301:3091;2300:3009;1111:3110;1077:136" data-name="_base/icon/add">
+                          <div className="absolute inset-[16.67%]" data-node-id="I7929:29958;2301:3091;2300:3009;1111:3110;1077:136;1028:1899" data-name="add">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAdd} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I7929:29958;2301:3091;2300:3009;1111:3111">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Maria GC</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-[var(--table\/row\/default\/background-color,white)] content-stretch flex h-[45px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:29959" data-name="Table Cell">
+                  <div className="content-stretch flex gap-[var(--table\/cell\/link\/gap,8px)] items-center relative shrink-0" data-node-id="I7929:29959;2301:3082" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/none,0px)] py-[var(--button\/spacing\/padding-block\/none,0px)] relative rounded-[var(--radius\/md,6px)] shrink-0" data-node-id="I7929:29959;2301:3082;2300:3009" data-name="Button Text">
+                      <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:29959;2301:3082;2300:3009;1111:3110" data-name="action/add">
+                        <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I7929:29959;2301:3082;2300:3009;1111:3110;1077:136" data-name="_base/icon/add">
+                          <div className="absolute inset-[16.67%]" data-node-id="I7929:29959;2301:3082;2300:3009;1111:3110;1077:136;1028:1899" data-name="add">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAdd} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I7929:29959;2301:3082;2300:3009;1111:3111">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">João GC</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[45px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:29960" data-name="Table Cell">
+                  <div className="content-stretch flex gap-[var(--table\/cell\/link\/gap,8px)] items-center relative shrink-0" data-node-id="I7929:29960;2301:3091" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/none,0px)] py-[var(--button\/spacing\/padding-block\/none,0px)] relative rounded-[var(--radius\/md,6px)] shrink-0" data-node-id="I7929:29960;2301:3091;2300:3009" data-name="Button Text">
+                      <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:29960;2301:3091;2300:3009;1111:3110" data-name="action/add">
+                        <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I7929:29960;2301:3091;2300:3009;1111:3110;1077:136" data-name="_base/icon/add">
+                          <div className="absolute inset-[16.67%]" data-node-id="I7929:29960;2301:3091;2300:3009;1111:3110;1077:136;1028:1899" data-name="add">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAdd} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I7929:29960;2301:3091;2300:3009;1111:3111">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Junior GC</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[#f8f8f8] content-stretch flex h-[180px] items-start relative shrink-0 w-[8px]" data-node-id="7929:29961">
+                <div className="bg-[#c6c6c6] h-[116px] relative shrink-0 w-[8px]" data-node-id="7929:29962" />
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/large,0px)] items-start relative shrink-0 w-full" data-node-id="7929:29963">
+              <div className="content-stretch flex flex-col gap-[var(--modal\/footer\/gap,0px)] items-center relative shrink-0 w-full" data-node-id="7929:29964">
+                <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:29965" data-name="Button">
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:29965;1894:641">
+                    <p className="leading-[var(--type\/interface\/line-height,16px)]">Selecionar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

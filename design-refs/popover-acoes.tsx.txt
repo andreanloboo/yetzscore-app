@@ -1,0 +1,77 @@
+const imgTail = "https://www.figma.com/api/mcp/asset/ae40c7a7-87ca-468f-b33f-945d1917a060";
+const imgCheckCircle = "https://www.figma.com/api/mcp/asset/c052f478-6ee2-489a-8a68-9952d4ec58d4";
+const imgXCircle = "https://www.figma.com/api/mcp/asset/8b6b0d3b-4f6a-48ca-b1ef-526048848783";
+const imgLinkOff = "https://www.figma.com/api/mcp/asset/a73a1097-2b72-433f-8f0e-2bcff62d3b22";
+const imgEye = "https://www.figma.com/api/mcp/asset/8495305d-34a9-462f-85fd-3016d222dec7";
+
+export default function Popover() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--token('units/none'),0px)] isolate items-center justify-center relative size-full" data-node-id="7939:5165" data-name="Popover">
+      <div className="flex h-[7px] items-center justify-center relative shrink-0 w-full z-[2]" style={{ containerType: "size" }}>
+        <div className="flex-none h-[100cqw] rotate-90">
+          <div className="content-stretch flex h-full items-center justify-center overflow-clip relative w-[7px]" data-node-id="7939:5166" data-name="Arrow">
+            <div className="flex h-[15px] items-center justify-center relative shrink-0 w-[7px]">
+              <div className="flex-none rotate-90">
+                <div className="h-[7px] relative w-[15px]" data-node-id="7939:5167" data-name="Tail">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgTail} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--popover\/container\/background-color,white)] border border-[var(--popover\/container\/border-color,#cacaca)] border-solid content-stretch drop-shadow-[0px_1px_1px_var(--overlays\/overlay-black\/1,rgba(13,13,13,0.04))] flex flex-col gap-[var(--spacing\/inset\/xs,4px)] items-end p-[var(--popover\/container\/padding,16px)] relative rounded-[var(--radius\/4,4px)] shrink-0 z-[1]" data-node-id="7939:5169" data-name="Popover">
+        <div className="content-stretch flex flex-col gap-[var(--spacing\/stack\/m,16px)] items-start relative shrink-0 w-full" data-node-id="7939:5171">
+          <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] items-center relative shrink-0" data-node-id="7939:5172">
+            <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7939:5173" data-name="status/check-circle">
+              <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7939:5173;1079:832" data-name="_base/icon/check-circle">
+                <div className="absolute inset-[4.14%_4.17%]" data-node-id="I7939:5173;1079:832;1028:2081" data-name="check-circle">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckCircle} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-['Lato:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] whitespace-nowrap" data-node-id="7939:5174">
+              <p className="leading-[1.1]">Aprovar Contrato</p>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] items-center relative shrink-0" data-node-id="7939:5175">
+            <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7939:5176" data-name="status/x-circle">
+              <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7939:5176;1079:840" data-name="_base/icon/x-circle">
+                <div className="absolute inset-[4.17%]" data-node-id="I7939:5176;1079:840;1028:2084" data-name="x-circle">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgXCircle} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-['Lato:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] whitespace-nowrap" data-node-id="7939:5177">
+              <p className="leading-[1.1]">Reprovar Contrato</p>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] items-center relative shrink-0" data-node-id="7939:5178">
+            <div className="h-[24px] relative shrink-0 w-[16px]" data-node-id="7939:5179" data-name="interface-devices/link-off">
+              <div className="absolute inset-[16.67%_2.08%]" data-node-id="I7939:5179;3952:13;3931:17" data-name="link-off">
+                <div className="absolute inset-[-7.03%_-4.89%]">
+                  <img alt="" className="block max-w-none size-full" src={imgLinkOff} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-['Lato:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] whitespace-nowrap" data-node-id="7939:5180">
+              <p className="leading-[1.1]">Desvincular</p>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] items-start relative shrink-0" data-node-id="7939:5181">
+            <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7939:5182" data-name="interface-devices/eye">
+              <div className="absolute inset-[0_0.52%_-4.43%_0]" data-node-id="I7939:5182;1079:908" data-name="_base/icon/eye">
+                <div className="absolute inset-[12.5%_0]" data-node-id="I7939:5182;1079:908;1028:2105" data-name="eye">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEye} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-['Lato:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] whitespace-nowrap" data-node-id="7939:5183">
+              <p className="leading-[1.1]">Ver detalhes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

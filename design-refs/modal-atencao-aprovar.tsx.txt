@@ -1,0 +1,41 @@
+const imgInfo = "https://www.figma.com/api/mcp/asset/4a6685a7-9e91-4d9a-8878-666dcf3bab96";
+
+export default function Modal() {
+  return (
+    <div className="bg-[var(--modal\/container\/background-color,white)] content-stretch flex items-center px-[var(--modal\/container\/padding,32px)] py-[32px] relative rounded-[var(--modal\/container\/border-radius,12px)] size-full" data-node-id="7929:29917" data-name="Modal">
+      <div className="content-stretch flex flex-col gap-[40px] items-center justify-center relative shrink-0 w-[327px]" data-node-id="7929:29918">
+        <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0" data-node-id="7929:29919">
+          <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="7929:29920" data-name="status/check-circle">
+            <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:29920;1079:832" data-name="_base/icon/info">
+              <div className="absolute inset-[4.17%]" data-node-id="I7929:29920;1079:832;1028:2090" data-name="info">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgInfo} />
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] flex flex-col font-['Lato:Bold'] justify-center leading-[0] not-italic relative shrink-0 text-[22px] text-black text-center w-[297px]" data-node-id="7929:29921">
+            <p className="leading-[normal]">Atenção</p>
+          </div>
+          <div className="[word-break:break-word] flex flex-col font-['Lato:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--modal\/description\/text-color,#4b4b4b)] text-center w-[297px]" data-node-id="7929:29922">
+            <p className="leading-[normal]">Deseja aprovar este(s) contrato(s)?</p>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0 w-full" data-node-id="7929:29923">
+          <button className="content-stretch cursor-pointer flex flex-col gap-[var(--modal\/content\/gap\/large,0px)] items-start relative shrink-0 w-full" data-node-id="7929:29924">
+            <div className="content-stretch flex flex-col gap-[var(--modal\/footer\/gap,0px)] items-center relative shrink-0 w-full" data-node-id="7929:29925">
+              <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:29926" data-name="Button">
+                <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:29926;1894:641">
+                  <p className="leading-[var(--type\/interface\/line-height,16px)]">Confirmar</p>
+                </div>
+              </div>
+            </div>
+          </button>
+          <div className="border-[length:var(--button\/shape\/border-width,1px)] border-[var(--color\/action\/primary\/default,#00842f)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:29927" data-name="Button">
+            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:29927;1109:399">
+              <p className="leading-[var(--type\/interface\/line-height,16px)]">Cancelar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

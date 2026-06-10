@@ -1,0 +1,197 @@
+const imgFile = "https://www.figma.com/api/mcp/asset/0f74e22a-02d7-4377-9fb8-dd30d689a1c9";
+const imgIconCheck = "https://www.figma.com/api/mcp/asset/5f0f1c43-1901-4424-a0c9-76341ce2ca3e";
+const imgXCircle = "https://www.figma.com/api/mcp/asset/6d9a2fae-a6fd-4cb1-b1c2-b0e71172a757";
+
+export default function ModalContratosSelecionados() {
+  return (
+    <div className="bg-white content-stretch flex flex-col gap-[20px] items-start overflow-clip p-[32px] relative rounded-[12px] size-full" data-node-id="7929:30810" data-name="Modal - Contratos selecionados">
+      <div className="content-stretch flex gap-[12px] items-center overflow-clip relative shrink-0" data-node-id="7929:30811" data-name="Header">
+        <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="7929:30812" data-name="object/file">
+          <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I7929:30812;1079:728" data-name="_base/icon/file">
+            <div className="absolute inset-[4.17%_12.5%]" data-node-id="I7929:30812;1079:728;1028:2052" data-name="file">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFile} />
+            </div>
+          </div>
+        </div>
+        <p className="[word-break:break-word] font-['Lato:Bold'] leading-[26px] not-italic relative shrink-0 text-[22px] text-[color:var(--color\/action\/primary\/default,#00842f)] whitespace-nowrap" data-node-id="7929:30813">
+          Contratos selecionados
+        </p>
+      </div>
+      <div className="bg-[#cacaca] h-px relative shrink-0 w-full" data-node-id="7929:30814" data-name="Divider" />
+      <div className="content-stretch flex gap-[12px] items-center overflow-clip relative shrink-0 w-full" data-node-id="7929:30815" data-name="Descrição">
+        <p className="[word-break:break-word] flex-[1_0_0] font-['Lato:Regular'] leading-[19px] min-w-px not-italic relative text-[#4b4b4b] text-[14px]" data-node-id="7929:30816">
+          Desmarque os que não devem ser aprovados.
+        </p>
+        <div className="bg-[#dffbe8] content-stretch flex items-start overflow-clip px-[8px] py-[4px] relative rounded-[6px] shrink-0" data-node-id="7929:30817" data-name="Contador">
+          <p className="[word-break:break-word] font-['Lato:Bold'] leading-[normal] not-italic relative shrink-0 text-[#00842f] text-[12px] whitespace-nowrap" data-node-id="7929:30818">
+            5 de 5
+          </p>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] items-center relative shrink-0" data-node-id="7929:30819" data-name="Checkbox">
+        <div className="content-stretch flex items-start pt-[var(--checkbox\/layout\/padding-top,2px)] relative shrink-0" data-node-id="I7929:30819;1295:1513" data-name="Container">
+          <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/hover\/border-color,#015e22)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30819;1295:1514" data-name="_CheckboxBase" />
+        </div>
+        <div className="content-stretch flex flex-col items-start justify-center relative shrink-0" data-node-id="I7929:30819;1295:1515" data-name="Content">
+          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] h-[24px] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--checkbox\/label\/color\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] w-full" data-node-id="I7929:30819;1295:1516">
+            <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Selecionar todos</p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-full" data-node-id="7929:30820" data-name="Lista de contratos">
+        <div className="bg-[var(--color\/background\/page-100,#f5f5f5)] content-stretch flex gap-[12px] items-center overflow-clip p-[12px] relative rounded-[8px] shrink-0 w-full" data-node-id="7929:30821" data-name="Contrato 156898">
+          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30822" data-name="Checkbox">
+            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30822;38:661" data-name="bg" />
+            <div className="absolute inset-[15%]" data-node-id="I7929:30822;38:662" data-name="icon-check">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start min-w-px not-italic overflow-clip relative whitespace-nowrap" data-node-id="7929:30823" data-name="Info">
+            <p className="font-['Lato:Bold'] leading-[normal] relative shrink-0 text-[14px] text-black" data-node-id="7929:30824">
+              Cód. revenda 156898
+            </p>
+            <p className="font-['Lato:Regular'] leading-[17px] relative shrink-0 text-[#909191] text-[12px]" data-node-id="7929:30825">
+              Proposta 496884464644
+            </p>
+          </div>
+          <div className="bg-[#ffedee] content-stretch flex items-start overflow-clip px-[8px] py-[2px] relative rounded-[6px] shrink-0" data-node-id="7929:30826" data-name="Status">
+            <p className="[word-break:break-word] font-['Lato:Bold'] leading-[17px] not-italic relative shrink-0 text-[#c00] text-[12px] whitespace-nowrap" data-node-id="7929:30827">
+              Aguardando vínculo
+            </p>
+          </div>
+          <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7929:30828" data-name="status/x-circle">
+            <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:30828;1079:840" data-name="_base/icon/x-circle">
+              <div className="absolute inset-[4.17%]" data-node-id="I7929:30828;1079:840;1028:2084" data-name="x-circle">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgXCircle} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background\/page-100,#f5f5f5)] content-stretch flex gap-[12px] items-center overflow-clip p-[12px] relative rounded-[8px] shrink-0 w-full" data-node-id="7929:30829" data-name="Contrato 156895">
+          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30830" data-name="Checkbox">
+            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30830;38:661" data-name="bg" />
+            <div className="absolute inset-[15%]" data-node-id="I7929:30830;38:662" data-name="icon-check">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start min-w-px not-italic overflow-clip relative whitespace-nowrap" data-node-id="7929:30831" data-name="Info">
+            <p className="font-['Lato:Bold'] leading-[normal] relative shrink-0 text-[14px] text-black" data-node-id="7929:30832">
+              Cód. revenda 156895
+            </p>
+            <p className="font-['Lato:Regular'] leading-[17px] relative shrink-0 text-[#909191] text-[12px]" data-node-id="7929:30833">
+              Proposta 496884464644
+            </p>
+          </div>
+          <div className="bg-[#ffedee] content-stretch flex items-start overflow-clip px-[8px] py-[2px] relative rounded-[6px] shrink-0" data-node-id="7929:30834" data-name="Status">
+            <p className="[word-break:break-word] font-['Lato:Bold'] leading-[17px] not-italic relative shrink-0 text-[#c00] text-[12px] whitespace-nowrap" data-node-id="7929:30835">
+              Aguardando vínculo
+            </p>
+          </div>
+          <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7929:30836" data-name="status/x-circle">
+            <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:30836;1079:840" data-name="_base/icon/x-circle">
+              <div className="absolute inset-[4.17%]" data-node-id="I7929:30836;1079:840;1028:2084" data-name="x-circle">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgXCircle} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background\/page-100,#f5f5f5)] content-stretch flex gap-[12px] items-center overflow-clip p-[12px] relative rounded-[8px] shrink-0 w-full" data-node-id="7929:30837" data-name="Contrato 156910">
+          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30838" data-name="Checkbox">
+            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30838;38:661" data-name="bg" />
+            <div className="absolute inset-[15%]" data-node-id="I7929:30838;38:662" data-name="icon-check">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start min-w-px not-italic overflow-clip relative whitespace-nowrap" data-node-id="7929:30839" data-name="Info">
+            <p className="font-['Lato:Bold'] leading-[normal] relative shrink-0 text-[14px] text-black" data-node-id="7929:30840">
+              Cód. revenda 156910
+            </p>
+            <p className="font-['Lato:Regular'] leading-[17px] relative shrink-0 text-[#909191] text-[12px]" data-node-id="7929:30841">
+              Proposta 496884460099
+            </p>
+          </div>
+          <div className="bg-[#ffedee] content-stretch flex items-start overflow-clip px-[8px] py-[2px] relative rounded-[6px] shrink-0" data-node-id="7929:30842" data-name="Status">
+            <p className="[word-break:break-word] font-['Lato:Bold'] leading-[17px] not-italic relative shrink-0 text-[#c00] text-[12px] whitespace-nowrap" data-node-id="7929:30843">
+              Aguardando vínculo
+            </p>
+          </div>
+          <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7929:30844" data-name="status/x-circle">
+            <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:30844;1079:840" data-name="_base/icon/x-circle">
+              <div className="absolute inset-[4.17%]" data-node-id="I7929:30844;1079:840;1028:2084" data-name="x-circle">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgXCircle} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background\/page-100,#f5f5f5)] content-stretch flex gap-[12px] items-center overflow-clip p-[12px] relative rounded-[8px] shrink-0 w-full" data-node-id="7929:30845" data-name="Contrato 156912">
+          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30846" data-name="Checkbox">
+            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30846;38:661" data-name="bg" />
+            <div className="absolute inset-[15%]" data-node-id="I7929:30846;38:662" data-name="icon-check">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start min-w-px not-italic overflow-clip relative whitespace-nowrap" data-node-id="7929:30847" data-name="Info">
+            <p className="font-['Lato:Bold'] leading-[normal] relative shrink-0 text-[14px] text-black" data-node-id="7929:30848">
+              Cód. revenda 156910
+            </p>
+            <p className="font-['Lato:Regular'] leading-[17px] relative shrink-0 text-[#909191] text-[12px]" data-node-id="7929:30849">
+              Proposta 496884460099
+            </p>
+          </div>
+          <div className="bg-[#ffedee] content-stretch flex items-start overflow-clip px-[8px] py-[2px] relative rounded-[6px] shrink-0" data-node-id="7929:30850" data-name="Status">
+            <p className="[word-break:break-word] font-['Lato:Bold'] leading-[17px] not-italic relative shrink-0 text-[#c00] text-[12px] whitespace-nowrap" data-node-id="7929:30851">
+              Aguardando vínculo
+            </p>
+          </div>
+          <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7929:30852" data-name="status/x-circle">
+            <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:30852;1079:840" data-name="_base/icon/x-circle">
+              <div className="absolute inset-[4.17%]" data-node-id="I7929:30852;1079:840;1028:2084" data-name="x-circle">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgXCircle} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background\/page-100,#f5f5f5)] content-stretch flex gap-[12px] items-center overflow-clip p-[12px] relative rounded-[8px] shrink-0 w-full" data-node-id="7929:30853" data-name="Contrato 156911">
+          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30854" data-name="Checkbox">
+            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30854;38:661" data-name="bg" />
+            <div className="absolute inset-[15%]" data-node-id="I7929:30854;38:662" data-name="icon-check">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start min-w-px not-italic overflow-clip relative whitespace-nowrap" data-node-id="7929:30855" data-name="Info">
+            <p className="font-['Lato:Bold'] leading-[normal] relative shrink-0 text-[14px] text-black" data-node-id="7929:30856">
+              Cód. revenda 156910
+            </p>
+            <p className="font-['Lato:Regular'] leading-[17px] relative shrink-0 text-[#909191] text-[12px]" data-node-id="7929:30857">
+              Proposta 496884460099
+            </p>
+          </div>
+          <div className="bg-[#ffedee] content-stretch flex items-start overflow-clip px-[8px] py-[2px] relative rounded-[6px] shrink-0" data-node-id="7929:30858" data-name="Status">
+            <p className="[word-break:break-word] font-['Lato:Bold'] leading-[17px] not-italic relative shrink-0 text-[#c00] text-[12px] whitespace-nowrap" data-node-id="7929:30859">
+              Aguardando vínculo
+            </p>
+          </div>
+          <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7929:30860" data-name="status/x-circle">
+            <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:30860;1079:840" data-name="_base/icon/x-circle">
+              <div className="absolute inset-[4.17%]" data-node-id="I7929:30860;1079:840;1028:2084" data-name="x-circle">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgXCircle} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-full" data-node-id="7929:30861" data-name="Botões">
+        <div className="bg-[var(--button\/primary\/default\/background-color,#00842f)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:30862" data-name="Button">
+          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30862;1894:641">
+            <p className="leading-[var(--type\/interface\/line-height,16px)]">Aprovar selecionados (5)</p>
+          </div>
+        </div>
+        <div className="border-[length:var(--button\/shape\/border-width,1px)] border-[var(--color\/action\/primary\/default,#00842f)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:30863" data-name="Button">
+          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30863;1109:399">
+            <p className="leading-[var(--type\/interface\/line-height,16px)]">Cancelar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

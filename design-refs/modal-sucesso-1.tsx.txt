@@ -1,0 +1,38 @@
+const imgGroup = "https://www.figma.com/api/mcp/asset/e6d58f9f-9294-421f-976b-f38839026a98";
+
+export default function ModalConfirmacao() {
+  return (
+    <div className="content-stretch flex flex-col items-center relative size-full" data-node-id="7929:29974" data-name="Modal Confirmação">
+      <div className="bg-white content-stretch flex flex-col items-center justify-center p-[32px] relative rounded-[16px] shrink-0 w-[392px]" data-node-id="7929:29975" data-name="Modal Confirmação">
+        <div className="content-stretch flex flex-col gap-[40px] items-center relative shrink-0 w-full" data-node-id="7929:29976">
+          <div className="content-stretch flex flex-col gap-[24px] items-center leading-[0] relative shrink-0" data-node-id="7929:29977">
+            <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="7929:29978">
+              <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="7929:29979" data-name="Group">
+                <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="7929:29980" data-name="_x30_5_Accept">
+                  <div className="col-1 h-[32px] ml-0 mt-0 relative row-1 w-[31.999px]" data-node-id="7929:29981" data-name="Group">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-['Lato:Bold'] justify-center not-italic relative shrink-0 text-[22px] text-black text-center whitespace-nowrap" data-node-id="7929:29984">
+              <p className="leading-[normal] mb-0">Contrato aprovado</p>
+              <p className="leading-[normal]">com sucesso!</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="7929:29985">
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/large,0px)] items-start relative shrink-0 w-full" data-node-id="7929:29986">
+              <div className="content-stretch flex flex-col gap-[var(--modal\/footer\/gap,0px)] items-center relative shrink-0 w-full" data-node-id="7929:29987">
+                <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:29988" data-name="Button">
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:29988;1894:641">
+                    <p className="leading-[var(--type\/interface\/line-height,16px)]">Ok</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,246 @@
+const imgViewColumn = "https://www.figma.com/api/mcp/asset/0c3c0b2b-ca91-4c4a-9543-135089f97e88";
+const imgLine8 = "https://www.figma.com/api/mcp/asset/5e41d412-94c2-4813-98b2-cc4f07b2ad4d";
+const imgDragIndicator = "https://www.figma.com/api/mcp/asset/573d3be8-5c68-4fd7-9819-6b880ab4912c";
+const imgCheck = "https://www.figma.com/api/mcp/asset/3c1cdfac-4d7c-4849-b324-d1ac899ed02a";
+const imgRefresh = "https://www.figma.com/api/mcp/asset/36cc6063-a378-4862-80de-dde5743a503c";
+
+export default function GerenciarColunas() {
+  return (
+    <div className="bg-[var(--modal\/container\/background-color,white)] content-stretch flex flex-col items-center justify-center p-[var(--spacing\/inset\/xl,32px)] relative rounded-[var(--modal\/container\/border-radius,12px)] size-full" data-node-id="7929:30669" data-name="Gerenciar colunas">
+      <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/large,32px)] items-start relative shrink-0 w-full" data-node-id="7929:30670">
+        <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/large,0px)] items-center relative shrink-0" data-node-id="7929:30671">
+          <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="7929:30672">
+            <div className="relative shrink-0 size-[40px]" data-node-id="7929:30673" data-name="view_column">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgViewColumn} />
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)] whitespace-nowrap" data-node-id="7929:30676">
+              <p className="leading-[var(--type\/heading\/s\/line-height,26px)]">Gerenciar colunas</p>
+            </div>
+          </div>
+        </div>
+        <div className="h-0 relative shrink-0 w-full" data-node-id="7929:30677">
+          <div className="absolute inset-[-1px_0_0_0]">
+            <img alt="" className="block max-w-none size-full" src={imgLine8} />
+          </div>
+        </div>
+        <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="7929:30678">
+          <p className="[word-break:break-word] flex-[1_0_0] font-['Lato:Regular'] leading-[normal] min-w-px not-italic relative text-[16px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)]" data-node-id="7929:30679">
+            Arraste para reordenar. Marque ou desmarque para mostrar ou ocultar colunas
+          </p>
+        </div>
+        <div className="content-stretch flex gap-[8px] h-[510px] items-start justify-center overflow-clip relative shrink-0 w-full" data-node-id="7929:30680">
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--modal\/content\/gap\/large,0px)] items-start min-w-px relative" data-node-id="7929:30681">
+            <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="7929:30682">
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="7929:30683">
+                <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="7929:30684">
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30685" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30686" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30689" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30689;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30690" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30690;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30690;2032:109">
+                          Vendedor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30691" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30692" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30695" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30695;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30696" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30696;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30696;2032:109">
+                          Valor do contrato
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30697" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30698" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30701" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30701;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30702" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30702;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30702;2032:109">
+                          Código de revenda
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30703" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30704" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30707" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30707;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30708" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30708;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30708;2032:109">
+                          Nome do cliente
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30709" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30710" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30713" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30713;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30714" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30714;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30714;2032:109">
+                          Data do contrato
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30715" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30716" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30719" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30719;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30720" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30720;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30720;2032:109">{`Número da proposta `}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30721" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30722" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30725" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30725;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30726" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30726;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30726;2032:109">
+                          Valor do contrato
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30727" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30728" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30731" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30731;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30732" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30732;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30732;2032:109">{`Número da proposta `}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30733" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30734" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30737" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30737;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30738" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30738;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30738;2032:109">
+                          Número do contrato
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30739" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30740" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30743" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30743;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30744" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30744;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30744;2032:109">
+                          Chassi
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[41px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30745" data-name="Table Cell">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="7929:30746" data-name="drag_indicator">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                    </div>
+                    <div className="content-stretch flex gap-[var(--table\/cell\/actions\/gap,0px)] items-center relative shrink-0" data-node-id="7929:30749" data-name="_Content">
+                      <button className="bg-[var(--checkbox\/control\/unchecked\/default\/background-color,white)] block border border-[var(--checkbox\/control\/unchecked\/default\/border-color,#cacaca)] border-solid cursor-pointer relative rounded-[var(--checkbox\/control\/radius,4px)] shrink-0 size-[16px]" data-node-id="I7929:30749;2034:234" data-name="_CheckboxBase" />
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30750" data-name="_Content">
+                      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30750;2032:817" data-name="Container">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30750;2032:109">
+                          Fornecedor
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[#e3e3e3] content-stretch flex h-full items-start relative rounded-[42px] shrink-0 w-[8px]" data-node-id="7929:30751">
+            <div className="bg-[#c6c6c6] h-[116px] relative rounded-[4px] shrink-0 w-[8px]" data-node-id="7929:30752" />
+          </div>
+        </div>
+        <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:30753">
+          <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="7929:30754" data-name="Button">
+            <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:30754;2630:797" data-name="status/check">
+              <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:30754;2630:797;1079:824" data-name="_base/icon/check">
+                <div className="absolute inset-[23.07%_12.5%]" data-node-id="I7929:30754;2630:797;1079:824;3568:15" data-name="check">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheck} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/tertiary\/default\/text-color,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30754;2630:798">
+              <p className="leading-[var(--type\/interface\/line-height,16px)]">Selecionar todos</p>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="7929:30755" data-name="Button">
+            <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:30755;2630:797" data-name="action/refresh">
+              <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I7929:30755;2630:797;1079:227" data-name="_base/icon/refresh">
+                <div className="absolute inset-[8.33%]" data-node-id="I7929:30755;2630:797;1079:227;1028:1931" data-name="refresh">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgRefresh} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/tertiary\/default\/text-color,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30755;2630:798">
+              <p className="leading-[var(--type\/interface\/line-height,16px)]">Restaurar padrão</p>
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="7929:30756">
+          <div className="bg-[var(--button\/primary\/default\/background-color,#00842f)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:30757" data-name="Button">
+            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30757;1894:641">
+              <p className="leading-[var(--type\/interface\/line-height,16px)]">Aplicar</p>
+            </div>
+          </div>
+          <div className="border-[length:var(--button\/shape\/border-width,1px)] border-[var(--color\/action\/primary\/default,#00842f)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="7929:30758" data-name="Button">
+            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30758;1109:399">
+              <p className="leading-[var(--type\/interface\/line-height,16px)]">Cancelar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

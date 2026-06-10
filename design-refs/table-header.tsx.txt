@@ -1,0 +1,28 @@
+const imgDragIndicator = "https://www.figma.com/api/mcp/asset/331c6290-3038-4453-8c5f-2d9e5a9d7034";
+const imgFilterList = "https://www.figma.com/api/mcp/asset/1f45e356-3102-4508-8d03-154bddaed123";
+
+export default function TableHeader() {
+  return (
+    <div className="content-stretch flex items-center relative size-full" data-node-id="8185:16589" data-name="Table Header">
+      <div className="bg-[var(--color\/action\/primary\/hover,#015e22)] content-stretch flex flex-[1_0_0] h-full items-center min-w-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative" data-node-id="8185:16590" data-name="Table Header">
+        <div className="content-stretch flex flex-[1_0_0] items-center justify-between min-h-[21px] min-w-px relative" data-node-id="8185:16591" data-name="Container">
+          <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-[148px]" data-node-id="8185:16593">
+            <div className="relative shrink-0 size-[21px]" data-node-id="8185:16594" data-name="drag_indicator">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+            </div>
+            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="8185:16597">
+              Status
+            </p>
+          </div>
+          <div className="bg-[var(--color\/action\/primary\/disabled-on,#79a588)] relative rounded-[var(--radius\/sm,4px)] shrink-0 size-[24px]" data-node-id="8303:16215" data-name="action/filter-secondary">
+            <div className="absolute left-0 size-[24px] top-0" data-node-id="I8303:16215;4080:12" data-name="_base/icon/filter-secondary">
+              <div className="absolute h-[11.8px] left-[4.5px] top-[6.1px] w-[15px]" data-node-id="I8303:16215;4080:12;4075:12" data-name="filter-list">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFilterList} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

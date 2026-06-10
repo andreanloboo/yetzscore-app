@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lato: "Lato", sans-serif;
+
+  /* YetzScore design tokens (from Figma variables) */
+  --color-brand: #00842f;
+  --color-brand-dark: #006b26;
+  --color-brand-light: #e6f3ea;
+  --color-text-primary: #000000;
+  --color-text-secondary: #4b4b4b;
+  --color-text-disabled: #8e8e8e;
+  --color-border-default: #cacaca;
+  --color-page: #ffffff;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-lato);
+  color: var(--color-text-primary);
+  background: var(--color-page);
+}

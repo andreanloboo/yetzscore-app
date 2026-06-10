@@ -1,0 +1,1035 @@
+const imgSlot = "https://www.figma.com/api/mcp/asset/4b904e4d-aaf9-4e26-802c-080b9248f33c";
+const imgLineChart = "https://www.figma.com/api/mcp/asset/8c483662-aac9-4fa5-b4b3-0b62913872e9";
+const imgFile = "https://www.figma.com/api/mcp/asset/a552d022-4b17-4f3a-8ddc-3d6d0e8dff94";
+const imgAvatar = "https://www.figma.com/api/mcp/asset/6ef330a1-2fd7-41bf-a125-03a831871506";
+const imgLine8 = "https://www.figma.com/api/mcp/asset/c7972e34-5dfb-4e81-9ded-f7f029a847bb";
+const imgLineChart1 = "https://www.figma.com/api/mcp/asset/f43c1033-300a-4ab4-b68a-4c7019dd8b03";
+const imgSearch = "https://www.figma.com/api/mcp/asset/378ed605-c9ea-4b05-958c-29bae417295b";
+const imgLineChart2 = "https://www.figma.com/api/mcp/asset/2424107c-a034-44dd-a64a-da71244ca958";
+const imgVectorStroke = "https://www.figma.com/api/mcp/asset/e76be88b-8211-49e4-9033-f9a7098e3ac8";
+const imgDonutLarge = "https://www.figma.com/api/mcp/asset/9e5f1ae0-7574-4b8f-b38e-5f6ec0601f3a";
+const imgCalendar = "https://www.figma.com/api/mcp/asset/27804702-4397-4bb4-b2a4-f8b2247ec737";
+const imgVectorStroke1 = "https://www.figma.com/api/mcp/asset/faac4bed-f1ef-4594-ae53-8c6dab07ac08";
+const imgDot = "https://www.figma.com/api/mcp/asset/ce99a844-f869-48c0-b31c-c9db16023d08";
+const imgMoreHorizontal = "https://www.figma.com/api/mcp/asset/d60b2744-15d5-4b42-9380-3e2ef1e785bc";
+const imgLineChart3 = "https://www.figma.com/api/mcp/asset/01a001c1-b81d-48bd-a03a-92970b0c0155";
+const imgDivisor = "https://www.figma.com/api/mcp/asset/544deb09-53e7-4338-b3de-40be49b682bf";
+const imgCardLock = "https://www.figma.com/api/mcp/asset/a5e0aee7-57e7-403b-8115-7232a35b98d9";
+const imgDot1 = "https://www.figma.com/api/mcp/asset/8b51a503-e1a2-4214-8eee-971c67ac0b38";
+const imgMoreHorizontal1 = "https://www.figma.com/api/mcp/asset/a893e3de-b897-42ae-a215-709bb9323a52";
+const imgLineChart4 = "https://www.figma.com/api/mcp/asset/2b5a001c-bfdf-48b6-9da5-e7decdd9855e";
+const imgDivisor1 = "https://www.figma.com/api/mcp/asset/66d2bce6-22b2-48a5-8da2-c3a8cbd22e20";
+const imgCalendar1 = "https://www.figma.com/api/mcp/asset/b4a706ac-202d-4d70-b23c-380333dd49f6";
+const imgCardLock1 = "https://www.figma.com/api/mcp/asset/e6c19865-1aa5-48e2-8a50-694808c1047a";
+const imgCardUnlock = "https://www.figma.com/api/mcp/asset/41275f23-e008-4b19-871a-92644bd02c18";
+const imgChevronRight = "https://www.figma.com/api/mcp/asset/5435ca41-113e-4f39-91a8-558805dd710b";
+const imgChevronRight1 = "https://www.figma.com/api/mcp/asset/9540beae-433f-4cd0-b379-aa79653e5fd7";
+const imgLogoYetz = "https://www.figma.com/api/mcp/asset/ddd95640-9805-46f7-adf6-2c4a9680a477";
+const imgLine7 = "https://www.figma.com/api/mcp/asset/f7bda9fd-89d2-4331-9eee-bae07d8ae435";
+
+export default function CampanhasInicial() {
+  return (
+    <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="8340:17440" data-name="Campanhas / Inicial">
+      <div className="content-stretch flex flex-[1_0_0] items-start justify-between min-h-px relative w-full" data-node-id="8340:17441">
+        <div className="bg-[var(--sidebar\/container\/background-color,white)] border-[var(--sidebar\/container\/border-color,#cacaca)] border-r-[length:var(--sidebar\/container\/border-width,1px)] border-solid content-stretch flex flex-col h-full items-center overflow-clip p-[var(--sidebar\/container\/padding,16px)] relative shrink-0" data-node-id="8340:17447" data-name="Sidebar">
+          <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px relative" data-node-id="I8340:17447;3079:10093">
+            <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0" data-node-id="I8340:17447;3079:10089">
+              <div className="content-stretch flex flex-col items-center py-[var(--sidebar\/header\/mobile\/padding-block,16px)] relative shrink-0 w-full" data-node-id="I8340:17447;3079:10080" data-name="Slot">
+                <div className="h-[32px] overflow-clip relative shrink-0 w-[21.581px]" data-node-id="I8340:17447;3079:10081" data-name="logo_yetz">
+                  <div className="absolute inset-[16.51%_0.4%_0_0]" data-node-id="I8340:17447;3079:10081;2212:2698" data-name="logo-yetz">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSlot} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] items-start overflow-clip relative shrink-0" data-node-id="I8340:17447;3075:8917" data-name="Nav/Items">
+                <div className="content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,0px)] items-center relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 w-full" data-node-id="I8340:17447;3075:8917;8340:17443" data-name="_NavItem">
+                  <div className="bg-[var(--button\/primary\/default\/background-color,#00842f)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,0px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="I8340:17447;3075:8917;8340:17443;2173:1109" data-name="IconButton">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I8340:17447;3075:8917;8340:17443;2173:1109;1111:3762" data-name="data/line-chart">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17447;3075:8917;8340:17443;2173:1109;1111:3762;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17447;3075:8917;8340:17443;2173:1109;1111:3762;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,0px)] items-center relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 w-full" data-node-id="I8340:17447;3075:8917;8340:17444" data-name="_NavItem">
+                  <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,0px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="I8340:17447;3075:8917;8340:17444;2173:969" data-name="IconButton">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I8340:17447;3075:8917;8340:17444;2173:969;1115:4233" data-name="object/file">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17447;3075:8917;8340:17444;2173:969;1115:4233;1079:728" data-name="_base/icon/file">
+                        <div className="absolute inset-[4.17%_12.5%]" data-node-id="I8340:17447;3075:8917;8340:17444;2173:969;1115:4233;1079:728;1028:2052" data-name="file">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFile} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-center justify-center overflow-clip py-[var(--sidebar\/footer\/gap,16px)] relative shrink-0 w-full" data-node-id="I8340:17447;3075:8941" data-name="User/Area">
+              <div className="relative shrink-0 size-[32px]" data-node-id="I8340:17447;3075:8942" data-name="Avatar">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAvatar} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white content-stretch flex flex-[1_0_0] flex-col h-full items-center min-w-px relative" data-node-id="8340:17448">
+          <div className="h-0 relative shrink-0 w-full" data-node-id="8340:17449">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgLine8} />
+            </div>
+          </div>
+          <div className="border-[var(--color\/action\/primary\/disabled,#e1e1e1)] border-b border-solid content-stretch flex items-center p-[64px] relative shrink-0 w-full" data-node-id="8340:17450" data-name="Component 21">
+            <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="8340:17451">
+              <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="8340:17452" data-name="data/line-chart">
+                <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17452;3595:24" data-name="_base/icon/line-chart">
+                  <div className="absolute inset-[8.33%]" data-node-id="I8340:17452;3595:24;3595:22" data-name="line-chart">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart1} />
+                  </div>
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/heading\/s\/line-height,26px)] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)] whitespace-nowrap" data-node-id="8340:17453">
+                Gerenciamento de campanhas
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing\/inset\/xl,32px)] items-start min-h-px p-[64px] relative w-full" data-node-id="8340:17454">
+            <div className="content-stretch flex items-end justify-between relative shrink-0 w-full" data-node-id="8340:17455">
+              <div className="content-stretch flex flex-col gap-[var(--spacing\/inset\/squish,12px)] items-start justify-center relative shrink-0" data-node-id="8340:17456">
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="8340:17457">
+                  <div className="flex flex-row items-center self-stretch">
+                    <div className="content-stretch flex flex-col gap-[8px] h-full items-start justify-center relative shrink-0 w-[500px]" data-node-id="8340:17458" data-name="Text input">
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex items-center justify-between px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="8340:17460" data-name="Input">
+                        <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="8340:17462">
+                          Buscar pelo nome da campanha
+                        </p>
+                        <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8340:17463" data-name="action/search">
+                          <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I8340:17463;1077:160" data-name="_base/icon/search">
+                            <div className="absolute inset-[8.33%]" data-node-id="I8340:17463;1077:160;1028:1908" data-name="search">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSearch} />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--chips\/layout\/gap\/small,0px)] items-center relative shrink-0" data-node-id="8340:17470" data-name="Chips_menu">
+                  <div className="content-stretch flex gap-[var(--chips\/layout\/gap\/small,4px)] items-center relative shrink-0" data-node-id="I8340:17470;2890:2111" data-name="Slot 2">
+                    <div className="border-[length:var(--chips\/shape\/border-width,1px)] border-[var(--chips\/unselected\/default\/border-color,#00842f)] border-solid content-stretch flex gap-[var(--chips\/spacing\/gap,4px)] items-center justify-center px-[var(--chips\/spacing\/padding-inline\/small,8px)] py-[var(--chips\/spacing\/padding-block\/small,4px)] relative rounded-[var(--chips\/shape\/border-radius,6px)] shrink-0" data-node-id="I8340:17470;2890:2111;8340:17466" data-name="_Chips">
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--chips\/unselected\/default\/text-color,#00842f)] text-[length:var(--button\/type\/small,14px)] text-center whitespace-nowrap" data-node-id="I8340:17470;2890:2111;8340:17466;2827:2777">
+                        <p className="leading-[var(--type\/interface\/line-height,16px)]">{`Valor fixo `}</p>
+                      </div>
+                    </div>
+                    <div className="border-[length:var(--chips\/shape\/border-width,1px)] border-[var(--chips\/unselected\/default\/border-color,#00842f)] border-solid content-stretch flex gap-[var(--chips\/spacing\/gap,4px)] items-center justify-center px-[var(--chips\/spacing\/padding-inline\/small,8px)] py-[var(--chips\/spacing\/padding-block\/small,4px)] relative rounded-[var(--chips\/shape\/border-radius,6px)] shrink-0" data-node-id="I8340:17470;2890:2111;8340:17467" data-name="_Chips">
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--chips\/unselected\/default\/text-color,#00842f)] text-[length:var(--button\/type\/small,14px)] text-center whitespace-nowrap" data-node-id="I8340:17470;2890:2111;8340:17467;2827:2777">
+                        <p className="leading-[var(--type\/interface\/line-height,16px)]">{`Valor variÃ¡vel `}</p>
+                      </div>
+                    </div>
+                    <div className="border-[length:var(--chips\/shape\/border-width,1px)] border-[var(--chips\/unselected\/default\/border-color,#00842f)] border-solid content-stretch flex gap-[var(--chips\/spacing\/gap,4px)] items-center justify-center px-[var(--chips\/spacing\/padding-inline\/small,8px)] py-[var(--chips\/spacing\/padding-block\/small,4px)] relative rounded-[var(--chips\/shape\/border-radius,6px)] shrink-0" data-node-id="I8340:17470;2890:2111;8340:17468" data-name="_Chips">
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--chips\/unselected\/default\/text-color,#00842f)] text-[length:var(--button\/type\/small,14px)] text-center whitespace-nowrap" data-node-id="I8340:17470;2890:2111;8340:17468;2827:2777">
+                        <p className="leading-[var(--type\/interface\/line-height,16px)]">Ativas</p>
+                      </div>
+                    </div>
+                    <div className="border-[length:var(--chips\/shape\/border-width,1px)] border-[var(--chips\/unselected\/default\/border-color,#00842f)] border-solid content-stretch flex gap-[var(--chips\/spacing\/gap,4px)] items-center justify-center px-[var(--chips\/spacing\/padding-inline\/small,8px)] py-[var(--chips\/spacing\/padding-block\/small,4px)] relative rounded-[var(--chips\/shape\/border-radius,6px)] shrink-0" data-node-id="I8340:17470;2890:2111;8340:17469" data-name="_Chips">
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--chips\/unselected\/default\/text-color,#00842f)] text-[length:var(--button\/type\/small,14px)] text-center whitespace-nowrap" data-node-id="I8340:17470;2890:2111;8340:17469;2827:2777">
+                        <p className="leading-[var(--type\/interface\/line-height,16px)]">Inativas</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[8px] items-end justify-end relative shrink-0" data-node-id="8340:17471">
+                <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="8340:17479" data-name="Button">
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17479;2630:797" data-name="data/line-chart">
+                    <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17479;2630:797;3595:24" data-name="_base/icon/line-chart">
+                      <div className="absolute inset-[8.33%]" data-node-id="I8340:17479;2630:797;3595:24;3595:22" data-name="line-chart">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart2} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/tertiary\/default\/text-color,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I8340:17479;2630:798">
+                    <p className="leading-[var(--type\/interface\/line-height,16px)]">Tipo de campanha</p>
+                  </div>
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17479;2630:799" data-name="navigation/chevron-down">
+                    <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I8340:17479;2630:799;1077:114" data-name="_base/icon/chevron-down">
+                      <div className="absolute inset-[33.33%_20.83%]" data-node-id="I8340:17479;2630:799;1077:114;1028:1880" data-name="Vector (Stroke)">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="8340:17480" data-name="Button">
+                  <div className="relative shrink-0 size-[16px]" data-node-id="8340:17481" data-name="donut_large">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDonutLarge} />
+                  </div>
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/tertiary\/default\/text-color,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="8340:17484">
+                    <p className="leading-[var(--type\/interface\/line-height,16px)]">Status</p>
+                  </div>
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8340:17485" data-name="navigation/chevron-down">
+                    <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I8340:17485;1077:114" data-name="_base/icon/chevron-down">
+                      <div className="absolute inset-[33.33%_20.83%]" data-node-id="I8340:17485;1077:114;1028:1880" data-name="Vector (Stroke)">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="8340:17486" data-name="Button">
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17486;2630:797" data-name="object/calendar">
+                    <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17486;2630:797;1079:768" data-name="_base/icon/calendar">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17486;2630:797;1079:768;1028:2063" data-name="calendar">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/tertiary\/default\/text-color,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I8340:17486;2630:798">
+                    <p className="leading-[var(--type\/interface\/line-height,16px)]">PerÃ­odo</p>
+                  </div>
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17486;2630:799" data-name="navigation/chevron-down">
+                    <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I8340:17486;2630:799;1077:114" data-name="_base/icon/chevron-down">
+                      <div className="absolute inset-[33.33%_20.83%]" data-node-id="I8340:17486;2630:799;1077:114;1028:1880" data-name="Vector (Stroke)">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke1} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="gap-x-[12px] gap-y-[12px] grid grid-cols-[repeat(4,minmax(0,1fr))] grid-rows-[repeat(3,minmax(0,1fr))] h-[600px] overflow-clip relative shrink-0 w-full" data-node-id="8340:17487">
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-1 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-1 self-stretch shrink-0" data-node-id="8340:17488" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17488;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17488;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17488;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17488;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17488;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17488;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17488;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17488;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17488;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17488;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17488;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17488;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17488;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17488;8239:6570">
+                      LÃ­deres em vendas automotivas 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17488;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17488;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17488;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17488;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17488;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17488;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17488;8239:6588">
+                      15/11/26 - 15/01/27
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17488;8239:6578" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17488;8261:6686" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17488;8261:6686;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17488;8239:6580">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-2 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-1 self-stretch shrink-0" data-node-id="8340:17489" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17489;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17489;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17489;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17489;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17489;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17489;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17489;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17489;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17489;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17489;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17489;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17489;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17489;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17489;8239:6570">
+                      Top vendas de carros 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17489;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17489;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17489;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17489;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17489;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17489;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17489;8239:6588">
+                      01/09/26 - 30/11/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17489;8239:6578" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17489;8261:6686" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17489;8261:6686;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17489;8239:6580">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] col-3 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-1 self-stretch shrink-0" data-node-id="8340:17490" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17490;8264:7336">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17490;8264:7337" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17490;8264:7337;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17490;8264:7337;2034:565;1960:549" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot1} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/icon\/action\/disabled,#8e8e8e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17490;8264:7337;2034:565;1960:550">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Inativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17490;8264:7338" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17490;8264:7338;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal1} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17490;8264:7340">
+                  <div className="bg-[var(--color\/background\/disabled,#e1e1e1)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17490;8264:7341" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17490;8264:7342" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17490;8264:7342;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17490;8264:7342;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart4} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17490;8264:7343" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17490;8264:7344">
+                      CampeÃµes automotivos 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17490;8264:7345" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor1} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17490;8264:7346" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17490;8264:7368" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17490;8264:7369" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17490;8264:7369;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17490;8264:7369;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar1} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17490;8264:7370">
+                      05/08/26 - 05/10/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17490;8264:7351" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17490;8264:7353" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17490;8264:7353;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock1} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17490;8264:7354">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-4 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-1 self-stretch shrink-0" data-node-id="8340:17491" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17491;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17491;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17491;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17491;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17491;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17491;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17491;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17491;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17491;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17491;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17491;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17491;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17491;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17491;8239:6570">
+                      Vencedores em vendas de veÃ­culos 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17491;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17491;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17491;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17491;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17491;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17491;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17491;8239:6588">
+                      20/07/26 - 20/09/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17491;8239:6578" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17491;8261:6686" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17491;8261:6686;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17491;8239:6580">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-1 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-2 self-stretch shrink-0" data-node-id="8340:17492" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17492;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17492;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17492;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17492;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17492;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17492;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17492;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17492;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17492;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17492;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17492;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17492;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17492;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17492;8239:6570">
+                      Destaques em vendas automotivas 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17492;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17492;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17492;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17492;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17492;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17492;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17492;8239:6588">
+                      10/06/26 - 10/08/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17492;8261:6716" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17492;8261:6808" data-name="payment/card-unlock">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17492;8261:6808;3605:51" data-name="_base/icon/card-unlock">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17492;8261:6808;3605:51;3616:178" data-name="card-unlock">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardUnlock} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17492;8261:6719">
+                      Valor variÃ¡vel
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-2 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-2 self-stretch shrink-0" data-node-id="8340:17493" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17493;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17493;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17493;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17493;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17493;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17493;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17493;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17493;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17493;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17493;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17493;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17493;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17493;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17493;8239:6570">
+                      CampeÃµes de vendas de carros 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17493;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17493;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17493;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17493;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17493;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17493;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17493;8239:6588">
+                      25/05/26 - 25/07/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17493;8239:6578" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17493;8261:6686" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17493;8261:6686;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17493;8239:6580">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-3 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-2 self-stretch shrink-0" data-node-id="8340:17494" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17494;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17494;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17494;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17494;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17494;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17494;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17494;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17494;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17494;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17494;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17494;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17494;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17494;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17494;8239:6570">
+                      LÃ­deres em vendas de automÃ³veis 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17494;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17494;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17494;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17494;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17494;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17494;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17494;8239:6588">
+                      15/04/26 - 15/06/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17494;8239:6578" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17494;8261:6686" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17494;8261:6686;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17494;8239:6580">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-4 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-2 self-stretch shrink-0" data-node-id="8340:17495" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17495;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17495;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17495;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17495;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17495;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17495;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17495;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17495;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17495;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17495;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17495;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17495;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17495;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17495;8239:6570">
+                      Top vendedores automotivos 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17495;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17495;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17495;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17495;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17495;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17495;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17495;8239:6588">
+                      01/03/26 - 01/05/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17495;8239:6578" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17495;8261:6686" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17495;8261:6686;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17495;8239:6580">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-1 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-3 self-stretch shrink-0" data-node-id="8340:17496" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17496;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17496;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17496;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17496;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17496;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17496;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17496;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17496;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17496;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17496;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17496;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17496;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17496;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17496;8239:6570">
+                      CampeÃµes em vendas de veÃ­culos 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17496;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17496;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17496;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17496;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17496;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17496;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17496;8239:6588">
+                      10/02/26 - 10/04/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17496;8239:6578" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17496;8261:6686" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17496;8261:6686;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17496;8239:6580">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] col-2 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-3 self-stretch shrink-0" data-node-id="8340:17497" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17497;8264:7336">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17497;8264:7337" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17497;8264:7337;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17497;8264:7337;2034:565;1960:549" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot1} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/icon\/action\/disabled,#8e8e8e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17497;8264:7337;2034:565;1960:550">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Inativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17497;8264:7338" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17497;8264:7338;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal1} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17497;8264:7340">
+                  <div className="bg-[var(--color\/background\/disabled,#e1e1e1)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17497;8264:7341" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17497;8264:7342" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17497;8264:7342;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17497;8264:7342;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart4} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17497;8264:7343" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17497;8264:7344">
+                      Destaques em vendas de carros 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17497;8264:7345" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor1} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17497;8264:7346" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17497;8264:7368" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17497;8264:7369" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17497;8264:7369;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17497;8264:7369;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar1} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17497;8264:7370">
+                      20/01/26 - 20/03/26
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17497;8264:7351" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17497;8264:7353" data-name="_base/icon/card-lock">
+                      <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17497;8264:7353;3616:175" data-name="card-lock">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardLock1} />
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17497;8264:7354">
+                      Valor Fixo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/page,white)] border border-[var(--color\/border\/static\/default,#cacaca)] border-solid col-3 content-stretch flex flex-col items-center justify-between justify-self-stretch px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/stack\/l,24px)] relative rounded-[var(--radius\/md,6px)] row-3 self-stretch shrink-0" data-node-id="8340:17498" data-name="Card">
+                <div className="content-stretch flex h-[23px] items-center justify-between relative shrink-0 w-full" data-node-id="I8340:17498;8239:7987">
+                  <div className="content-stretch flex items-center relative shrink-0" data-node-id="I8340:17498;8239:6568" data-name="_Content">
+                    <div className="content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center p-[var(--spacing\/none,0px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I8340:17498;8239:6568;2034:565" data-name="Badges">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I8340:17498;8239:6568;2034:565;1960:552" data-name="dot">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDot} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/container\/bg\/strong\/success,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I8340:17498;8239:6568;2034:565;1960:553">
+                        <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex h-[23.511px] items-center justify-center relative shrink-0 w-[24.646px]">
+                    <div className="flex-none rotate-90">
+                      <div className="h-[24.646px] relative w-[23.511px]" data-node-id="I8340:17498;8239:7960" data-name="_base/icon/more-horizontal">
+                        <div className="absolute inset-[41.67%_12.5%]" data-node-id="I8340:17498;8239:7960;1028:1890" data-name="more-horizontal">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoreHorizontal} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[var(--spacing\/inset\/squish,12px)] items-center relative shrink-0 w-full" data-node-id="I8340:17498;8239:8962">
+                  <div className="bg-[var(--color\/background\/container,#f5f5f5)] content-stretch flex items-center justify-center p-[19.173px] relative rounded-[7.286px] shrink-0 size-[51px]" data-node-id="I8340:17498;8239:8913" data-name="icon">
+                    <div className="overflow-clip relative shrink-0 size-[22.368px]" data-node-id="I8340:17498;8239:8914" data-name="Icon">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17498;8239:8914;3595:24" data-name="_base/icon/line-chart">
+                        <div className="absolute inset-[8.33%]" data-node-id="I8340:17498;8239:8914;3595:24;3595:22" data-name="line-chart">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart3} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] h-[52px] items-center min-w-px relative" data-node-id="I8340:17498;8239:6569" data-name="Title Container">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[52px] leading-[var(--type\/heading\/s\/line-height,26px)] min-w-px not-italic relative text-[color:var(--color\/text\/link\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)]" data-node-id="I8340:17498;8239:6570">
+                      Vencedores em vendas automotivas 2026
+                    </p>
+                  </div>
+                </div>
+                <div className="h-0 relative shrink-0 w-full" data-node-id="I8340:17498;8239:6571" data-name="Divisor">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgDivisor} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="I8340:17498;8239:6572" data-name="Info Container">
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17498;8239:6586" data-name="Date">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17498;8239:6587" data-name="Icon">
+                      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17498;8239:6587;1079:768" data-name="_base/icon/calendar">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17498;8239:6587;1079:768;1028:2063" data-name="calendar">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17498;8239:6588">
+                      05/12/26 - 05/02/27
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[var(--spacing\/inset\/xs-squish,6px)] items-center relative shrink-0" data-node-id="I8340:17498;8261:6716" data-name="Value">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8340:17498;8261:6808" data-name="payment/card-unlock">
+                      <div className="absolute inset-0 overflow-clip" data-node-id="I8340:17498;8261:6808;3605:51" data-name="_base/icon/card-unlock">
+                        <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17498;8261:6808;3605:51;3616:178" data-name="card-unlock">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCardUnlock} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/secondary\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8340:17498;8261:6719">
+                      Valor variÃ¡vel
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="8340:17499">
+              <p className="[word-break:break-word] font-['Lato:Medium'] leading-[normal] not-italic relative shrink-0 text-[#5e5f5f] text-[14px] text-center whitespace-nowrap" data-node-id="8340:17500">
+                Mostrando 1 a 3 de 24 campanhas
+              </p>
+              <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="8340:17501">
+                <div className="flex items-center justify-center relative shrink-0">
+                  <div className="flex-none rotate-180">
+                    <div className="border border-[var(--color\/action\/primary\/disabled,#e1e1e1)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,0px)] h-[32px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/small,8px)] py-[var(--button\/spacing\/padding-block\/small,8px)] relative rounded-[var(--button\/shape\/border-radius,6px)]" data-node-id="8340:17502" data-name="IconButton">
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8340:17503" data-name="navigation/chrevron-right">
+                        <div className="absolute inset-[20.83%_33.33%]" data-node-id="I8340:17503;1077:103;1028:1876" data-name="chevron-right">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Lato:Medium'] leading-[normal] not-italic relative shrink-0 text-[#5e5f5f] text-[14px] text-center whitespace-nowrap" data-node-id="8340:17504">
+                  PÃ¡gina 1 de 3
+                </p>
+                <div className="border border-[var(--color\/border\/static\/default,#cacaca)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,0px)] h-[32px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/small,8px)] py-[var(--button\/spacing\/padding-block\/small,8px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="8340:17505" data-name="IconButton">
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8340:17506" data-name="navigation/chrevron-right">
+                    <div className="absolute inset-[20.83%_33.33%]" data-node-id="I8340:17506;1077:103;1028:1876" data-name="chevron-right">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight1} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[var(--color\/background\/page,white)] content-stretch flex flex-col items-center justify-center overflow-clip px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/inset\/xxs,2px)] relative shrink-0 w-full" data-node-id="8340:17507" data-name="rodapÃ©">
+            <div className="content-stretch flex gap-[var(--spacing\/inset\/2xl,48px)] items-center justify-center py-[12px] relative rounded-[12px] shrink-0 w-[672.358px]" data-node-id="8340:17508" data-name="rodapÃ©">
+              <div className="h-[23.843px] relative shrink-0 w-[53.355px]" data-node-id="8340:17509" data-name="Logo Yetz">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoYetz} />
+              </div>
+              <div className="flex h-[44px] items-center justify-center relative shrink-0 w-0">
+                <div className="flex-none rotate-90">
+                  <div className="h-0 relative w-[44px]" data-node-id="8340:17516">
+                    <div className="absolute inset-[-0.5px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine7} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/caption\/default\/size,12px)] whitespace-nowrap" data-node-id="8340:17517">
+                <p className="leading-[var(--type\/caption\/default\/line-height,17px)] mb-0">YETZ LTDA | CNPJ: 28.325.166/0001-05</p>
+                <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">2026 | Todos os direitos reservados</p>
+              </div>
+              <div className="flex h-[44px] items-center justify-center relative shrink-0 w-0">
+                <div className="flex-none rotate-90">
+                  <div className="h-0 relative w-[44px]" data-node-id="8340:17518">
+                    <div className="absolute inset-[-0.5px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine7} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] whitespace-nowrap" data-node-id="8340:17519">
+                <p className="font-['Lato:Regular'] leading-[17px] mb-0 text-[#8e8e8e] text-[12px]">Para mais informaÃ§Ãµes sobre como seus</p>
+                <p className="font-['Lato:Regular'] text-[#8e8e8e] text-[12px]">
+                  <span className="leading-[17px]">{`dados sÃ£o tratados `}</span>
+                  <span className="[text-underline-position:from-font] decoration-from-font decoration-solid leading-[17px] underline">clique aqui.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: Heading/S: Font(family: "type/family/brand", style: Bold, size: type/heading/s/size, weight: 700, lineHeight: type/heading/s/line-height, letterSpacing: 0), Button/Label/Small: Font(family: "type/family/brand", style: Bold, size: button/type/small, weight: 700, lineHeight: type/interface/line-height, letterSpacing: 0), Button/Label/Medium: Font(family: "type/family/brand", style: Bold, size: type/interface/standard/size, weight: 700, lineHeight: type/interface/line-height, letterSpacing: 0), Body/S-Default: Font(family: "type/family/brand", style: Regular, size: type/body/s/size, weight: 400, lineHeight: type/body/s/line-height, letterSpacing: 0), Cores Yetz/cinza 01: #5E5F5F.
+
+Images and SVGs will be stored as constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000'. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

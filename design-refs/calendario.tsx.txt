@@ -1,0 +1,385 @@
+const imgCalendar = "https://www.figma.com/api/mcp/asset/ee3910c5-3aa2-46a7-a7fe-acde9e7529a1";
+const imgSorting = "https://www.figma.com/api/mcp/asset/d38161c3-6fb1-4ba6-8d87-5ee698e763f2";
+const imgChevronLeft = "https://www.figma.com/api/mcp/asset/4f25185b-8313-4c8b-835e-a3bdcb430928";
+const imgChevronRight = "https://www.figma.com/api/mcp/asset/54f3c4e3-2ecc-46a7-86de-74dff9f6b336";
+const imgCurrentDateIndicator = "https://www.figma.com/api/mcp/asset/2e049893-4922-4467-8230-c64fb5ce438b";
+const imgSelectedDateIndicator = "https://www.figma.com/api/mcp/asset/ab8239c0-4033-4a6b-ac51-45de00d54920";
+
+export default function Calendario() {
+  return (
+    <div className="content-stretch flex flex-col gap-[12px] items-start leading-[0] relative size-full" data-node-id="7929:29973" data-name="_Calendario">
+      <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="I7929:29973;5828:3390">
+        <div className="[word-break:break-word] col-1 flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] h-[16px] justify-center ml-0 mt-0 not-italic relative row-1 text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] w-[127px]" data-node-id="I7929:29973;5828:3391">
+          <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Período</p>
+        </div>
+      </div>
+      <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="I7929:29973;5828:3392">
+        <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="I7929:29973;5828:3393">
+          <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="I7929:29973;5828:3394">
+            <div className="bg-[var(--color\/background\/page,white)] col-1 content-stretch flex gap-[10px] h-[331px] items-start ml-0 mt-0 px-[25px] py-[12px] relative rounded-[6px] row-1 w-[312px]" data-node-id="I7929:29973;5828:3395" data-name="inputs">
+              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[#5e5f5f] text-[0px] w-[244px]" data-node-id="I7929:29973;5828:3396">
+                <p className="font-['Lato:Regular'] text-[14px]">
+                  <span className="leading-[17px] text-[#4b4b4b]">21/01/2024 -</span>
+                  <span className="leading-[17px] text-[#8e8e8e]">{` `}</span>
+                  <span className="leading-[17px] text-[#8e8e8e]">06/04/2025</span>
+                </p>
+              </div>
+              <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:29973;5828:3397" data-name="object/calendar">
+                <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I7929:29973;5828:3397;1079:768" data-name="_base/icon/calendar">
+                  <div className="absolute inset-[4.17%_8.33%]" data-node-id="I7929:29973;5828:3397;1079:768;1028:2063" data-name="calendar">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-1 content-stretch flex flex-col h-[263.034px] items-start ml-[8px] mt-[49px] overflow-clip relative rounded-[3.825px] row-1" data-node-id="I7929:29973;5828:3398" data-name="Desktop Date Picker">
+          <div className="content-stretch flex gap-[53.551px] h-[49.726px] items-center pb-[11.475px] pt-[15.3px] px-[22.95px] relative shrink-0 w-[244.804px]" data-node-id="I7929:29973;5828:3399" data-name="Month">
+            <div className="content-stretch flex flex-[1_0_0] gap-[1.913px] items-center min-w-px relative" data-node-id="I7929:29973;5828:3400" data-name="Month">
+              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[20.082px] not-italic relative shrink-0 text-[13.388px] text-[color:var(--color\/text\/primary\/default,black)] whitespace-nowrap" data-node-id="I7929:29973;5828:3401">
+                Janeiro 2024
+              </p>
+              <div className="overflow-clip relative shrink-0 size-[22.95px]" data-node-id="I7929:29973;5828:3402" data-name="📍icon">
+                <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:29973;5828:3402;2020:509" data-name="_base/icon/sorting-down">
+                  <div className="absolute flex inset-[40.45%_32.97%_32%_32.97%] items-center justify-center" style={{ containerType: "size" }}>
+                    <div className="flex-none h-[100cqh] rotate-180 w-[100cqw]">
+                      <div className="relative size-full" data-node-id="I7929:29973;5828:3402;2020:509;2020:483" data-name="sorting">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSorting} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[22.95px] items-center justify-end py-[4.781px] relative shrink-0" data-node-id="I7929:29973;5828:3403" data-name="Month Pagination">
+              <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:29973;5828:3404" data-name="navigation/chevron-left">
+                <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:29973;5828:3404;1077:98" data-name="_base/icon/chevron-left">
+                  <div className="absolute inset-[20.83%_33.33%]" data-node-id="I7929:29973;5828:3404;1077:98;1028:1874" data-name="chevron-left">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronLeft} />
+                  </div>
+                </div>
+              </div>
+              <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:29973;5828:3405" data-name="navigation/chrevron-right">
+                <div className="absolute inset-[20.83%_33.33%]" data-node-id="I7929:29973;5828:3405;1077:103;1028:1876" data-name="chevron-right">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex h-[30.601px] items-start px-[var(--spacing\/inset\/m,16px)] relative shrink-0 w-[244.804px]" data-node-id="I7929:29973;5828:3406" data-name="Weekdays Date Picker">
+            <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3407" data-name="Calendar Date">
+              <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3408">
+                <p className="leading-[var(--type\/body\/s\/line-height,17px)]">S</p>
+              </div>
+            </div>
+            <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3409" data-name="Calendar Date">
+              <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3410">
+                <p className="leading-[var(--type\/body\/s\/line-height,17px)]">T</p>
+              </div>
+            </div>
+            <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3411" data-name="Calendar Date">
+              <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3412">
+                <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Q</p>
+              </div>
+            </div>
+            <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3413" data-name="Calendar Date">
+              <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3414">
+                <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Q</p>
+              </div>
+            </div>
+            <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3415" data-name="Calendar Date">
+              <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3416">
+                <p className="leading-[var(--type\/body\/s\/line-height,17px)]">S</p>
+              </div>
+            </div>
+            <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3417" data-name="Calendar Date">
+              <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3418">
+                <p className="leading-[var(--type\/body\/s\/line-height,17px)]">S</p>
+              </div>
+            </div>
+            <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3419" data-name="Calendar Date">
+              <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3420">
+                <p className="leading-[var(--type\/body\/s\/line-height,17px)]">D</p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col items-start pb-[var(--spacing\/inset\/s,8px)] px-[var(--spacing\/inset\/m,16px)] relative shrink-0" data-node-id="I7929:29973;5828:3421" data-name="Calendar">
+            <div className="content-stretch flex items-start relative shrink-0" data-node-id="I7929:29973;5828:3422" data-name="Date Grid">
+              <div className="opacity-0 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3423" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3423;5:2219" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-['Roboto:Regular'] font-normal inset-0 justify-center leading-[0] text-[13.39px] text-[color:var(--color\/text\/primary\/default,black)] text-center tracking-[0.25px]" data-node-id="I7929:29973;5828:3423;5:2222" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  <p className="leading-[19.125px]">1</p>
+                </div>
+              </div>
+              <div className="opacity-0 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3424" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3424;5:2219" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-['Roboto:Regular'] font-normal inset-0 justify-center leading-[0] text-[13.39px] text-[color:var(--color\/text\/primary\/default,black)] text-center tracking-[0.25px]" data-node-id="I7929:29973;5828:3424;5:2222" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  <p className="leading-[19.125px]">1</p>
+                </div>
+              </div>
+              <div className="opacity-0 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3425" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3425;5:2219" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-['Roboto:Regular'] font-normal inset-0 justify-center leading-[0] text-[13.39px] text-[color:var(--color\/text\/primary\/default,black)] text-center tracking-[0.25px]" data-node-id="I7929:29973;5828:3425;5:2222" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  <p className="leading-[19.125px]">1</p>
+                </div>
+              </div>
+              <div className="opacity-0 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3426" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3426;5:2219" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-['Roboto:Regular'] font-normal inset-0 justify-center leading-[0] text-[13.39px] text-[color:var(--color\/text\/primary\/default,black)] text-center tracking-[0.25px]" data-node-id="I7929:29973;5828:3426;5:2222" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  <p className="leading-[19.125px]">1</p>
+                </div>
+              </div>
+              <div className="opacity-0 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3427" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3427;5:2219" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-['Roboto:Regular'] font-normal inset-0 justify-center leading-[0] text-[13.39px] text-[color:var(--color\/text\/primary\/default,black)] text-center tracking-[0.25px]" data-node-id="I7929:29973;5828:3427;5:2222" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  <p className="leading-[19.125px]">1</p>
+                </div>
+              </div>
+              <div className="opacity-0 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3428" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3428;5:2219" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-['Roboto:Regular'] font-normal inset-0 justify-center leading-[0] text-[13.39px] text-[color:var(--color\/text\/primary\/default,black)] text-center tracking-[0.25px]" data-node-id="I7929:29973;5828:3428;5:2222" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  <p className="leading-[19.125px]">1</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3429" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3430" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3436">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">1</p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-start relative shrink-0" data-node-id="I7929:29973;5828:3437" data-name="Date Grid">
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3438" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3438;5:2219" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-['Lato:Regular'] inset-0 justify-center leading-[0] not-italic text-[12.8px] text-[color:var(--color\/text\/primary\/default,black)] text-center" data-node-id="I7929:29973;5828:3438;5:2222">
+                  <p className="leading-[19.203px]">2</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3439" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3440" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3446">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">3</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3447" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3448" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3454">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">4</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3455" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3456" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3462">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">5</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3463" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3464" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3470">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">6</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3471" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3472" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3478">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">7</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3479" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3480" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3486">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">8</p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-start relative shrink-0" data-node-id="I7929:29973;5828:3487" data-name="Date Grid">
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3488" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3489" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3495">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">9</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3496" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3497" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3503">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">10</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3504" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3505" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3511">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">11</p>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] relative rounded-bl-[20px] rounded-tl-[20px] shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3512" data-name="Desktop Date Picker">
+                <div className="absolute contents inset-[3.12%_3.13%_3.13%_3.12%]" data-node-id="I7929:29973;5828:3513" data-name="Indicators">
+                  <div className="absolute inset-[3.12%_3.13%_3.13%_3.12%]" data-node-id="I7929:29973;5828:3518" data-name="Current Date Indicator">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCurrentDateIndicator} />
+                  </div>
+                </div>
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3519">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">12</p>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3520" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3521" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3527">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">13</p>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3528" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3529" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3535">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">14</p>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] relative rounded-br-[20px] rounded-tr-[20px] shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3536" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3537" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3543">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">15</p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-start relative shrink-0" data-node-id="I7929:29973;5828:3544" data-name="Date Grid">
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] relative rounded-bl-[20px] rounded-tl-[20px] shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3545" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3546" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3552">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">16</p>
+                </div>
+              </div>
+              <div className="bg-[var(--color\/background\/container,#f5f5f5)] relative rounded-br-[20px] rounded-tr-[20px] shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3553" data-name="Desktop Date Picker">
+                <div className="absolute contents inset-[3.12%_3.13%_3.13%_3.12%]" data-node-id="I7929:29973;5828:3554" data-name="Indicators">
+                  <div className="absolute inset-[3.13%_3.13%_3.12%_3.12%]" data-node-id="I7929:29973;5828:3558" data-name="Selected Date Indicator">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSelectedDateIndicator} />
+                  </div>
+                </div>
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/on-brand\/default,white)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3560">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">17</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3561" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3562" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3568">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">18</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3569" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3570" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3576">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">19</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3577" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3578" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3584">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">20</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3585" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3586" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3592">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">21</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3593" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3594" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3600">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">22</p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-start relative shrink-0" data-node-id="I7929:29973;5828:3601" data-name="Date Grid">
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3602" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3603" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3609">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">23</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3610" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3611" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3617">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">24</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3618" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3619" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3625">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">25</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3626" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3627" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3633">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">26</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3634" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3635" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3641">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">27</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3642" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3643" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3649">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">28</p>
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3650" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3651" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3657">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">29</p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-start relative shrink-0" data-node-id="I7929:29973;5828:3658" data-name="Date Grid">
+              <div className="relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3659" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3660" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3666">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">30</p>
+                </div>
+              </div>
+              <div className="opacity-40 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3667" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3668" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3674">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">1</p>
+                </div>
+              </div>
+              <div className="opacity-40 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3675" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3676" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3682">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">2</p>
+                </div>
+              </div>
+              <div className="opacity-40 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3683" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3684" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3690">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">3</p>
+                </div>
+              </div>
+              <div className="opacity-40 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3691" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3692" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3698">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">4</p>
+                </div>
+              </div>
+              <div className="opacity-40 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3699" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3700" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3706">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">5</p>
+                </div>
+              </div>
+              <div className="opacity-40 relative shrink-0 size-[30.601px]" data-node-id="I7929:29973;5828:3707" data-name="Desktop Date Picker">
+                <div className="absolute bottom-full contents left-0 right-full top-0" data-node-id="I7929:29973;5828:3708" data-name="Indicators" />
+                <div className="[word-break:break-word] absolute flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] inset-0 justify-center leading-[0] not-italic text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] text-center" data-node-id="I7929:29973;5828:3714">
+                  <p className="leading-[var(--type\/body\/s\/line-height,17px)]">6</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

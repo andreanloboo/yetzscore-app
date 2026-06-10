@@ -1,0 +1,73 @@
+const imgUnion = "https://www.figma.com/api/mcp/asset/775a2165-2272-473c-b66b-c8591e805cc5";
+const imgEdit = "https://www.figma.com/api/mcp/asset/63833897-d8dd-446c-b8fc-e46d8e38eaf3";
+const imgLock = "https://www.figma.com/api/mcp/asset/5f772092-f34c-4cbc-ab97-2ce7c417174e";
+const imgLogout = "https://www.figma.com/api/mcp/asset/3658d64e-9c07-4d3b-822d-35c9a020853c";
+
+function ObjectUser({ className }: { className?: string }) {
+  return (
+    <div className={className || "overflow-clip relative size-[24px]"} data-node-id="8340:17971" data-name="object/user">
+      <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="8340:17972" data-name="_base/icon/user">
+        <div className="absolute inset-[8.33%_12.5%]" data-node-id="I8340:17972;1028:2046" data-name="Union">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUnion} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function UserMenu({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-white border border-[#e5e5e5] border-solid content-stretch flex flex-col items-start pt-[8px] relative rounded-[8px] w-[200px]"} data-node-id="8340:17973" data-name="UserMenu">
+      <div className="content-stretch flex gap-[12px] items-center overflow-clip px-[16px] py-[12px] relative shrink-0 w-[200px]" data-node-id="8340:17974" data-name="Editar perfil">
+        <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8340:17975" data-name="action/edit">
+          <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I8340:17975;1077:152" data-name="_base/icon/edit">
+            <div className="-translate-y-1/2 absolute aspect-[22.12109375/22.12109375] left-[6.25%] right-[6.25%] top-[calc(50%+0.42px)]" data-node-id="I8340:17975;1077:152;1028:1905" data-name="edit">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEdit} />
+            </div>
+          </div>
+        </div>
+        <p className="[word-break:break-word] flex-[1_0_0] font-['Lato:Regular'] leading-[20px] min-w-px not-italic relative text-[#222] text-[14px]" data-node-id="8340:17976">
+          Editar perfil
+        </p>
+      </div>
+      <div className="content-stretch flex gap-[12px] items-center overflow-clip px-[16px] py-[12px] relative shrink-0 w-[200px]" data-node-id="8340:17977" data-name="Recuperar senha">
+        <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8340:17978" data-name="object/lock">
+          <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8340:17978;1079:792" data-name="_base/icon/lock">
+            <div className="absolute inset-[4.17%_8.33%]" data-node-id="I8340:17978;1079:792;1028:2072" data-name="lock">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLock} />
+            </div>
+          </div>
+        </div>
+        <p className="[word-break:break-word] flex-[1_0_0] font-['Lato:Regular'] leading-[20px] min-w-px not-italic relative text-[#222] text-[14px]" data-node-id="8340:17979">
+          Recuperar senha
+        </p>
+      </div>
+      <div className="content-stretch flex gap-[12px] items-center overflow-clip px-[16px] py-[12px] relative shrink-0 w-[200px]" data-node-id="8340:17980" data-name="Sair">
+        <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8340:17981" data-name="action/logout">
+          <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I8340:17981;1079:241" data-name="_base/icon/logout">
+            <div className="absolute inset-[8.33%]" data-node-id="I8340:17981;1079:241;1028:1937" data-name="logout">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogout} />
+            </div>
+          </div>
+        </div>
+        <p className="[word-break:break-word] flex-[1_0_0] font-['Lato:Regular'] leading-[20px] min-w-px not-italic relative text-[#222] text-[14px]" data-node-id="8340:17982">
+          Sair
+        </p>
+      </div>
+      <div className="bg-[#e5e5e5] h-px relative shrink-0 w-[200px]" data-node-id="8340:17983" data-name="Divider" />
+      <div className="bg-[#f7f8f9] content-stretch flex gap-[12px] items-center overflow-clip px-[16px] py-[12px] relative rounded-bl-[7px] rounded-br-[7px] shrink-0 w-[200px]" data-node-id="8340:17984" data-name="UserSection">
+        <div className="bg-[#e5e5e5] content-stretch flex items-center justify-center overflow-clip relative rounded-[999px] shrink-0 size-[40px]" data-node-id="8340:17985" data-name="Avatar">
+          <ObjectUser className="overflow-clip relative shrink-0 size-[20px]" />
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px not-italic overflow-clip relative whitespace-nowrap" data-node-id="8340:17987" data-name="UserInfo">
+          <p className="font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] relative shrink-0 text-[length:var(--type\/body\/s\/size,14px)] text-black" data-node-id="8340:17988">
+            Izabela
+          </p>
+          <p className="font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/caption\/default\/line-height,17px)] relative shrink-0 text-[#8e8e8e] text-[length:var(--type\/caption\/default\/size,12px)]" data-node-id="8340:17989">
+            Gerente de Negócios
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

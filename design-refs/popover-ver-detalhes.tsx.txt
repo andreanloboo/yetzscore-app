@@ -1,0 +1,38 @@
+const imgTail = "https://www.figma.com/api/mcp/asset/14d18f2d-9987-405c-b032-a12307c7536f";
+const imgEye = "https://www.figma.com/api/mcp/asset/c60d1e9d-7469-4f21-a068-a9978a256c9a";
+
+export default function Popover() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--token('units/none'),0px)] isolate items-center justify-center relative size-full" data-node-id="7929:30884" data-name="Popover">
+      <div className="flex h-[7px] items-center justify-center relative shrink-0 w-full z-[2]" style={{ containerType: "size" }}>
+        <div className="flex-none h-[100cqw] rotate-90">
+          <div className="content-stretch flex h-full items-center justify-center overflow-clip relative w-[7px]" data-node-id="7929:30885" data-name="Arrow">
+            <div className="flex h-[15px] items-center justify-center relative shrink-0 w-[7px]">
+              <div className="flex-none rotate-90">
+                <div className="h-[7px] relative w-[15px]" data-node-id="7929:30886" data-name="Tail">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgTail} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--popover\/container\/background-color,white)] border border-[var(--popover\/container\/border-color,#cacaca)] border-solid content-stretch drop-shadow-[0px_1px_1px_var(--overlays\/overlay-black\/1,rgba(13,13,13,0.04))] flex flex-col gap-[var(--spacing\/inset\/xs,4px)] items-end p-[var(--popover\/container\/padding,16px)] relative rounded-[var(--radius\/4,4px)] shrink-0 z-[1]" data-node-id="7929:30888" data-name="Popover">
+        <div className="content-stretch flex flex-col gap-[var(--spacing\/stack\/m,0px)] items-start relative shrink-0 w-full" data-node-id="7929:30890">
+          <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] items-start relative shrink-0" data-node-id="7929:30891">
+            <div className="h-[24px] overflow-clip relative shrink-0 w-[16px]" data-node-id="7929:30892" data-name="interface-devices/eye">
+              <div className="absolute inset-[0_0.52%_-4.43%_0]" data-node-id="I7929:30892;1079:908" data-name="_base/icon/eye">
+                <div className="absolute inset-[12.5%_0]" data-node-id="I7929:30892;1079:908;1028:2105" data-name="eye">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEye} />
+                </div>
+              </div>
+            </div>
+            <div className="[word-break:break-word] flex flex-col font-['Lato:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] whitespace-nowrap" data-node-id="7929:30893">
+              <p className="leading-[1.1]">Ver detalhes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

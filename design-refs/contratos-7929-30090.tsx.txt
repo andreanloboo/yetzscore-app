@@ -1,0 +1,1126 @@
+const imgIconCheck = "https://www.figma.com/api/mcp/asset/095fe8ad-3cdc-4b0f-ab67-0f5b6085df44";
+const imgVector = "https://www.figma.com/api/mcp/asset/9cb171e2-3a91-4a14-9276-9063886d5b92";
+const imgGroup = "https://www.figma.com/api/mcp/asset/c6ac2bef-7a34-4537-bbf9-2e50ae743cab";
+const imgLineChart = "https://www.figma.com/api/mcp/asset/85db1b7a-60b8-4043-87b7-c6cb41a263cf";
+const imgFile = "https://www.figma.com/api/mcp/asset/32fe3201-7cc6-4f25-b252-b48806e6fb9d";
+const imgUsers = "https://www.figma.com/api/mcp/asset/93082a38-8538-4913-b822-81500946ec2a";
+const imgAvatar = "https://www.figma.com/api/mcp/asset/798293c1-eb5a-4e27-b756-808c0b975818";
+const imgLine8 = "https://www.figma.com/api/mcp/asset/56da8dfb-269c-48ca-823a-8ae49ac54464";
+const imgFile1 = "https://www.figma.com/api/mcp/asset/0d61b2f1-ecd1-4f12-8f31-87db5fbe2afa";
+const imgChevronLeft = "https://www.figma.com/api/mcp/asset/adae27dd-9701-4747-a89f-0a06ff48b049";
+const imgClose = "https://www.figma.com/api/mcp/asset/2b1f1769-2f16-42c2-93c2-2811ae365252";
+const imgVectorStroke = "https://www.figma.com/api/mcp/asset/e9f1b2ab-c0bf-4ea6-b625-14f58139a2cb";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/ec413afb-fffb-4714-9106-a1a69380d02d";
+const imgUsers1 = "https://www.figma.com/api/mcp/asset/ddf7fc38-34f9-422b-86b6-81212a6c940b";
+const imgCheckCircle = "https://www.figma.com/api/mcp/asset/681c5174-461e-4edd-b531-c887e2b7e918";
+const imgUnion = "https://www.figma.com/api/mcp/asset/e56902a4-b47e-4a14-b421-c480402ee173";
+const imgSearch = "https://www.figma.com/api/mcp/asset/3c2de4de-9917-4b34-a18d-3954a4074437";
+const imgViewColumn = "https://www.figma.com/api/mcp/asset/600f1068-fe49-446f-be3d-cbda7cbd3a6d";
+const imgVectorStroke1 = "https://www.figma.com/api/mcp/asset/0d4dcb21-9439-4d68-8758-1b1b57b8a274";
+const imgCalendar = "https://www.figma.com/api/mcp/asset/1db2387a-6675-4210-b568-cbf1eef915dc";
+const imgDragIndicator = "https://www.figma.com/api/mcp/asset/010f83e4-aa47-40cf-b74b-f2e5ed896324";
+const imgBaseIconMoreHorizontal = "https://www.figma.com/api/mcp/asset/80825fcc-ba51-4386-bec4-9134755bdb9c";
+const imgChevronRight = "https://www.figma.com/api/mcp/asset/a213518d-3884-4acb-8e3f-a25c4aeea753";
+const imgChevronRight1 = "https://www.figma.com/api/mcp/asset/36ae0785-78e8-4e7c-bdee-29e4655fd7f4";
+const imgLogoYetz = "https://www.figma.com/api/mcp/asset/b9a305eb-8a5d-4ba5-a95e-13138de1dd23";
+const imgLine7 = "https://www.figma.com/api/mcp/asset/cf023046-7cfb-461f-bc37-2b743ba063d9";
+
+type CheckboxProps = {
+  className?: string;
+  checkbox?: "Non-selected" | "Selected";
+};
+
+function Checkbox({ className, checkbox = "Selected" }: CheckboxProps) {
+  const isNonSelected = checkbox === "Non-selected";
+  return (
+    <div className={className || "relative size-[15px]"} id={isNonSelected ? "node-4506_4331" : "node-4506_4327"}>
+      <div className={`absolute inset-0 rounded-[3px] ${isNonSelected ? "border-[#909191] border-[1.8px] border-solid" : "bg-[#f17e21]"}`} id={isNonSelected ? "node-4506_4332" : "node-4506_4328"} data-name="bg" />
+      {checkbox === "Selected" && (
+        <div className="absolute inset-[15%]" data-node-id="4506:4329" data-name="icon-check">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function GerenteDeNegociosAberta() {
+  return (
+    <div className="bg-white content-stretch flex flex-col items-center relative size-full" data-node-id="7929:30090" data-name="Gerente de NegÃ³cios / Aberta">
+      <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:30091">
+        <div className="bg-[var(--sidebar\/container\/background-color,white)] border-[var(--sidebar\/container\/border-color,#cacaca)] border-r-[length:var(--sidebar\/container\/border-width,1px)] border-solid content-stretch flex flex-col items-start overflow-clip p-[var(--sidebar\/container\/padding,16px)] relative self-stretch shrink-0" data-node-id="8295:16175" data-name="Sidebar">
+          <div className="content-stretch flex flex-[1_0_0] flex-col items-center justify-between min-h-px relative w-[208px]" data-node-id="I8295:16175;3079:10160">
+            <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="I8295:16175;3079:10159">
+              <div className="content-stretch flex items-center overflow-clip py-[var(--sidebar\/header\/desktop\/padding-block,16px)] relative shrink-0 w-full" data-node-id="I8295:16175;3075:8860" data-name="Logo">
+                <div className="h-[32px] relative shrink-0 w-[130px]" data-node-id="I8295:16175;3075:8860;8295:16174" data-name="logo_score">
+                  <div className="absolute inset-[0_75.4%_0_0]" data-node-id="I8295:16175;3075:8860;8295:16174;143:1011" data-name="Vector">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+                  </div>
+                  <div className="absolute inset-[22.06%_0_16.15%_29.29%]" data-node-id="I8295:16175;3075:8860;8295:16174;143:1012" data-name="Group">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--sidebar\/menu\/gap,4px)] items-start overflow-clip relative shrink-0 w-full" data-node-id="I8295:16175;3075:8869" data-name="Nav/Items3">
+                <div className="content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,12px)] h-[40px] items-center px-[var(--navigation\/sidebar\/item\/desktop\/spacing\/padding-inline,8px)] py-[var(--navigation\/sidebar\/item\/desktop\/spacing\/padding-block,12px)] relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 w-full" data-node-id="I8295:16175;3075:8869;8295:16170" data-name="_NavItem">
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8295:16175;3075:8869;8295:16170;2166:87" data-name="data/line-chart">
+                    <div className="absolute inset-0 overflow-clip" data-node-id="I8295:16175;3075:8869;8295:16170;2166:87;3595:24" data-name="_base/icon/line-chart">
+                      <div className="absolute inset-[8.33%]" data-node-id="I8295:16175;3075:8869;8295:16170;2166:87;3595:24;3595:22" data-name="line-chart">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLineChart} />
+                      </div>
+                    </div>
+                  </div>
+                  <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--navigation\/sidebar\/item\/default\/label\/color,black)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8295:16175;3075:8869;8295:16170;2166:91">
+                    Campanhas
+                  </p>
+                </div>
+                <div className="content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,12px)] h-[40px] items-center px-[var(--navigation\/sidebar\/item\/desktop\/spacing\/padding-inline,8px)] py-[var(--navigation\/sidebar\/item\/desktop\/spacing\/padding-block,12px)] relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 w-full" data-node-id="I8295:16175;3075:8869;8295:16171" data-name="_NavItem">
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8295:16175;3075:8869;8295:16171;2166:87" data-name="object/file">
+                    <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8295:16175;3075:8869;8295:16171;2166:87;1079:728" data-name="_base/icon/file">
+                      <div className="absolute inset-[4.17%_12.5%]" data-node-id="I8295:16175;3075:8869;8295:16171;2166:87;1079:728;1028:2052" data-name="file">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFile} />
+                      </div>
+                    </div>
+                  </div>
+                  <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--navigation\/sidebar\/item\/default\/label\/color,black)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8295:16175;3075:8869;8295:16171;2166:91">
+                    Contratos
+                  </p>
+                </div>
+                <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,8px)] items-center px-[var(--navigation\/sidebar\/item\/desktop\/spacing\/padding-inline,8px)] py-[var(--navigation\/sidebar\/item\/desktop\/spacing\/padding-block,12px)] relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 w-full" data-node-id="I8295:16175;3075:8869;8295:16172" data-name="_NavItem">
+                  <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I8295:16175;3075:8869;8295:16172;2173:1046" data-name="object/users">
+                    <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I8295:16175;3075:8869;8295:16172;2173:1046;1079:720" data-name="_base/icon/users">
+                      <div className="absolute inset-[8.33%_0]" data-node-id="I8295:16175;3075:8869;8295:16172;2173:1046;1079:720;1028:2049" data-name="users">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUsers} />
+                      </div>
+                    </div>
+                  </div>
+                  <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] min-w-px not-italic relative text-[color:var(--color\/action\/primary\/subtle,#dffbe8)] text-[length:var(--type\/body\/s\/size,14px)]" data-node-id="I8295:16175;3075:8869;8295:16172;2173:1047">
+                    DelegaÃ§Ãµes
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="border-[var(--sidebar\/container\/border-color,#cacaca)] border-solid border-t-[length:var(--sidebar\/container\/border-width,1px)] content-stretch flex gap-[8px] items-center overflow-clip py-[var(--sidebar\/footer\/gap,16px)] relative shrink-0 w-full" data-node-id="I8295:16175;3075:8908" data-name="User/Area">
+              <div className="relative shrink-0 size-[32px]" data-node-id="I8295:16175;3075:8909" data-name="Avatar">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgAvatar} />
+              </div>
+              <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start min-w-px not-italic overflow-clip relative whitespace-nowrap" data-node-id="I8295:16175;3075:8910" data-name="UserInfo">
+                <p className="font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] relative shrink-0 text-[length:var(--type\/body\/s\/size,14px)] text-black" data-node-id="I8295:16175;3075:8911">
+                  Izabela
+                </p>
+                <p className="font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/caption\/default\/line-height,17px)] relative shrink-0 text-[#8e8e8e] text-[length:var(--type\/caption\/default\/size,12px)]" data-node-id="I8295:16175;3075:8912">
+                  Gerente de NegÃ³cios
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white content-stretch flex flex-[1_0_0] flex-col items-center min-w-px relative" data-node-id="7929:30105">
+          <div className="h-0 relative shrink-0 w-full" data-node-id="7929:30106">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgLine8} />
+            </div>
+          </div>
+          <div className="border-[var(--color\/action\/primary\/disabled,#e1e1e1)] border-b border-solid content-stretch flex items-center p-[64px] relative shrink-0 w-full" data-node-id="7929:30107" data-name="Component 22">
+            <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="7929:30108">
+              <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="7929:30109" data-name="object/file">
+                <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I7929:30109;1079:728" data-name="_base/icon/file">
+                  <div className="absolute inset-[4.17%_12.5%]" data-node-id="I7929:30109;1079:728;1028:2052" data-name="file">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFile1} />
+                  </div>
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Lato:Bold'] leading-none not-italic relative shrink-0 text-[20px] text-[color:var(--color\/action\/primary\/default,#00842f)] whitespace-nowrap" data-node-id="7929:30110">
+                Gerenciamento de contratos
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col items-start px-[64px] py-[40px] relative shrink-0 w-full" data-node-id="7929:30111">
+            <div className="content-stretch flex items-start py-[24px] relative shrink-0 w-full" data-node-id="7929:30112">
+              <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/none,0px)] py-[var(--button\/spacing\/padding-block\/none,0px)] relative rounded-[var(--radius\/md,6px)] shrink-0" data-node-id="7929:30113" data-name="Button Text">
+                <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:30113;1111:3110" data-name="navigation/chevron-left">
+                  <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:30113;1111:3110;1077:98" data-name="_base/icon/chevron-left">
+                    <div className="absolute inset-[20.83%_33.33%]" data-node-id="I7929:30113;1111:3110;1077:98;1028:1874" data-name="chevron-left">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronLeft} />
+                    </div>
+                  </div>
+                </div>
+                <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30113;1111:3111">
+                  <p className="leading-[var(--type\/interface\/line-height,16px)]">Voltar</p>
+                </div>
+              </div>
+            </div>
+            <div className="border-[var(--color\/action\/primary\/disabled,#e1e1e1)] border-b border-solid content-stretch flex items-center justify-between p-[var(--spacing\/inset\/l,24px)] relative shrink-0 w-full" data-node-id="7929:30114">
+              <div className="content-stretch flex flex-col gap-[8px] h-[48px] items-start justify-center relative shrink-0 w-[400px]" data-node-id="7939:10044" data-name="Text input">
+                <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex items-center justify-between px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="7939:10046" data-name="Input">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7939:10048">
+                    <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="7939:10049">
+                      Campanha Dezembro
+                    </p>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7939:10050" data-name="_Content">
+                      <div className="bg-[var(--badge\/container\/bg\/subtle\/green,#dcfce7)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/medium,8px)] py-[var(--badge\/container\/padding-block\/medium,4px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7939:10050;2034:565" data-name="Badges">
+                        <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/green,#22c55e)] text-[length:var(--type\/body\/s\/size,14px)] text-center whitespace-nowrap" data-node-id="I7939:10050;2034:565;1960:514">
+                          <p className="leading-[var(--type\/body\/s\/line-height,17px)]">Ativo</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7939:10051">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7939:10052" data-name="navigation/close">
+                      <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7939:10052;1077:72" data-name="_base/icon/close">
+                        <div className="absolute inset-[20.83%]" data-node-id="I7939:10052;1077:72;1028:1858" data-name="close">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClose} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7939:10053" data-name="navigation/chevron-down">
+                      <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7939:10053;1077:114" data-name="_base/icon/chevron-down">
+                        <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7939:10053;1077:114;1028:1880" data-name="Vector (Stroke)">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7929:30124">
+                <div className="border border-[var(--color\/background\/disabled,#e1e1e1)] border-solid content-stretch flex flex-col gap-[8px] items-start px-[8px] py-[12px] relative rounded-[8px] shrink-0" data-node-id="7929:30125">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7929:30126">
+                    <div className="content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,0px)] items-center justify-center relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 size-[24px]" data-node-id="7929:30127" data-name="_NavItem">
+                      <div className="h-[16px] relative shrink-0 w-[12.444px]" data-node-id="7929:30128" data-name="Group">
+                        <div className="absolute inset-[-4.69%_-6.03%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Lato:Regular'] leading-[normal] not-italic relative shrink-0 text-[12px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] w-[86px]" data-node-id="7929:30134">
+                      Total
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:30135">
+                    <p className="[word-break:break-word] font-['Lato:Black'] leading-[normal] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] whitespace-nowrap" data-node-id="7929:30136">
+                      200
+                    </p>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30137" data-name="_Content">
+                      <div className="bg-[var(--badge\/container\/bg\/subtle\/grey,#eee)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30137;2034:565" data-name="Badges">
+                        <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/grey,#4b4b4b)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30137;2034:565;1959:135">
+                          <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">100 %</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-[var(--color\/background\/disabled,#e1e1e1)] border-solid content-stretch flex flex-col gap-[8px] items-start px-[8px] py-[12px] relative rounded-[8px] shrink-0" data-node-id="7929:30138">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7929:30139">
+                    <div className="content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,0px)] items-center justify-center relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 size-[24px]" data-node-id="7929:30140" data-name="_NavItem">
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7929:30141" data-name="object/users">
+                        <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I7929:30141;1079:720" data-name="_base/icon/users">
+                          <div className="absolute inset-[8.33%_0]" data-node-id="I7929:30141;1079:720;1028:2049" data-name="users">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUsers1} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Lato:Regular'] leading-[normal] not-italic relative shrink-0 text-[12px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] w-[86px]" data-node-id="7929:30142">
+                      Vinculados
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:30143">
+                    <p className="[word-break:break-word] font-['Lato:Black'] leading-[normal] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] whitespace-nowrap" data-node-id="7929:30144">
+                      50
+                    </p>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30145" data-name="_Content">
+                      <div className="bg-[var(--badge\/container\/bg\/subtle\/green,#dcfce7)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30145;2034:565" data-name="Badges">
+                        <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/green,#22c55e)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30145;2034:565;1959:143">
+                          <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">25 %</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-[var(--color\/background\/disabled,#e1e1e1)] border-solid content-stretch flex flex-col gap-[8px] items-start px-[8px] py-[12px] relative rounded-[8px] shrink-0" data-node-id="7929:30146">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7929:30147">
+                    <div className="content-stretch flex gap-[var(--navigation\/sidebar\/item\/spacing\/gap,0px)] items-center justify-center relative rounded-[var(--navigation\/sidebar\/item\/shape\/radius,6px)] shrink-0 size-[24px]" data-node-id="7929:30148" data-name="_NavItem">
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7929:30149" data-name="status/check-circle">
+                        <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:30149;1079:832" data-name="_base/icon/check-circle">
+                          <div className="absolute inset-[4.14%_4.17%]" data-node-id="I7929:30149;1079:832;1028:2081" data-name="check-circle">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckCircle} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Lato:Regular'] leading-[normal] not-italic relative shrink-0 text-[12px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] w-[86px]" data-node-id="7929:30150">
+                      Aprovados
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:30151">
+                    <div className="content-stretch flex flex-col items-start relative self-stretch shrink-0" data-node-id="7929:30152">
+                      <p className="[word-break:break-word] font-['Lato:Black'] leading-[normal] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] w-full" data-node-id="7929:30153">
+                        5
+                      </p>
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30154" data-name="_Content">
+                      <div className="bg-[var(--badge\/container\/bg\/subtle\/green,#dcfce7)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30154;2034:565" data-name="Badges">
+                        <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/green,#22c55e)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30154;2034:565;1959:143">
+                          <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">10 %</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-[var(--color\/background\/disabled,#e1e1e1)] border-solid content-stretch flex flex-col gap-[8px] items-start px-[8px] py-[12px] relative rounded-[8px] shrink-0" data-node-id="7929:30155">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7929:30156">
+                    <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,0px)] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 size-[24px]" data-node-id="7929:30157" data-name="IconButton">
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7929:30158" data-name="object/user">
+                        <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I7929:30158;1079:712" data-name="_base/icon/user">
+                          <div className="absolute inset-[8.33%_12.5%]" data-node-id="I7929:30158;1079:712;1028:2046" data-name="Union">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUnion} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Lato:Regular'] leading-[normal] not-italic relative shrink-0 text-[12px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] w-[86px]" data-node-id="7929:30159">
+                      NÃ£o vinculados
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:30160">
+                    <p className="[word-break:break-word] font-['Lato:Black'] leading-[normal] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] whitespace-nowrap" data-node-id="7929:30161">
+                      150
+                    </p>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30162" data-name="_Content">
+                      <div className="bg-[var(--badge\/container\/bg\/subtle\/red,#ffedee)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30162;2034:565" data-name="Badges">
+                        <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/red,#c00)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30162;2034:565;1959:167">
+                          <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">75 %</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-node-id="7929:30163">
+              <div className="border-[#efefef] border-solid border-t content-stretch flex flex-col gap-[40px] items-end pt-[40px] relative shrink-0 w-full" data-node-id="7929:30164">
+                <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="7929:30165">
+                  <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="7929:30166">
+                    <div className="content-stretch flex h-[48px] items-center relative shrink-0" data-node-id="7929:30167">
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex flex-col gap-[24px] h-full items-start justify-center px-[var(--form-field\/spacing\/padding-inline\/medium,12px)] py-[var(--form-field\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-[328px]" data-node-id="7929:30168" data-name="Input">
+                        <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="7929:30170">
+                          <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--form-field\/placeholder\/text-color\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="7929:30171">
+                            Selecionar Gerentes de negÃ³cios
+                          </p>
+                          <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7929:30172" data-name="navigation/chevron-down">
+                            <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:30172;1077:114" data-name="_base/icon/chevron-down">
+                              <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7929:30172;1077:114;1028:1880" data-name="Vector (Stroke)">
+                                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30173">
+                      <div className="flex flex-row items-center self-stretch">
+                        <div className="content-stretch flex flex-col gap-[8px] h-full items-start justify-center relative shrink-0 w-[500px]" data-node-id="7929:30174" data-name="Text input">
+                          <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex items-center justify-between px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="7929:30176" data-name="Input">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="7929:30178">
+                              Digite o nÂº do contrato, grupo econÃ´mico ou cÃ³digo da revenda
+                            </p>
+                            <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7929:30179" data-name="action/search">
+                              <div className="absolute inset-[0_0_-4.82%_0]" data-node-id="I7929:30179;1077:160" data-name="_base/icon/search">
+                                <div className="absolute inset-[8.33%]" data-node-id="I7929:30179;1077:160;1028:1908" data-name="search">
+                                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSearch} />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex gap-[8px] items-center justify-end relative shrink-0" data-node-id="7929:30181">
+                    <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="7929:30182" data-name="Button">
+                      <div className="relative shrink-0 size-[16px]" data-node-id="7929:30183" data-name="view_column">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgViewColumn} />
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="7929:30186">
+                        <p className="leading-[var(--type\/interface\/line-height,16px)]">Gerencias colunas</p>
+                      </div>
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="7929:30187" data-name="navigation/chevron-down">
+                        <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:30187;1077:114" data-name="_base/icon/chevron-down">
+                          <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7929:30187;1077:114;1028:1880" data-name="Vector (Stroke)">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke1} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="7929:30194" data-name="Button">
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:30194;2630:797" data-name="object/users">
+                        <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I7929:30194;2630:797;1079:720" data-name="_base/icon/users">
+                          <div className="absolute inset-[8.33%_0]" data-node-id="I7929:30194;2630:797;1079:720;1028:2049" data-name="users">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUsers1} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/tertiary\/default\/text-color,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30194;2630:798">
+                        <p className="leading-[var(--type\/interface\/line-height,16px)]">Gerente</p>
+                      </div>
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:30194;2630:799" data-name="navigation/chevron-down">
+                        <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:30194;2630:799;1077:114" data-name="_base/icon/chevron-down">
+                          <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7929:30194;2630:799;1077:114;1028:1880" data-name="Vector (Stroke)">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke1} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex gap-[var(--spacing\/inline\/s,8px)] h-[40px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/medium,12px)] py-[var(--button\/spacing\/padding-block\/medium,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="7929:30195" data-name="Button">
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:30195;2630:797" data-name="object/calendar">
+                        <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-node-id="I7929:30195;2630:797;1079:768" data-name="_base/icon/calendar">
+                          <div className="absolute inset-[4.17%_8.33%]" data-node-id="I7929:30195;2630:797;1079:768;1028:2063" data-name="calendar">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendar} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/tertiary\/default\/text-color,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:30195;2630:798">
+                        <p className="leading-[var(--type\/interface\/line-height,16px)]">PerÃ­odo</p>
+                      </div>
+                      <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="I7929:30195;2630:799" data-name="navigation/chevron-down">
+                        <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:30195;2630:799;1077:114" data-name="_base/icon/chevron-down">
+                          <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7929:30195;2630:799;1077:114;1028:1880" data-name="Vector (Stroke)">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="7929:30196">
+                  <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="7929:30197">
+                    <p className="[word-break:break-word] font-['Lato:Black'] leading-[normal] not-italic relative shrink-0 text-[20px] text-black whitespace-nowrap" data-node-id="7929:30198">
+                      Kaique Atene GC
+                    </p>
+                    <div className="content-stretch flex gap-[24px] items-center justify-center relative shrink-0" data-node-id="7929:30199">
+                      <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="7929:30200">
+                        <Checkbox checkbox="Non-selected" className="relative shrink-0 size-[15px]" />
+                        <p className="[text-decoration-skip-ink:none] [text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/body\/s\/size,14px)] underline whitespace-nowrap" data-node-id="7929:30202">
+                          Selecionar todos
+                        </p>
+                      </div>
+                      <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30203">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30204">
+                          <div className="content-stretch flex gap-[var(--switch\/layout\/gap\/default,8px)] items-center relative shrink-0" data-node-id="7929:30205" data-name="Switch">
+                            <div className="bg-[#c6c6c6] content-stretch flex gap-[var(--spacing\/none,0px)] items-center overflow-clip p-[var(--switch\/track\/padding\/medium,4px)] relative rounded-[var(--radius\/full,9999px)] shrink-0 w-[48px]" data-node-id="7929:30206" data-name="_SwitchBase">
+                              <div className="bg-[var(--switch\/handle\/background\/color\/default,white)] relative rounded-[var(--radius\/full,9999px)] shrink-0 size-[16px]" data-node-id="7929:30207" data-name="Handle" />
+                            </div>
+                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="7929:30208" data-name="Content">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/m\/line-height,24px)] not-italic relative shrink-0 text-[color:var(--switch\/label\/color\/default,black)] text-[length:var(--type\/body\/m\/size,16px)] w-full" data-node-id="7929:30209">
+                                Aprovar
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex items-end relative shrink-0 w-[1552px]" data-node-id="7929:30211" data-name="Container">
+                    <div className="flex flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30212" data-name="Badge Group">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] h-[54px] relative rounded-bl-[8px] rounded-tl-[8px] shrink-0 w-full" data-node-id="7929:30213" data-name="Table Cell" />
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.67px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-bl-[8px] rounded-tl-[8px] shrink-0 w-full" data-node-id="7929:30214" data-name="Table Cell">
+                          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30215" data-name="Checkbox">
+                            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30215;38:661" data-name="bg" />
+                            <div className="absolute inset-[15%]" data-node-id="I7929:30215;38:662" data-name="icon-check">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.67px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-bl-[8px] rounded-tl-[8px] shrink-0 w-full" data-node-id="7929:30216" data-name="Table Cell">
+                          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30217" data-name="Checkbox">
+                            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30217;38:661" data-name="bg" />
+                            <div className="absolute inset-[15%]" data-node-id="I7929:30217;38:662" data-name="icon-check">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.67px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-bl-[8px] rounded-tl-[8px] shrink-0 w-full" data-node-id="7929:30218" data-name="Table Cell">
+                          <div className="relative shrink-0 size-[15px]" data-node-id="7929:30219" data-name="Checkbox">
+                            <div className="absolute bg-[var(--color\/action\/primary\/default,#00842f)] inset-0 rounded-[3px]" data-node-id="I7929:30219;38:661" data-name="bg" />
+                            <div className="absolute inset-[15%]" data-node-id="I7929:30219;38:662" data-name="icon-check">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCheck} />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30220" data-name="Badge Group">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="7929:30221" data-name="Table Header">
+                          <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-[54px] items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative shrink-0" data-node-id="7929:30222" data-name="Table Header">
+                            <div className="relative shrink-0 size-[21px]" data-node-id="7929:30223" data-name="drag_indicator">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                            </div>
+                            <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30226" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30228">
+                                CÃ³digo da revenda
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30230" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30230;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30230;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30230;2034:2726;2032:109">
+                                156898
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30231" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30231;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30231;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30231;2034:2726;2032:109">
+                                156895
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30232" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30232;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30232;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30232;2034:2726;2032:109">
+                                156898
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30233" data-name="Date Group">
+                        <div className="content-stretch flex h-[54px] items-center relative shrink-0" data-node-id="7929:30234" data-name="Table Header">
+                          <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-[54px] items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative shrink-0" data-node-id="7929:30235" data-name="Table Header">
+                            <div className="relative shrink-0 size-[21px]" data-node-id="7929:30236" data-name="drag_indicator">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                            </div>
+                            <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30239" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30241">
+                                Grupo econÃ´mico
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30243" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30243;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30243;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30243;2034:2726;2032:109">
+                                Sem grupo
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30244" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30244;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30244;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30244;2034:2726;2032:109">
+                                Sem grupo
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30245" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30245;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30245;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30245;2034:2726;2032:109">
+                                156895
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30246" data-name="Date Group">
+                        <div className="content-stretch flex h-[54px] items-center relative shrink-0" data-node-id="7929:30247" data-name="Table Header">
+                          <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-[54px] items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative shrink-0" data-node-id="7929:30248" data-name="Table Header">
+                            <div className="relative shrink-0 size-[21px]" data-node-id="7929:30249" data-name="drag_indicator">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                            </div>
+                            <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30252" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30254">
+                                CNPJ do Cliente
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30256" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30256;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30256;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30256;2034:2726;2032:109">
+                                454**************
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30257" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30257;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30257;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30257;2034:2726;2032:109">
+                                454**************
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30258" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30258;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30258;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30258;2034:2726;2032:109">
+                                Sem grupo
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30259" data-name="Badge Group">
+                        <div className="content-stretch flex h-[54px] items-center relative shrink-0" data-node-id="7929:30260" data-name="Table Header">
+                          <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-[54px] items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative shrink-0" data-node-id="7929:30261" data-name="Table Header">
+                            <div className="relative shrink-0 size-[21px]" data-node-id="7929:30262" data-name="drag_indicator">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                            </div>
+                            <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30265" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30267">{`NÃºmero da propostaÂ `}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30269" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30269;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30269;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30269;2034:2726;2032:109">
+                                496884464644
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30270" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30270;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30270;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30270;2034:2726;2032:109">
+                                496884464644
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30271" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30271;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30271;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30271;2034:2726;2032:109">
+                                454**************
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-[1_0_0] flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-[1_0_0] flex-col gap-px h-full items-start min-w-px relative" data-node-id="7929:30272" data-name="Badge Group">
+                        <div className="content-stretch flex h-[54px] items-center relative shrink-0 w-full" data-node-id="7929:30273" data-name="Table Header">
+                          <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex flex-[1_0_0] gap-[8px] h-[54px] items-center min-w-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative" data-node-id="7929:30274" data-name="Table Header">
+                            <div className="relative shrink-0 size-[21px]" data-node-id="7929:30275" data-name="drag_indicator">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                            </div>
+                            <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30278" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30280">
+                                Vendedor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30282" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30282;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30282;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30282;2034:2726;2032:109">
+                                Eduardo Gomes
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30283" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30283;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30283;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30283;2034:2726;2032:109">
+                                Eduardo Gomes
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30284" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30284;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30284;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30284;2034:2726;2032:109">
+                                Eduardo Gomes
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-[1_0_0] flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-[1_0_0] flex-col gap-px h-full items-start min-w-px relative" data-node-id="7929:30285" data-name="Badge Group">
+                        <div className="content-stretch flex h-[54px] items-center relative shrink-0 w-full" data-node-id="7929:30286" data-name="Table Header">
+                          <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex flex-[1_0_0] gap-[8px] h-full items-center min-w-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative" data-node-id="7929:30287" data-name="Table Header">
+                            <div className="relative shrink-0 size-[21px]" data-node-id="7929:30288" data-name="drag_indicator">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                            </div>
+                            <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30291" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30293">
+                                Gerente
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30295" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30295;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30295;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30295;2034:2726;2032:109">
+                                JosÃ© LourenÃ§o
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30296" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30296;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30296;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30296;2034:2726;2032:109">
+                                JosÃ© LourenÃ§o
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30297" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30297;2034:2726" data-name="_Content">
+                            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30297;2034:2726;2032:817" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30297;2034:2726;2032:109">
+                                Eduardo Gomes
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30298" data-name="Badge Group">
+                        <div className="content-stretch flex h-[54px] items-center relative shrink-0 w-full" data-node-id="7929:30299" data-name="Table Header">
+                          <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex flex-[1_0_0] gap-[8px] h-[54px] items-center min-w-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative" data-node-id="7929:30300" data-name="Table Header">
+                            <div className="relative shrink-0 size-[21px]" data-node-id="7929:30301" data-name="drag_indicator">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                            </div>
+                            <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30304" data-name="Container">
+                              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30306">
+                                Status
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30308" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30308;2034:2738" data-name="_Content">
+                            <div className="bg-[var(--badge\/container\/bg\/subtle\/yellow,#fef9c3)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30308;2034:2738;2034:565" data-name="Badges">
+                              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/yellow,#f59e0b)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30308;2034:2738;2034:565;1959:159">
+                                <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">Aguardando aprovaÃ§Ã£o</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30309" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30309;2034:2738" data-name="_Content">
+                            <div className="bg-[var(--badge\/container\/bg\/subtle\/yellow,#fef9c3)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30309;2034:2738;2034:565" data-name="Badges">
+                              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/yellow,#f59e0b)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30309;2034:2738;2034:565;1959:159">
+                                <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">Aguardando aprovaÃ§Ã£o</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0 w-full" data-node-id="7929:30310" data-name="Table Cell">
+                          <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30310;2034:2738" data-name="_Content">
+                            <div className="bg-[var(--badge\/container\/bg\/subtle\/green,#dcfce7)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30310;2034:2738;2034:565" data-name="Badges">
+                              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/green,#22c55e)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30310;2034:2738;2034:565;1959:143">
+                                <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">Aprovado</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-end self-stretch">
+                      <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30311" data-name="Badge Group">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex h-[54px] items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative rounded-br-[8px] rounded-tr-[8px] shrink-0 w-full" data-node-id="7929:30312" data-name="Table Header">
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30313" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30315">
+                              AÃ§Ãµes
+                            </p>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-br-[8px] rounded-tr-[8px] shrink-0 w-full" data-node-id="7929:30317" data-name="Table Cell">
+                          <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="7929:30318" data-name="navigation/more-horizontal">
+                            <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="7929:30319" data-name="_base/icon/more-horizontal">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBaseIconMoreHorizontal} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-br-[8px] rounded-tr-[8px] shrink-0 w-full" data-node-id="7929:30321" data-name="Table Cell">
+                          <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="7929:30322" data-name="navigation/more-horizontal">
+                            <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="7929:30323" data-name="_base/icon/more-horizontal">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBaseIconMoreHorizontal} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex h-[54px] items-center justify-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-br-[8px] rounded-tr-[8px] shrink-0 w-full" data-node-id="7929:30325" data-name="Table Cell">
+                          <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="7929:30326" data-name="navigation/more-horizontal">
+                            <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="7929:30327" data-name="_base/icon/more-horizontal">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBaseIconMoreHorizontal} />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="7929:30329">
+                  <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="7929:30330">
+                    <p className="[word-break:break-word] font-['Lato:Black'] leading-[normal] not-italic relative shrink-0 text-[20px] text-black whitespace-nowrap" data-node-id="7929:30331">
+                      Vinculados - Confirmar Vendedor
+                    </p>
+                  </div>
+                  <div className="content-stretch flex h-[170.333px] items-end relative shrink-0 w-[1552px]" data-node-id="7929:30332" data-name="Container">
+                    <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30333" data-name="Badge Group">
+                      <div className="content-stretch flex flex-[1_0_0] items-center min-h-px relative rounded-bl-[8px] rounded-tl-[8px]" data-node-id="7929:30334" data-name="Table Header">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-full items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative rounded-bl-[8px] rounded-tl-[8px] shrink-0" data-node-id="7929:30335" data-name="Table Header">
+                          <div className="relative shrink-0 size-[21px]" data-node-id="7929:30336" data-name="drag_indicator">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30339" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30341">
+                              CÃ³digo da revenda
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-bl-[8px] rounded-tl-[8px] w-full" data-node-id="7929:30343" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30343;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30343;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30343;2034:2726;2032:109">
+                              156898
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-bl-[8px] rounded-tl-[8px] w-full" data-node-id="7929:30344" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30344;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30344;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--color\/feedback\/neutral\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30344;2034:2726;2032:109">
+                              156895
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30345" data-name="Date Group">
+                      <div className="content-stretch flex flex-[1_0_0] items-center min-h-px relative" data-node-id="7929:30346" data-name="Table Header">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-full items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative shrink-0" data-node-id="7929:30347" data-name="Table Header">
+                          <div className="relative shrink-0 size-[21px]" data-node-id="7929:30348" data-name="drag_indicator">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30351" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30353">
+                              Grupo econÃ´mico
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30355" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30355;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30355;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30355;2034:2726;2032:109">
+                              Sem grupo
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30356" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30356;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30356;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30356;2034:2726;2032:109">
+                              Sem grupo
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30357" data-name="Date Group">
+                      <div className="content-stretch flex flex-[1_0_0] items-center min-h-px relative" data-node-id="7929:30358" data-name="Table Header">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-full items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative shrink-0" data-node-id="7929:30359" data-name="Table Header">
+                          <div className="relative shrink-0 size-[21px]" data-node-id="7929:30360" data-name="drag_indicator">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30363" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30365">
+                              CNPJ do Cliente
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30367" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30367;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30367;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30367;2034:2726;2032:109">
+                              454**************
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30368" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30368;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30368;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30368;2034:2726;2032:109">
+                              454**************
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30369" data-name="Badge Group">
+                      <div className="content-stretch flex flex-[1_0_0] items-center min-h-px relative" data-node-id="7929:30370" data-name="Table Header">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex gap-[8px] h-full items-center overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative shrink-0" data-node-id="7929:30371" data-name="Table Header">
+                          <div className="relative shrink-0 size-[21px]" data-node-id="7929:30372" data-name="drag_indicator">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30375" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30377">{`NÃºmero da propostaÂ `}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30379" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30379;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30379;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30379;2034:2726;2032:109">
+                              496884464644
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30380" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30380;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30380;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30380;2034:2726;2032:109">
+                              496884464644
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-px h-full items-start min-w-px relative" data-node-id="7929:30381" data-name="Badge Group">
+                      <div className="content-stretch flex flex-[1_0_0] items-center min-h-px relative w-full" data-node-id="7929:30382" data-name="Table Header">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex flex-[1_0_0] gap-[8px] h-full items-center min-w-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative" data-node-id="7929:30383" data-name="Table Header">
+                          <div className="relative shrink-0 size-[21px]" data-node-id="7929:30384" data-name="drag_indicator">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30387" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30389">
+                              Vendedor
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30391" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30391;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30391;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30391;2034:2726;2032:109">
+                              Eduardo Gomes
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30392" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30392;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30392;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30392;2034:2726;2032:109">
+                              Eduardo Gomes
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-[1_0_0] flex-col gap-px h-full items-start min-w-px relative" data-node-id="7929:30393" data-name="Badge Group">
+                      <div className="content-stretch flex flex-[1_0_0] items-center min-h-px relative w-full" data-node-id="7929:30394" data-name="Table Header">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex flex-[1_0_0] gap-[8px] h-full items-center min-w-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative" data-node-id="7929:30395" data-name="Table Header">
+                          <div className="relative shrink-0 size-[21px]" data-node-id="7929:30396" data-name="drag_indicator">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30399" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30401">
+                              Gerente
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30403" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30403;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30403;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30403;2034:2726;2032:109">
+                              JosÃ© LourenÃ§o
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30404" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30404;2034:2726" data-name="_Content">
+                          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I7929:30404;2034:2726;2032:817" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/cell\/text-color\/default,#4b4b4b)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I7929:30404;2034:2726;2032:109">
+                              JosÃ© LourenÃ§o
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30405" data-name="Badge Group">
+                      <div className="content-stretch flex flex-[1_0_0] items-center min-h-px relative w-full" data-node-id="7929:30406" data-name="Table Header">
+                        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex flex-[1_0_0] gap-[8px] h-full items-center min-w-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative" data-node-id="7929:30407" data-name="Table Header">
+                          <div className="relative shrink-0 size-[21px]" data-node-id="7929:30408" data-name="drag_indicator">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgDragIndicator} />
+                          </div>
+                          <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30411" data-name="Container">
+                            <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30413">
+                              Status
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center justify-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7929:30415" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7929:30415;2034:2738" data-name="_Content">
+                          <div className="bg-[var(--badge\/container\/bg\/subtle\/red,#ffedee)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7929:30415;2034:2738;2034:565" data-name="Badges">
+                            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/red,#c00)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7929:30415;2034:2738;2034:565;1959:167">
+                              <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">Aguardando vÃ­nculo</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center justify-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative w-full" data-node-id="7939:5204" data-name="Table Cell">
+                        <div className="content-stretch flex items-center relative shrink-0" data-node-id="I7939:5204;2034:2738" data-name="_Content">
+                          <div className="bg-[var(--badge\/container\/bg\/subtle\/red,#ffedee)] content-stretch flex gap-[var(--badge\/content\/gap\/small,4px)] h-[21px] items-center justify-center px-[var(--badge\/container\/padding-inline\/small,4px)] py-[var(--badge\/container\/padding-block\/small,2px)] relative rounded-[var(--badge\/container\/border-radius,6px)] shrink-0" data-node-id="I7939:5204;2034:2738;2034:565" data-name="Badges">
+                            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--badge\/label\/text-color\/subtle\/red,#c00)] text-[length:var(--type\/caption\/default\/size,12px)] text-center whitespace-nowrap" data-node-id="I7939:5204;2034:2738;2034:565;1959:167">
+                              <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">Aguardando vÃ­nculo</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-px h-full items-start relative shrink-0" data-node-id="7929:30417" data-name="Badge Group">
+                      <div className="bg-[var(--color\/action\/primary\/default,#00842f)] content-stretch flex flex-[1_0_0] items-center min-h-px overflow-clip px-[var(--table\/row\/padding-inline,16px)] py-[var(--table\/row\/padding-block,12px)] relative rounded-br-[8px] rounded-tr-[8px]" data-node-id="7929:30418" data-name="Table Header">
+                        <div className="content-stretch flex gap-[8px] items-center min-h-[21px] relative shrink-0" data-node-id="7929:30419" data-name="Container">
+                          <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Bold')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--table\/header\/text-color\/on-brand,white)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="7929:30421">
+                            Detalhes
+                          </p>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center justify-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-br-[8px] rounded-tr-[8px] w-full" data-node-id="7929:30423" data-name="Table Cell">
+                        <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="7929:30424" data-name="navigation/more-horizontal">
+                          <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="7929:30425" data-name="_base/icon/more-horizontal">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBaseIconMoreHorizontal} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-[var(--table\/row\/subtle\/background-color,#f5f5f5)] content-stretch flex flex-[1_0_0] items-center justify-center min-h-px px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative rounded-br-[8px] rounded-tr-[8px] w-full" data-node-id="7929:30427" data-name="Table Cell">
+                        <div className="overflow-clip relative shrink-0 size-[32px]" data-node-id="7929:30428" data-name="navigation/more-horizontal">
+                          <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="7929:30429" data-name="_base/icon/more-horizontal">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBaseIconMoreHorizontal} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="8181:4790">
+                <p className="[word-break:break-word] font-['Lato:Medium'] leading-[normal] not-italic relative shrink-0 text-[#5e5f5f] text-[14px] text-center whitespace-nowrap" data-node-id="8181:4791">
+                  Mostrando 1 a 2 de 24 campanhas
+                </p>
+                <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="8181:4792">
+                  <div className="flex items-center justify-center relative shrink-0">
+                    <div className="flex-none rotate-180">
+                      <div className="border border-[var(--color\/action\/primary\/disabled,#e1e1e1)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,0px)] h-[32px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/small,8px)] py-[var(--button\/spacing\/padding-block\/small,8px)] relative rounded-[var(--button\/shape\/border-radius,6px)]" data-node-id="8181:4793" data-name="IconButton">
+                        <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8181:4794" data-name="navigation/chrevron-right">
+                          <div className="absolute inset-[20.83%_33.33%]" data-node-id="I8181:4794;1077:103;1028:1876" data-name="chevron-right">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="[word-break:break-word] font-['Lato:Medium'] leading-[normal] not-italic relative shrink-0 text-[#5e5f5f] text-[14px] text-center whitespace-nowrap" data-node-id="8181:4795">
+                    PÃ¡gina 1 de 3
+                  </p>
+                  <div className="border border-[var(--color\/border\/static\/default,#cacaca)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,0px)] h-[32px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/small,8px)] py-[var(--button\/spacing\/padding-block\/small,8px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0" data-node-id="8181:4796" data-name="IconButton">
+                    <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8181:4797" data-name="navigation/chrevron-right">
+                      <div className="absolute inset-[20.83%_33.33%]" data-node-id="I8181:4797;1077:103;1028:1876" data-name="chevron-right">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight1} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[var(--color\/background\/page,white)] content-stretch flex flex-col items-center justify-center overflow-clip px-[var(--spacing\/inset\/l,24px)] py-[var(--spacing\/inset\/xxs,2px)] relative shrink-0 w-full" data-node-id="7929:30431" data-name="rodapÃ©">
+            <div className="content-stretch flex gap-[var(--spacing\/inset\/2xl,48px)] items-center justify-center py-[12px] relative rounded-[12px] shrink-0 w-[672.358px]" data-node-id="7929:30432" data-name="rodapÃ©">
+              <div className="h-[23.843px] relative shrink-0 w-[53.355px]" data-node-id="7929:30433" data-name="Logo Yetz">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoYetz} />
+              </div>
+              <div className="flex h-[44px] items-center justify-center relative shrink-0 w-0">
+                <div className="flex-none rotate-90">
+                  <div className="h-0 relative w-[44px]" data-node-id="7929:30440">
+                    <div className="absolute inset-[-0.5px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine7} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/caption\/default\/size,12px)] whitespace-nowrap" data-node-id="7929:30441">
+                <p className="leading-[var(--type\/caption\/default\/line-height,17px)] mb-0">YETZ LTDA | CNPJ: 28.325.166/0001-05</p>
+                <p className="leading-[var(--type\/caption\/default\/line-height,17px)]">2026 | Todos os direitos reservados</p>
+              </div>
+              <div className="flex h-[44px] items-center justify-center relative shrink-0 w-0">
+                <div className="flex-none rotate-90">
+                  <div className="h-0 relative w-[44px]" data-node-id="7929:30442">
+                    <div className="absolute inset-[-0.5px_0_0_0]">
+                      <img alt="" className="block max-w-none size-full" src={imgLine7} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Regular')] justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] whitespace-nowrap" data-node-id="7929:30443">
+                <p className="font-['Lato:Regular'] leading-[17px] mb-0 text-[#8e8e8e] text-[12px]">Para mais informaÃ§Ãµes sobre como seus</p>
+                <p className="font-['Lato:Regular'] text-[#8e8e8e] text-[12px]">
+                  <span className="leading-[17px]">{`dados sÃ£o tratados `}</span>
+                  <span className="[text-underline-position:from-font] decoration-from-font decoration-solid leading-[17px] underline">clique aqui.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: Body/S-Default: Font(family: "type/family/brand", style: Regular, size: type/body/s/size, weight: 400, lineHeight: type/body/s/line-height, letterSpacing: 0), Body/S-Bold: Font(family: "type/family/brand", style: Bold, size: type/body/s/size, weight: 700, lineHeight: type/body/s/line-height, letterSpacing: 0), Caption/Default: Font(family: "type/family/brand", style: Regular, size: type/caption/default/size, weight: 400, lineHeight: type/caption/default/line-height, letterSpacing: 0), Cores Yetz/preto 01: #000000, Cores Yetz/cinza 02: #909191, Cores Yetz/cinza 03: #C6C6C6, Cores Yetz/branco 01: #FFFFFF, Cores Yetz/cinza 04: #EFEFEF, Cores Yetz/cinza 01: #5E5F5F.
+
+Images and SVGs will be stored as constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000'. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

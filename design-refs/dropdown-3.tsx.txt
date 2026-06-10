@@ -1,0 +1,27 @@
+export default function Dropdown() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--select\/layout\/gap\/medium,8px)] items-start relative size-full" data-node-id="8340:17920" data-name="Dropdown">
+      <div className="content-stretch flex flex-col items-start overflow-clip px-[var(--spacing\/scale\/0,0px)] py-[var(--spacing\/inset\/none,0px)] relative shrink-0 w-full" data-node-id="I8340:17920;2714:1411" data-name="_BaseDropdown">
+        <div className="bg-[var(--select\/dropdown\/menu\/background-color,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex flex-col gap-[var(--spacing\/none,0px)] items-start overflow-clip px-[var(--spacing\/inline\/none,0px)] py-[var(--select\/dropdown\/menu\/padding-block,4px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I8340:17920;2714:1411;1519:618" data-name="_SelectList">
+          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I8340:17920;2714:1411;1519:618;2898:834" data-name="Slot">
+            <div className="bg-[var(--select\/dropdown\/menu\/background-color,white)] content-stretch flex flex-col gap-[var(--form-field\/content\/gap\/medium,0px)] items-start justify-center overflow-clip px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I8340:17920;2714:1411;1519:618;2898:834;8340:17922" data-name="_ItemMenu">
+              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] text-[length:var(--type\/interface\/standard\/size,16px)] w-full" data-node-id="I8340:17920;2714:1411;1519:618;2898:834;8340:17922;1497:1590">
+                Todos
+              </p>
+            </div>
+            <div className="bg-[var(--select\/dropdown\/menu\/background-color,white)] content-stretch flex flex-col gap-[var(--form-field\/content\/gap\/medium,0px)] items-start justify-center overflow-clip px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I8340:17920;2714:1411;1519:618;2898:834;8340:17923" data-name="_ItemMenu">
+              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] text-[length:var(--type\/interface\/standard\/size,16px)] w-full" data-node-id="I8340:17920;2714:1411;1519:618;2898:834;8340:17923;1497:1590">
+                Valor Fixo
+              </p>
+            </div>
+            <div className="bg-[var(--select\/dropdown\/option\/hover\/background-color,#dffbe8)] content-stretch cursor-pointer flex flex-col gap-[var(--form-field\/content\/gap\/medium,0px)] items-start justify-center overflow-clip px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I8340:17920;2714:1411;1519:618;2898:834;8340:17924" data-name="_ItemMenu">
+              <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--select\/dropdown\/option\/default\/text-color,#4b4b4b)] text-[length:var(--type\/interface\/standard\/size,16px)] w-full" data-node-id="I8340:17920;2714:1411;1519:618;2898:834;8340:17924;1497:1597">
+                Financiamento
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
