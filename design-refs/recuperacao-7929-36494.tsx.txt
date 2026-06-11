@@ -1,0 +1,426 @@
+// Figma node 7929:36494 - Envio de token (4 estados lado a lado)
+const imgLogoYetz = "https://www.figma.com/api/mcp/asset/f0ed5f34-6dc4-4f7c-94c0-d2ba5e9173c1";
+const imgLine23 = "https://www.figma.com/api/mcp/asset/87c3b1d8-8f7e-4af2-a060-34f9adc1faa4";
+const imgGroup = "https://www.figma.com/api/mcp/asset/224986c7-b9b8-4287-9921-4eb4503906b7";
+const imgLogoYetz1 = "https://www.figma.com/api/mcp/asset/f1b9b7e1-37f7-4281-8bbb-f3285241f642";
+const imgLogoYetz2 = "https://www.figma.com/api/mcp/asset/588e8704-9e3b-4b7b-b97e-151676bb6fe6";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/d365ebf1-1666-47ad-8f19-8647671b7514";
+const imgHelpCircle = "https://www.figma.com/api/mcp/asset/a35b03d2-cc3c-42b9-8a65-c4c26c128bd1";
+const imgVectorStroke = "https://www.figma.com/api/mcp/asset/bbbc9209-9a25-420a-bf30-1c0055228731";
+const imgLogoYetz3 = "https://www.figma.com/api/mcp/asset/9fcf29e4-78c8-4a15-87d4-ab285522f089";
+const imgLayer2 = "https://www.figma.com/api/mcp/asset/4fbd7427-c145-4774-9a40-5a2a6243a72e";
+const imgChevronRight = "https://www.figma.com/api/mcp/asset/ebd243b5-c5cb-4103-8b01-440f5cbd25e2";
+
+export default function EnvioDeToken() {
+  return (
+    <div className="content-stretch flex gap-[19px] items-start relative size-full" data-node-id="7929:36494" data-name="Envio de token">
+      <div className="bg-[var(--modal\/container\/background-color,white)] content-stretch flex flex-col items-center p-[var(--modal\/container\/padding,32px)] relative rounded-[12px] shrink-0 w-[390px]" data-node-id="7929:36495" data-name="Token E-mail">
+        <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/x-large,48px)] items-center relative shrink-0 w-full" data-node-id="I7929:36495;3492:1327" data-name="Container">
+          <div className="content-stretch flex flex-col gap-[19px] items-center justify-center relative shrink-0 w-full" data-node-id="I7929:36495;3492:1328" data-name="Container">
+            <div className="content-stretch flex flex-col items-center px-[105px] relative shrink-0 w-full" data-node-id="I7929:36495;3492:1329" data-name="Container">
+              <div className="h-[32px] relative shrink-0 w-[71.592px]" data-node-id="I7929:36495;3492:1330" data-name="Logo Yetz">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoYetz} />
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[20px] items-center justify-center relative shrink-0" data-node-id="I7929:36495;3492:1337" data-name="Divider">
+              <div className="h-0 relative shrink-0 w-[309px]" data-node-id="I7929:36495;3492:1338">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgLine23} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36495;3492:1345" data-name="Container">
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36495;3492:1346" data-name="Container">
+              <div className="[word-break:break-word] content-stretch flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] gap-[var(--modal\/content\/gap\/x-small,8px)] items-center leading-[0] not-italic relative shrink-0 text-center w-full" data-node-id="I7929:36495;3492:1347" data-name="Title">
+                <div className="flex flex-col h-[24px] justify-center relative shrink-0 text-[color:var(--modal\/title\/text-color\/default,black)] text-[length:var(--type\/heading\/s\/size,22px)] w-[326px]" data-node-id="I7929:36495;3492:1348">
+                  <p className="leading-[var(--type\/heading\/s\/line-height,31px)]">Código de verificação</p>
+                </div>
+                <div className="flex flex-col justify-center relative shrink-0 text-[0px] text-[color:var(--modal\/description\/text-color,#4b4b4b)] w-[256.025px]" data-node-id="I7929:36495;3492:1349">
+                  <p className="font-['Lato:Bold'] leading-[21px] mb-0 text-[#4b4b4b] text-[14px]">Preencha com o código de verificação</p>
+                  <p className="font-['Lato:Regular'] leading-[21px] text-[#4b4b4b] text-[14px]">enviado para o seu e-mail.</p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--form-field\/layout\/gap\/medium,8px)] items-start relative shrink-0 w-full" data-node-id="I7929:36495;3492:1350" data-name="Text input">
+                <div className="bg-[var(--form-field\/background\/color\/disabled,#f5f5f5)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/disabled,#e1e1e1)] border-solid content-stretch flex gap-[var(--form-field\/content\/gap\/medium,8px)] items-center px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I7929:36495;3492:1350;1161:855" data-name="Input">
+                  <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] min-w-px not-italic relative text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center" data-node-id="I7929:36495;3492:1350;1161:857">
+                    jo****@gm***.br
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0" data-node-id="I7929:36495;3492:1351" data-name="Container">
+              <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="I7929:36495;3492:1352" data-name="Input">
+                <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="I7929:36495;3492:1353" data-name="Input">
+                  <div className="col-1 content-stretch flex gap-[4px] items-center ml-0 mt-0 relative row-1" data-node-id="I7929:36495;3492:1354" data-name="Código">
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36495;3492:1355" data-name="Input field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36495;3492:1356" data-name="Input field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36495;3492:1357" data-name="Input field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36495;3492:1358" data-name="Input field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36495;3492:1359" data-name="Input field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36495;3492:1360" data-name="Input field" />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[7px] items-center justify-center relative shrink-0" data-node-id="I7929:36495;3492:1361" data-name="Timer">
+                <div className="relative shrink-0 size-[24px]" data-node-id="I7929:36495;3492:1362" data-name="Component 14">
+                  <div className="absolute contents inset-0" data-node-id="I7929:36495;3492:1362;203:1827" data-name="Group">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/m\/line-height,24px)] not-italic relative shrink-0 text-[color:var(--modal\/description\/text-color,#4b4b4b)] text-[length:var(--type\/body\/m\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:36495;3492:1363">
+                  00:00:59
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--modal\/container\/background-color,white)] content-stretch flex flex-col items-center p-[var(--modal\/container\/padding,32px)] relative rounded-[12px] shrink-0 w-[390px]" data-node-id="7929:36496" data-name="Token E-mail">
+        <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/x-large,48px)] items-center relative shrink-0 w-full" data-node-id="I7929:36496;3492:1286" data-name="Container">
+          <div className="content-stretch flex flex-col gap-[19px] items-center justify-center relative shrink-0 w-full" data-node-id="I7929:36496;3492:1287" data-name="Container">
+            <div className="content-stretch flex flex-col items-center px-[105px] relative shrink-0 w-full" data-node-id="I7929:36496;3492:1288" data-name="Logo Container">
+              <div className="h-[32px] relative shrink-0 w-[71.592px]" data-node-id="I7929:36496;3492:1289" data-name="Logo Yetz">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoYetz1} />
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[20px] items-center justify-center relative shrink-0" data-node-id="I7929:36496;3492:1296" data-name="Divider Container">
+              <div className="h-0 relative shrink-0 w-[309px]" data-node-id="I7929:36496;3492:1297">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgLine23} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36496;3492:1304" data-name="Container">
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36496;3492:1305" data-name="Container">
+              <div className="[word-break:break-word] content-stretch flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] gap-[var(--modal\/content\/gap\/x-small,8px)] items-center leading-[0] not-italic relative shrink-0 text-center w-full" data-node-id="I7929:36496;3492:1306" data-name="Title">
+                <div className="flex flex-col h-[24px] justify-center relative shrink-0 text-[color:var(--modal\/title\/text-color\/default,black)] text-[length:var(--type\/heading\/s\/size,22px)] w-[326px]" data-node-id="I7929:36496;3492:1307">
+                  <p className="leading-[var(--type\/heading\/s\/line-height,31px)]">Código de verificação</p>
+                </div>
+                <div className="flex flex-col justify-center relative shrink-0 text-[0px] text-[color:var(--modal\/description\/text-color,#4b4b4b)] w-[256.025px]" data-node-id="I7929:36496;3492:1308">
+                  <p className="font-['Lato:Bold'] leading-[21px] mb-0 text-[#4b4b4b] text-[14px]">Preencha com o código de verificação</p>
+                  <p className="font-['Lato:Regular'] leading-[21px] text-[#4b4b4b] text-[14px]">enviado para o seu e-mail.</p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--form-field\/layout\/gap\/medium,8px)] items-start relative shrink-0 w-full" data-node-id="I7929:36496;3492:1309" data-name="Text input">
+                <div className="bg-[var(--form-field\/background\/color\/disabled,#f5f5f5)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/disabled,#e1e1e1)] border-solid content-stretch flex gap-[var(--form-field\/content\/gap\/medium,8px)] items-center px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I7929:36496;3492:1309;1161:855" data-name="Input">
+                  <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] min-w-px not-italic relative text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center" data-node-id="I7929:36496;3492:1309;1161:857">
+                    jo****@gm***.br
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0" data-node-id="I7929:36496;3492:1310" data-name="Container">
+              <div className="content-stretch flex flex-col gap-[var(--form-field\/layout\/gap\/medium,8px)] items-center relative shrink-0" data-node-id="I7929:36496;3492:1311" data-name="Container">
+                <div className="content-stretch flex gap-[var(--form-field\/content\/gap\/small,4px)] items-center relative shrink-0" data-node-id="I7929:36496;3492:1312" data-name="Código">
+                  <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/error,#c00)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36496;3492:1313" data-name="Code input" />
+                  <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/error,#c00)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36496;3492:1314" data-name="Code input" />
+                  <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/error,#c00)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36496;3492:1315" data-name="Code input" />
+                  <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/error,#c00)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36496;3492:1316" data-name="Code input" />
+                  <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/error,#c00)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36496;3492:1317" data-name="Code input" />
+                  <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/error,#c00)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36496;3492:1318" data-name="Code input" />
+                </div>
+                <div className="[word-break:break-word] flex flex-col font-['Lato:Regular'] h-[20px] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--modal\/title\/text-color\/destructive\/default,#c00)] text-center w-[96px]" data-node-id="I7929:36496;3492:1319">
+                  <p className="leading-[normal]">Código inválido</p>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[var(--modal\/content\/gap-inline\/medium,8px)] items-center justify-center relative shrink-0" data-node-id="I7929:36496;3492:1320" data-name="Timer">
+                <div className="relative shrink-0 size-[24px]" data-node-id="I7929:36496;3492:1321" data-name="Component 14">
+                  <div className="absolute contents inset-0" data-node-id="I7929:36496;3492:1321;203:1827" data-name="Group">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/m\/line-height,24px)] not-italic relative shrink-0 text-[color:var(--modal\/description\/text-color,#4b4b4b)] text-[length:var(--type\/body\/m\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:36496;3492:1322">
+                  00:00:59
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--modal\/container\/background-color,white)] content-stretch flex flex-col items-center p-[var(--modal\/container\/padding,32px)] relative rounded-[12px] shrink-0 w-[390px]" data-node-id="7929:36497" data-name="Token E-mail">
+        <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/x-large,48px)] items-center relative shrink-0 w-full" data-node-id="I7929:36497;3492:1368" data-name="Container">
+          <div className="content-stretch flex flex-col gap-[19px] items-center justify-center relative shrink-0 w-full" data-node-id="I7929:36497;3492:1369" data-name="Header">
+            <div className="content-stretch flex flex-col items-center px-[105px] relative shrink-0 w-full" data-node-id="I7929:36497;3492:1370" data-name="Logo">
+              <div className="h-[32px] relative shrink-0 w-[71.592px]" data-node-id="I7929:36497;3492:1371" data-name="Logo Yetz">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoYetz2} />
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[20px] items-center justify-center relative shrink-0" data-node-id="I7929:36497;3492:1378" data-name="Divider">
+              <div className="h-0 relative shrink-0 w-[309px]" data-node-id="I7929:36497;3492:1379">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgLine23} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36497;3492:1386" data-name="Form">
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36497;3492:1387" data-name="Verification Code Section">
+              <div className="[word-break:break-word] content-stretch flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] gap-[var(--modal\/content\/gap\/x-small,8px)] items-center leading-[0] not-italic relative shrink-0 text-center w-full" data-node-id="I7929:36497;3492:1388" data-name="Title">
+                <div className="flex flex-col h-[24px] justify-center relative shrink-0 text-[color:var(--modal\/title\/text-color\/default,black)] text-[length:var(--type\/heading\/s\/size,22px)] w-[326px]" data-node-id="I7929:36497;3492:1389">
+                  <p className="leading-[var(--type\/heading\/s\/line-height,31px)]">Código de verificação</p>
+                </div>
+                <div className="flex flex-col justify-center relative shrink-0 text-[0px] text-[color:var(--modal\/description\/text-color,#4b4b4b)] w-[256.025px]" data-node-id="I7929:36497;3492:1390">
+                  <p className="font-['Lato:Bold'] leading-[21px] mb-0 text-[#4b4b4b] text-[14px]">Preencha com o código de verificação</p>
+                  <p className="font-['Lato:Regular'] leading-[21px] text-[#4b4b4b] text-[14px]">enviado para o seu e-mail.</p>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--form-field\/layout\/gap\/medium,8px)] items-start relative shrink-0 w-full" data-node-id="I7929:36497;3492:1391" data-name="Text input">
+                <div className="bg-[var(--form-field\/background\/color\/disabled,#f5f5f5)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/disabled,#e1e1e1)] border-solid content-stretch flex gap-[var(--form-field\/content\/gap\/medium,8px)] items-center px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I7929:36497;3492:1391;1161:855" data-name="Input">
+                  <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] min-w-px not-italic relative text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center" data-node-id="I7929:36497;3492:1391;1161:857">
+                    jo****@gm***.br
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36497;3492:1392" data-name="Input Section">
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I7929:36497;3492:1393" data-name="Input">
+                <div className="grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 w-full" data-node-id="I7929:36497;3492:1394" data-name="Input">
+                  <div className="col-1 content-stretch flex gap-[4px] items-center ml-0 mt-0 relative row-1 w-full" data-node-id="I7929:36497;3492:1395" data-name="Código">
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36497;3492:1396" data-name="Input Field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36497;3492:1397" data-name="Input Field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36497;3492:1398" data-name="Input Field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36497;3492:1399" data-name="Input Field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36497;3492:1400" data-name="Input Field" />
+                    <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36497;3492:1401" data-name="Input Field" />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[7px] items-center justify-center relative shrink-0" data-node-id="I7929:36497;3492:1402" data-name="Timer">
+                <div className="relative shrink-0 size-[24px]" data-node-id="I7929:36497;3492:1403" data-name="Component 14">
+                  <div className="absolute contents inset-0" data-node-id="I7929:36497;3492:1403;203:1827" data-name="Group">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/m\/line-height,24px)] not-italic relative shrink-0 text-[color:var(--modal\/title\/text-color\/destructive\/default,#c00)] text-[length:var(--type\/body\/m\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:36497;3492:1404">
+                  00:00:00
+                </p>
+              </div>
+              <div className="bg-[var(--button\/primary\/default\/background-color,#f84f00)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="I7929:36497;3492:1405" data-name="Button">
+                <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:36497;3492:1405;1894:641">
+                  <p className="leading-[var(--type\/interface\/line-height,16px)]">Voltar</p>
+                </div>
+              </div>
+              <div className="content-stretch flex h-[65px] items-center justify-between relative shrink-0 w-full" data-node-id="I7929:36497;3492:1409" data-name="CTA">
+                <div className="content-stretch flex gap-[var(--modal\/content\/gap-inline\/medium,8px)] items-center relative shrink-0" data-node-id="I7929:36497;3492:1410" data-name="Help Section">
+                  <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:36497;3492:1411" data-name="Help Icon">
+                    <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:36497;3492:1411;1079:868" data-name="_base/icon/help-circle">
+                      <div className="absolute inset-[4.17%]" data-node-id="I7929:36497;3492:1411;1079:868;1028:2093" data-name="help-circle">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgHelpCircle} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="I7929:36497;3492:1412" data-name="Help Text Container">
+                    <div className="col-1 flex h-[42.763px] items-center justify-center ml-0 mt-0 relative row-1 w-[255.945px]">
+                      <div className="flex-none rotate-[0.17deg] skew-x-[-0.18deg]">
+                        <div className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[0] not-italic relative text-[0px] text-black w-[255.688px] whitespace-pre-wrap" data-node-id="I7929:36497;3492:1413">
+                          <p className="font-['Lato:Bold'] mb-0 text-[14px]">
+                            <span className="leading-[21px] text-black">Clique aqui</span>
+                            <span className="leading-[normal] text-[#f84f00]">{` `}</span>
+                          </p>
+                          <p className="font-['Lato:Regular'] leading-[21px] text-[14px]">Se não receber o código</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:36497;3492:1414" data-name="Dropdown Icon">
+                  <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:36497;3492:1414;1077:114" data-name="_base/icon/chevron-down">
+                    <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7929:36497;3492:1414;1077:114;1028:1880" data-name="Vector (Stroke)">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--modal\/container\/background-color,white)] content-stretch flex flex-col items-center p-[var(--modal\/container\/padding,32px)] relative rounded-[12px] shrink-0 w-[390px]" data-node-id="7929:36498" data-name="Token E-mail">
+        <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-start relative shrink-0 w-full" data-node-id="I7929:36498;3492:1416" data-name="Container">
+          <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/x-large,48px)] items-center relative shrink-0 w-full" data-node-id="I7929:36498;3492:1417" data-name="Container">
+            <div className="content-stretch flex flex-col gap-[19px] items-center justify-center relative shrink-0 w-full" data-node-id="I7929:36498;3492:1418" data-name="Container">
+              <div className="content-stretch flex flex-col items-center px-[105px] relative shrink-0 w-full" data-node-id="I7929:36498;3492:1419" data-name="Container">
+                <div className="h-[32px] relative shrink-0 w-[71.592px]" data-node-id="I7929:36498;3492:1420" data-name="Logo Yetz">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoYetz3} />
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[20px] items-center justify-center relative shrink-0" data-node-id="I7929:36498;3492:1427" data-name="Divider">
+                <div className="h-0 relative shrink-0 w-[309px]" data-node-id="I7929:36498;3492:1428">
+                  <div className="absolute inset-[-1px_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgLine23} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36498;3492:1435" data-name="Container">
+              <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36498;3492:1436" data-name="Container">
+                <div className="[word-break:break-word] content-stretch flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] gap-[var(--modal\/content\/gap\/x-small,8px)] items-center leading-[0] not-italic relative shrink-0 text-center w-full" data-node-id="I7929:36498;3492:1437" data-name="Title">
+                  <div className="flex flex-col h-[24px] justify-center relative shrink-0 text-[color:var(--modal\/title\/text-color\/default,black)] text-[length:var(--type\/heading\/s\/size,22px)] w-[326px]" data-node-id="I7929:36498;3492:1438">
+                    <p className="leading-[var(--type\/heading\/s\/line-height,31px)]">Código de verificação</p>
+                  </div>
+                  <div className="flex flex-col justify-center relative shrink-0 text-[0px] text-[color:var(--modal\/description\/text-color,#4b4b4b)] w-[256.025px]" data-node-id="I7929:36498;3492:1439">
+                    <p className="font-['Lato:Bold'] leading-[21px] mb-0 text-[#4b4b4b] text-[14px]">Preencha com o código de verificação</p>
+                    <p className="font-['Lato:Regular'] leading-[21px] text-[#4b4b4b] text-[14px]">enviado para o seu e-mail.</p>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col gap-[var(--form-field\/layout\/gap\/medium,8px)] items-start relative shrink-0 w-full" data-node-id="I7929:36498;3492:1440" data-name="Text input">
+                  <div className="bg-[var(--form-field\/background\/color\/disabled,#f5f5f5)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/disabled,#e1e1e1)] border-solid content-stretch flex gap-[var(--form-field\/content\/gap\/medium,8px)] items-center px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I7929:36498;3492:1440;1161:855" data-name="Input">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] min-w-px not-italic relative text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center" data-node-id="I7929:36498;3492:1440;1161:857">
+                      jo****@gm***.br
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36498;3492:1441" data-name="Container">
+                <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="I7929:36498;3492:1442" data-name="Input">
+                  <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="I7929:36498;3492:1443" data-name="Input">
+                    <div className="col-1 content-stretch flex gap-[4px] items-center ml-0 mt-0 relative row-1" data-node-id="I7929:36498;3492:1444" data-name="Código">
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36498;3492:1445" data-name="Input Box" />
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36498;3492:1446" data-name="Input Box" />
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36498;3492:1447" data-name="Input Box" />
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36498;3492:1448" data-name="Input Box" />
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36498;3492:1449" data-name="Input Box" />
+                      <div className="bg-[var(--form-field\/background\/color\/default,white)] border border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid relative rounded-[4px] shrink-0 size-[51px]" data-node-id="I7929:36498;3492:1450" data-name="Input Box" />
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex gap-[7px] items-center justify-center relative shrink-0" data-node-id="I7929:36498;3492:1451" data-name="Timer">
+                  <div className="relative shrink-0 size-[24px]" data-node-id="I7929:36498;3492:1452" data-name="Component 14">
+                    <div className="absolute contents inset-0" data-node-id="I7929:36498;3492:1452;203:1827" data-name="Group">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+                    </div>
+                  </div>
+                  <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/m\/line-height,24px)] not-italic relative shrink-0 text-[color:var(--modal\/description\/text-color,#4b4b4b)] text-[length:var(--type\/body\/m\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:36498;3492:1453">
+                    00:00:59
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[var(--button\/primary\/default\/background-color,#f84f00)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="I7929:36498;3492:1457" data-name="Button">
+            <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:36498;3492:1457;1894:641">
+              <p className="leading-[var(--type\/interface\/line-height,16px)]">Voltar</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center relative shrink-0 w-full" data-node-id="I7929:36498;3492:1458" data-name="Container">
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/x-small,8px)] items-center relative shrink-0 w-full" data-node-id="I7929:36498;3492:1459" data-name="Container">
+              <div className="content-stretch flex h-[65px] items-center justify-between relative shrink-0 w-full" data-node-id="I7929:36498;3492:1460" data-name="CTA">
+                <div className="content-stretch flex gap-[var(--modal\/content\/gap-inline\/medium,8px)] items-center relative shrink-0" data-node-id="I7929:36498;3492:1461" data-name="Container">
+                  <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:36498;3492:1462" data-name="Question Icon">
+                    <div className="absolute inset-[0_0_-3.77%_0]" data-node-id="I7929:36498;3492:1462;1079:868" data-name="_base/icon/help-circle">
+                      <div className="absolute inset-[4.17%]" data-node-id="I7929:36498;3492:1462;1079:868;1028:2093" data-name="help-circle">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgHelpCircle} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="I7929:36498;3492:1463" data-name="Container">
+                    <div className="col-1 flex h-[40.763px] items-center justify-center ml-0 mt-0 relative row-1 w-[255.932px]">
+                      <div className="flex-none rotate-[0.17deg] skew-x-[-0.18deg]">
+                        <div className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[0] not-italic relative text-[0px] text-black w-[255.688px] whitespace-pre-wrap" data-node-id="I7929:36498;3492:1464">
+                          <p className="font-['Lato:Bold'] mb-0 text-[14px]">
+                            <span className="leading-[17px] text-black">Clique aqui</span>
+                            <span className="leading-[normal] text-[#f84f00]">{` `}</span>
+                          </p>
+                          <p className="font-['Lato:Regular'] leading-[21px] text-[14px]">Se não receber o código</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:36498;3492:1465" data-name="Dropdown Icon">
+                  <div className="absolute inset-[0_2.04%_-2.69%_0]" data-node-id="I7929:36498;3492:1465;1077:114" data-name="_base/icon/chevron-down">
+                    <div className="absolute inset-[33.33%_20.83%]" data-node-id="I7929:36498;3492:1465;1077:114;1028:1880" data-name="Vector (Stroke)">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVectorStroke} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="border-[var(--modal\/divider\/color,#cacaca)] border-b-[length:var(--modal\/divider\/width,1px)] border-solid content-stretch flex items-center justify-between pb-[var(--spacing\/inset\/l,24px)] relative shrink-0 w-full" data-node-id="I7929:36498;3492:1466" data-name="Container">
+                <div className="content-stretch flex gap-[12px] items-center leading-[0] relative shrink-0" data-node-id="I7929:36498;3492:1467" data-name="Container">
+                  <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-node-id="I7929:36498;3493:907">
+                    <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="I7929:36498;3493:908">
+                      <div className="col-1 h-[19.2px] ml-0 mt-0 relative row-1 w-[24px]" data-node-id="I7929:36498;3493:909" data-name="Layer 2">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer2} />
+                      </div>
+                    </div>
+                  </div>
+                  <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] not-italic relative shrink-0 text-[0px] text-[color:var(--modal\/title\/text-color\/default,black)] w-[207px]" data-node-id="I7929:36498;3492:1469">
+                    <span className="font-['Lato:Regular'] leading-[21px] text-[14px] text-black">
+                      Não recebeu o email?
+                      <br aria-hidden />
+                    </span>
+                    <span className="font-['Lato:Bold'] leading-[17px] text-[14px] text-black">Veja o que fazer.</span>
+                  </p>
+                </div>
+                <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I7929:36498;3492:1470" data-name="Arrow Icon">
+                  <div className="absolute inset-[20.83%_33.33%]" data-node-id="I7929:36498;3492:1470;1077:103;1028:1876" data-name="chevron-right">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-start relative shrink-0 w-full" data-node-id="I7929:36498;3492:1471" data-name="Container">
+              <div className="content-stretch flex gap-[var(--modal\/content\/gap-inline\/large,16px)] items-end justify-end relative shrink-0 w-full" data-node-id="I7929:36498;3492:1489" data-name="Option Container">
+                <div className="content-stretch flex flex-[1_0_0] gap-[var(--modal\/content\/gap-inline\/medium,8px)] items-center min-w-px relative" data-node-id="I7929:36498;3492:1490" data-name="Container">
+                  <div className="flex flex-row items-center self-stretch">
+                    <div className="content-stretch flex h-full items-center pt-[var(--spacing\/inset\/l,24px)] relative shrink-0" data-node-id="I7929:36498;3492:1491" data-name="Icon">
+                      <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="I7929:36498;3492:1492">
+                        <div className="col-1 grid-cols-[max-content] grid-rows-[max-content] inline-grid ml-0 mt-0 place-items-start relative row-1" data-node-id="I7929:36498;3492:1493">
+                          <div className="col-1 h-[19.2px] ml-0 mt-0 relative row-1 w-[24px]" data-node-id="I7929:36498;3492:1494" data-name="Layer 2">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer2} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--modal\/content\/gap\/x-small,8px)] items-start min-w-px relative" data-node-id="I7929:36498;3492:1496" data-name="Container">
+                    <p className="[word-break:break-word] font-['Lato:Regular'] leading-[normal] not-italic relative shrink-0 text-[14px] text-black w-full" data-node-id="I7929:36498;3492:1497">
+                      Receber por E-mail
+                    </p>
+                    <div className="content-stretch flex flex-col gap-[var(--form-field\/layout\/gap\/medium,8px)] h-[48px] items-start relative shrink-0 w-full" data-node-id="I7929:36498;3492:1498" data-name="Text input">
+                      <div className="bg-[var(--form-field\/background\/color\/disabled,#f5f5f5)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/disabled,#e1e1e1)] border-solid content-stretch flex gap-[var(--form-field\/content\/gap\/medium,8px)] items-center px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I7929:36498;3492:1498;1161:855" data-name="Input">
+                        <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] min-w-px not-italic relative text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)]" data-node-id="I7929:36498;3492:1498;1161:857">
+                          jo****@gm***.br
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-[var(--button\/primary\/default\/background-color,#f84f00)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-[100px]" data-node-id="I7929:36498;3492:1499" data-name="Button">
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/default\/text-color,white)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I7929:36498;3492:1499;1894:641">
+                    <p className="leading-[var(--type\/interface\/line-height,16px)]">Reenviar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="I7929:36498;3492:1500" data-name="Precisa de Ajuda?" />
+      </div>
+    </div>
+  );
+}
+
+---
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+---
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+---
+
+These styles are contained in the design: Heading/S: Font(family: "type/family/brand", style: Bold, size: type/heading/s/size, weight: 700, lineHeight: type/heading/s/line-height, letterSpacing: 0), Yetz Title 14: Font(family: "Lato", style: Bold, size: 14, weight: 700, lineHeight: 100, letterSpacing: 0), Form Field/Large: Font(family: "type/family/brand", style: Regular, size: type/interface/standard/size, weight: 400, lineHeight: type/interface/line-height, letterSpacing: 0), Body/M-Default: Font(family: "type/family/brand", style: Regular, size: type/body/m/size, weight: 400, lineHeight: type/body/m/line-height, letterSpacing: 0), Yetz Text 14: Font(family: "Lato", style: Regular, size: 14, weight: 400, lineHeight: 100, letterSpacing: 0), Button/Label/Medium: Font(family: "type/family/brand", style: Bold, size: type/interface/standard/size, weight: 700, lineHeight: type/interface/line-height, letterSpacing: 0), Cores Yetz/preto 01: #000000.
+
+---
+
+Images and SVGs will be stored as constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000'. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

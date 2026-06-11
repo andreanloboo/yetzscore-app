@@ -1,0 +1,26 @@
+// Figma node 7929:36509 — "Senha redefinida com sucesso" (modal)
+// Container: bg white, padding 32px, radius 12px; conteúdo w-327px, gap 24px, centralizado.
+// Ícone status/check-circle 32px (verde no projeto). Título 22px/26px Lato Bold preto, w-317.
+// Descrição 14px/17px #4b4b4b, w-297. Botão primário "Efetuar login" h-48 radius 6px w-full,
+// texto bold 16px branco (token primary — usar #00842f do projeto; fallback laranja #f84f00 ignorado).
+
+const imgCheckCircle = "https://www.figma.com/api/mcp/asset/3bb7452a-306f-4abf-9b32-416f8030d24c";
+
+export default function SenhaRedefinidaComSucesso() {
+  return (
+    <div className="bg-white flex items-center p-[32px] rounded-[12px] size-full" data-node-id="7929:36509" data-name="Senha redefinida com sucesso">
+      <div className="flex flex-col gap-[24px] items-center justify-center w-[327px]">
+        <div className="size-[32px]" data-name="status/check-circle">
+          <img alt="" src={imgCheckCircle} />
+        </div>
+        <div className="flex flex-col gap-[8px] items-center text-center" data-name="Text">
+          <p className="font-['Lato:Bold'] text-black text-[22px] leading-[26px] w-[317px]">Senha redefinida com sucesso!</p>
+          <p className="font-['Lato:Regular'] text-[#4b4b4b] text-[14px] leading-[17px] w-[297px]">Uma nova senha foi redefinida, clique no botão abaixo para efetuar o login. </p>
+        </div>
+        <div className="flex flex-col gap-[8px] w-full" data-name="Button container">
+          <button className="h-[48px] w-full rounded-[6px] bg-[--button-primary] px-[32px] py-[12px] font-['Lato:Bold'] text-white text-[16px] leading-[16px]">Efetuar login</button>
+        </div>
+      </div>
+    </div>
+  );
+}

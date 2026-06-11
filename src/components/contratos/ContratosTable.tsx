@@ -1,8 +1,15 @@
-import { useRef } from "react";
+import { useRef, type KeyboardEvent } from "react";
 import StatusBadge from "./StatusBadge";
 import type { Contrato, ColumnConfig, ContratoStatus } from "./types";
 
 type StatusFilter = "Todos" | "Aguardando aprovação" | "Aprovado" | "Aguardando vínculo";
+
+export type SortDirection = "asc" | "desc";
+
+export interface SortState {
+  columnId: string;
+  direction: SortDirection;
+}
 
 interface ContratosTableProps {
   groupLabel: string;
@@ -18,10 +25,12 @@ interface ContratosTableProps {
   showDetalhes?: boolean;
   statusFilter: StatusFilter;
   onStatusFilterOpen: (x: number, y: number) => void;
+  sort: SortState | null;
+  onSortChange: (sort: SortState | null) => void;
 }
 
-function getColumnValue(col: ColumnConfig, row: Contrato): string {
-  switch (col.id) {
+function getColumnValue(colId: string, row: Contrato): string {
+  switch (colId) {
     case "codigoRevenda": return row.codigoRevenda;
     case "grupoEconomico": return row.grupoEconomico;
     case "cnpjCliente": return row.cnpjCliente;
@@ -41,6 +50,32 @@ function getColumnValue(col: ColumnConfig, row: Contrato): string {
 const visibleColumns = (cols: ColumnConfig[]) =>
   [...cols].filter((c) => c.visible).sort((a, b) => a.order - b.order);
 
+// Sort cycle (MUI DataGrid): none → asc → desc → none
+function nextSort(current: SortState | null, columnId: string): SortState | null {
+  if (!current || current.columnId !== columnId) return { columnId, direction: "asc" };
+  if (current.direction === "asc") return { columnId, direction: "desc" };
+  return null;
+}
+
+const isEmptyValue = (v: string) => v === "" || v === "—";
+
+function SortArrow({ direction }: { direction: SortDirection | null }) {
+  return (
+    <svg
+      className={`size-4 shrink-0 transition-[opacity,transform] duration-200 ${
+        direction ? "opacity-100" : "opacity-0 group-hover:opacity-40"
+      } ${direction === "desc" ? "rotate-180" : ""}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
+      <line x1="12" y1="19" x2="12" y2="5" />
+      <polyline points="5,12 12,5 19,12" />
+    </svg>
+  );
+}
+
 export default function ContratosTable({
   groupLabel,
   contratos,
@@ -55,6 +90,8 @@ export default function ContratosTable({
   showDetalhes = false,
   statusFilter,
   onStatusFilterOpen,
+  sort,
+  onSortChange,
 }: ContratosTableProps) {
   const statusHeaderRef = useRef<HTMLTableCellElement>(null);
   const cols = visibleColumns(columns);
@@ -65,6 +102,37 @@ export default function ContratosTable({
   const filtered = statusFilter === "Todos"
     ? contratos
     : contratos.filter((c) => c.status === (statusFilter as ContratoStatus));
+
+  const sortValue = (row: Contrato): string =>
+    sort?.columnId === "status" ? row.status : sort ? getColumnValue(sort.columnId, row) : "";
+
+  const sorted = sort
+    ? [...filtered].sort((a, b) => {
+        const va = sortValue(a);
+        const vb = sortValue(b);
+        // Empty values always last, regardless of direction
+        if (isEmptyValue(va) && isEmptyValue(vb)) return 0;
+        if (isEmptyValue(va)) return 1;
+        if (isEmptyValue(vb)) return -1;
+        const cmp = va.localeCompare(vb, "pt-BR", { numeric: true });
+        return sort.direction === "asc" ? cmp : -cmp;
+      })
+    : filtered;
+
+  const sortDirectionOf = (columnId: string): SortDirection | null =>
+    sort?.columnId === columnId ? sort.direction : null;
+
+  const ariaSortOf = (columnId: string): "ascending" | "descending" | "none" => {
+    const dir = sortDirectionOf(columnId);
+    return dir === "asc" ? "ascending" : dir === "desc" ? "descending" : "none";
+  };
+
+  const handleSortKeyDown = (columnId: string) => (e: KeyboardEvent<HTMLTableCellElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onSortChange(nextSort(sort, columnId));
+    }
+  };
 
   return (
     <div className="flex flex-col gap-6">
@@ -117,7 +185,11 @@ export default function ContratosTable({
               {cols.map((col, ci) => (
                 <th
                   key={col.id}
-                  className={`bg-[#00842f] h-[54px] px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap ${
+                  aria-sort={ariaSortOf(col.id)}
+                  tabIndex={0}
+                  onClick={() => onSortChange(nextSort(sort, col.id))}
+                  onKeyDown={handleSortKeyDown(col.id)}
+                  className={`group bg-[#00842f] h-[54px] cursor-pointer select-none px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap ${
                     !showAprovarAction && ci === 0 ? "rounded-tl-lg rounded-bl-lg" : ""
                   }`}
                 >
@@ -132,23 +204,36 @@ export default function ContratosTable({
                       <circle cx="15" cy="18" r="1.5" />
                     </svg>
                     {col.label}
+                    <SortArrow direction={sortDirectionOf(col.id)} />
                   </div>
                 </th>
               ))}
               {/* Status column */}
               <th
                 ref={statusHeaderRef}
-                className="bg-[#00842f] h-[54px] px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap cursor-pointer"
-                onClick={() => {
-                  const rect = statusHeaderRef.current?.getBoundingClientRect();
-                  if (rect) onStatusFilterOpen(rect.left, rect.bottom + 4);
-                }}
+                aria-sort={ariaSortOf("status")}
+                tabIndex={0}
+                onClick={() => onSortChange(nextSort(sort, "status"))}
+                onKeyDown={handleSortKeyDown("status")}
+                className="group bg-[#00842f] h-[54px] cursor-pointer select-none px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap"
               >
                 <div className="flex items-center gap-2">
                   Status
-                  <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <polyline points="6,9 12,15 18,9" />
-                  </svg>
+                  <SortArrow direction={sortDirectionOf("status")} />
+                  <button
+                    type="button"
+                    aria-label="Filtrar por status"
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const rect = statusHeaderRef.current?.getBoundingClientRect();
+                      if (rect) onStatusFilterOpen(rect.left, rect.bottom + 4);
+                    }}
+                  >
+                    <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <polyline points="6,9 12,15 18,9" />
+                    </svg>
+                  </button>
                 </div>
               </th>
               {/* Ações / Detalhes */}
@@ -158,7 +243,7 @@ export default function ContratosTable({
             </tr>
           </thead>
           <tbody>
-            {filtered.map((row) => (
+            {sorted.map((row) => (
               <tr key={row.id} className="bg-[#f5f5f5]">
                 {showAprovarAction && (
                   <td className="rounded-tl-lg rounded-bl-lg w-12 px-4 py-3 text-center">
@@ -181,7 +266,7 @@ export default function ContratosTable({
                       !showAprovarAction && ci === 0 ? "rounded-tl-lg rounded-bl-lg" : ""
                     }`}
                   >
-                    {getColumnValue(col, row)}
+                    {getColumnValue(col.id, row)}
                   </td>
                 ))}
                 {/* Status */}
@@ -210,7 +295,7 @@ export default function ContratosTable({
                 </td>
               </tr>
             ))}
-            {filtered.length === 0 && (
+            {sorted.length === 0 && (
               <tr className="bg-[#f5f5f5]">
                 <td
                   colSpan={cols.length + (showAprovarAction ? 1 : 0) + 2}

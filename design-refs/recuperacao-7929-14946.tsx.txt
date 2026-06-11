@@ -1,0 +1,30 @@
+// Figma node 7929:14946 — "Acesso bloqueado / Temporizador" (modal)
+// Container: bg white, padding 32px, radius 12px; conteúdo w-327px, gap 24px, centralizado.
+// Ícone status/x-circle 32px (vermelho). Título "Acesso temporariamente bloqueado." 22px/26px Lato Bold preto, w-317, centro.
+// Bloco gap 16px: descrição "Tempo restante para tentar novamente:" 14px/17px #4b4b4b w-297 centro.
+// Timer: ícone relógio 24px + texto "00:00:59" Lato Regular 16px #4b4b4b, gap 7px.
+// Botão primário "Ok" h-48 radius 6px w-full texto bold 16px branco (token primary — usar #00842f do projeto).
+
+const imgXCircle = "https://www.figma.com/api/mcp/asset/4b2f2d7c-49bb-4f33-bc11-30aa432416dc";
+const imgGroup = "https://www.figma.com/api/mcp/asset/312ce5de-914e-4d26-8c70-988466a52429"; // relógio
+
+export default function AcessoBloqueadoTemporizador() {
+  return (
+    <div className="bg-white flex items-center p-[32px] rounded-[12px] size-full" data-node-id="7929:14946" data-name="Acesso bloqueado / Temporizador">
+      <div className="flex flex-col gap-[24px] items-center justify-center w-[327px]">
+        <div className="size-[32px]" data-name="status/x-circle"><img alt="" src={imgXCircle} /></div>
+        <p className="font-['Lato:Bold'] text-black text-[22px] leading-[26px] text-center w-[317px]">Acesso temporariamente bloqueado.</p>
+        <div className="flex flex-col gap-[16px] items-center">
+          <p className="font-['Lato:Regular'] text-[#4b4b4b] text-[14px] leading-[17px] text-center w-[297px]">Tempo restante para tentar novamente:</p>
+          <div className="flex gap-[7px] items-center justify-center" data-name="Timer">
+            <img alt="" className="size-[24px]" src={imgGroup} />
+            <p className="font-['Lato:Regular'] text-[16px] text-[#4b4b4b] text-center whitespace-nowrap">00:00:59</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-[8px] w-full">
+          <button className="h-[48px] w-full rounded-[6px] bg-[--button-primary] px-[32px] py-[12px] font-['Lato:Bold'] text-white text-[16px] leading-[16px]">Ok</button>
+        </div>
+      </div>
+    </div>
+  );
+}

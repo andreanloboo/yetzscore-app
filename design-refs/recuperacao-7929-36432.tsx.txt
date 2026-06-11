@@ -1,0 +1,58 @@
+// Figma node 7929:36432 — "Esqueci minha senha" (modal)
+// Obs.: fallbacks de token aparecem como #f84f00 (laranja) mas o design system do projeto usa verde #00842f.
+
+const imgLock = "https://www.figma.com/api/mcp/asset/9600281e-60fc-45f8-bb20-14480394d4b5";
+
+export default function EsqueciMinhaSenha() {
+  return (
+    <div className="bg-[var(--modal\/container\/background-color,white)] content-stretch flex items-center p-[var(--modal\/container\/padding,32px)] relative rounded-[var(--modal\/container\/border-radius,12px)] size-full" data-node-id="7929:36432" data-name="Esqueci minha senha">
+      <div className="content-stretch flex flex-col gap-[var(--modal\/content\/gap\/medium,24px)] items-center justify-center relative shrink-0 w-[327px]" data-node-id="I7929:36432;1904:101" data-name="Slot 2">
+        <div className="overflow-clip relative shrink-0 size-[40px]" data-node-id="I7929:36432;1904:101;7929:36422" data-name="object/lock">
+          <div className="absolute inset-[0_-0.52%_-4.51%_0]" data-name="_base/icon/lock">
+            <div className="absolute inset-[4.17%_8.33%]" data-name="lock">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLock} />
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] items-center leading-[0] not-italic relative shrink-0 text-center" data-name="Text">
+          <div className="flex flex-col font-['Lato:Bold'] justify-center relative shrink-0 text-black text-[22px] w-[317px]">
+            <p className="leading-[26px]">Esqueci minha senha</p>
+          </div>
+          <div className="flex flex-col font-['Lato:Regular'] justify-center relative shrink-0 text-[#4b4b4b] text-[14px] w-[297px]">
+            <p className="leading-[17px]">Digite o e-mail cadastrado para receber as instruções de recuperação de senha.</p>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Text input">
+            <div className="content-stretch flex gap-[8px] h-[24px] items-center overflow-clip relative shrink-0 w-full" data-name="_Label">
+              <p className="font-['Lato:Regular'] leading-[17px] text-black text-[14px] whitespace-nowrap">E-mail</p>
+            </div>
+            <div className="bg-white border border-[#cacaca] border-solid flex gap-[8px] items-center px-[16px] py-[16px] relative rounded-[6px] shrink-0 w-full" data-name="Input">
+              <p className="flex-[1_0_0] font-['Lato:Regular'] leading-[16px] text-[16px] text-[rgba(0,0,0,0.5)]">Insira seu e-mail</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Text input">
+            <div className="content-stretch flex gap-[8px] h-[24px] items-center overflow-clip relative shrink-0 w-full" data-name="_Label">
+              <p className="font-['Lato:Regular'] leading-[17px] text-black text-[14px] whitespace-nowrap">Funcional</p>
+            </div>
+            <div className="bg-white border border-[#cacaca] border-solid flex gap-[8px] items-center px-[16px] py-[16px] relative rounded-[6px] shrink-0 w-full" data-name="Input">
+              <p className="flex-[1_0_0] font-['Lato:Regular'] leading-[16px] text-[16px] text-[rgba(0,0,0,0.5)]">Insira sua funcional</p>
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Button container">
+          <div className="bg-[var(--button\/primary\/default\/background-color,#f84f00)] flex gap-[8px] h-[48px] items-center justify-center overflow-clip px-[32px] py-[12px] relative rounded-[6px] shrink-0 w-full" data-name="Button">
+            <div className="flex flex-col font-['Lato:Bold'] justify-center leading-[0] relative shrink-0 text-white text-[16px] text-center whitespace-nowrap">
+              <p className="leading-[16px]">Continuar</p>
+            </div>
+          </div>
+          <div className="bg-transparent border border-[var(--button\/secondary\/default\/border-color,#f84f00)] border-solid flex gap-[8px] h-[48px] items-center justify-center overflow-clip px-[32px] py-[12px] relative rounded-[6px] shrink-0 w-full" data-name="Button">
+            <div className="flex flex-col font-['Lato:Bold'] justify-center leading-[0] relative shrink-0 text-[var(--button\/secondary\/default\/text-color,#f84f00)] text-[16px] text-center whitespace-nowrap">
+              <p className="leading-[16px]">Cancelar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

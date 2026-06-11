@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import AppSidebar from "../components/AppSidebar";
 import ContratosTable from "../components/contratos/ContratosTable";
+import type { SortState } from "../components/contratos/ContratosTable";
 import GerenciarColunasPanel from "../components/contratos/GerenciarColunasPanel";
 import DetalhesContratoPanel from "../components/contratos/DetalhesContratoPanel";
 import {
@@ -74,6 +75,15 @@ export default function ContratosPage() {
     maria: "Todos",
     joao: "Todos",
     junior: "Todos",
+  });
+
+  // ─── Sort state (independent per table group) ──────────────────────────────
+  const [sortStates, setSortStates] = useState<Record<string, SortState | null>>({
+    kaique: null,
+    vinculados: null,
+    maria: null,
+    joao: null,
+    junior: null,
   });
 
   // ─── Selection state ───────────────────────────────────────────────────────
@@ -231,6 +241,10 @@ export default function ContratosPage() {
 
   function openStatusDropdown(group: string, x: number, y: number) {
     setOverlay({ kind: "statusDropdown", tableGroup: group, x, y });
+  }
+
+  function updateSort(group: string, sort: SortState | null) {
+    setSortStates((prev) => ({ ...prev, [group]: sort }));
   }
 
   const findContrato = (id: string) => contratos.find((c) => c.id === id);
@@ -451,6 +465,8 @@ export default function ContratosPage() {
                       showAprovarAction
                       statusFilter={statusFilters.kaique}
                       onStatusFilterOpen={(x, y) => openStatusDropdown("kaique", x, y)}
+                      sort={sortStates.kaique ?? null}
+                      onSortChange={(s) => updateSort("kaique", s)}
                     />
                     <ContratosTable
                       groupLabel="Vinculados - Confirmar Vendedor"
@@ -466,6 +482,8 @@ export default function ContratosPage() {
                       showDetalhes
                       statusFilter={statusFilters.vinculados}
                       onStatusFilterOpen={(x, y) => openStatusDropdown("vinculados", x, y)}
+                      sort={sortStates.vinculados ?? null}
+                      onSortChange={(s) => updateSort("vinculados", s)}
                     />
                   </>
                 )}
@@ -483,6 +501,8 @@ export default function ContratosPage() {
                     showAprovarAction
                     statusFilter={statusFilters.maria}
                     onStatusFilterOpen={(x, y) => openStatusDropdown("maria", x, y)}
+                    sort={sortStates.maria ?? null}
+                    onSortChange={(s) => updateSort("maria", s)}
                   />
                 )}
                 {showJoao && (
@@ -499,6 +519,8 @@ export default function ContratosPage() {
                     showAprovarAction
                     statusFilter={statusFilters.joao}
                     onStatusFilterOpen={(x, y) => openStatusDropdown("joao", x, y)}
+                    sort={sortStates.joao ?? null}
+                    onSortChange={(s) => updateSort("joao", s)}
                   />
                 )}
                 {showJunior && (
@@ -515,6 +537,8 @@ export default function ContratosPage() {
                     showAprovarAction
                     statusFilter={statusFilters.junior}
                     onStatusFilterOpen={(x, y) => openStatusDropdown("junior", x, y)}
+                    sort={sortStates.junior ?? null}
+                    onSortChange={(s) => updateSort("junior", s)}
                   />
                 )}
               </div>
