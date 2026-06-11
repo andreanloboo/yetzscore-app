@@ -1,0 +1,7 @@
+﻿// valor-fixo: confirmacao (8435:10302)
+// Header: LinkIcon + "Vincular"
+// Bold 16px black center: "Jéssica Silva Luz" / "Doc: 893.470.130-72"
+// Description 14px #4b4b4b w-297 center, 2 linhas:
+//   "Deseja confirmar o vínculo do Vendedor?"
+//   "No valor: R$ 300,00"
+// Buttons: [Sim primary] [Não outline]

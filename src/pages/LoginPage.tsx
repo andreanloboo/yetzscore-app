@@ -1,18 +1,61 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import loginY from "../assets/login-y.svg";
 import logoScore1 from "../assets/logo-score-1.svg";
 import logoScore2 from "../assets/logo-score-2.svg";
+import { isLoginValid, isSenhaValid } from "../components/login/validation";
+import { useCountdown } from "../components/login/useCountdown";
+import { inputBase, inputBorder, primaryButton } from "../components/login/ui";
+import { FadeSlideIn } from "../components/login/ModalShell";
+import {
+  BloqueioDefinitivoModal,
+  BloqueioTemporarioModal,
+} from "../components/login/BloqueioModals";
+import RecuperarSenhaFlow from "../components/login/RecuperarSenhaFlow";
 
 export default function LoginPage() {
   const navigate = useNavigate();
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
+  // ─── Máquina de estados das tentativas ──────────────────────────────────────
+  // failCount: 0..2 livre | 3 → bloqueio temporário (59s) | 5 → bloqueio definitivo
+  const [failCount, setFailCount] = useState(0);
+  const [showError, setShowError] = useState(false);
+  const [tempLockOpen, setTempLockOpen] = useState(false);
+  const [permLocked, setPermLocked] = useState(false);
+  const [permLockOpen, setPermLockOpen] = useState(false);
+  const [showRecuperar, setShowRecuperar] = useState(false);
+
+  const { remaining: lockRemaining, restart: startLock } = useCountdown(0);
+  const tempLocked = lockRemaining > 0;
+  const entrarDisabled = tempLocked || permLocked;
+
+  // Fecha o modal de bloqueio temporário automaticamente quando o cronômetro zera
+  useEffect(() => {
+    if (lockRemaining === 0 && tempLockOpen) setTempLockOpen(false);
+  }, [lockRemaining, tempLockOpen]);
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    navigate("/campanhas");
+    if (entrarDisabled) return;
+
+    if (isLoginValid(login) && isSenhaValid(senha)) {
+      navigate("/campanhas");
+      return;
+    }
+
+    const next = failCount + 1;
+    setFailCount(next);
+    setShowError(true);
+    if (next === 3) {
+      startLock(59);
+      setTempLockOpen(true);
+    } else if (next >= 5) {
+      setPermLocked(true);
+      setPermLockOpen(true);
+    }
   }
 
   return (
@@ -45,7 +88,7 @@ export default function LoginPage() {
                   Para entrar, basta inserir seus dados de login
                 </p>
               </div>
-              <form className="flex w-full flex-col items-center gap-6" onSubmit={handleSubmit}>
+              <form className="flex w-full flex-col items-center gap-6" onSubmit={handleSubmit} noValidate>
                 <div className="flex w-full flex-col gap-6">
                   <div className="flex w-full flex-col gap-2">
                     <div className="flex flex-col gap-2">
@@ -55,10 +98,14 @@ export default function LoginPage() {
                       <input
                         id="login"
                         type="text"
+                        inputMode="numeric"
                         value={login}
-                        onChange={(e) => setLogin(e.target.value)}
+                        onChange={(e) => {
+                          setLogin(e.target.value);
+                          setShowError(false);
+                        }}
                         placeholder="Digite sua funcional"
-                        className="w-full rounded-md border border-[#cacaca] bg-white p-4 text-base leading-4 text-black outline-none placeholder:text-[#4b4b4b] focus:border-[#00842f]"
+                        className={`${inputBase} ${inputBorder(showError)} placeholder:text-[#4b4b4b]`}
                       />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -69,20 +116,31 @@ export default function LoginPage() {
                         id="senha"
                         type="password"
                         value={senha}
-                        onChange={(e) => setSenha(e.target.value)}
+                        onChange={(e) => {
+                          setSenha(e.target.value);
+                          setShowError(false);
+                        }}
                         placeholder="Digite sua senha"
-                        className="w-full rounded-md border border-[#cacaca] bg-white p-4 text-base leading-4 text-black outline-none placeholder:text-[#4b4b4b] focus:border-[#00842f]"
+                        className={`${inputBase} ${inputBorder(showError)} placeholder:text-[#4b4b4b]`}
                       />
                     </div>
+                    {showError && (
+                      <FadeSlideIn>
+                        <p className="text-sm leading-[17px] text-[#cc0000]">
+                          Dados inválidos. Verifique e tente novamente.
+                        </p>
+                      </FadeSlideIn>
+                    )}
                   </div>
-                  <button
-                    type="submit"
-                    className="flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#00842f] px-8 py-3 text-center text-base font-bold text-white transition-colors hover:bg-[#006b26]"
-                  >
+                  <button type="submit" disabled={entrarDisabled} className={`${primaryButton} w-full`}>
                     Entrar
                   </button>
                 </div>
-                <button type="button" className="text-center text-base font-bold leading-4 text-[#00842f]">
+                <button
+                  type="button"
+                  onClick={() => setShowRecuperar(true)}
+                  className="cursor-pointer rounded text-center text-base font-bold leading-4 text-[#00842f] transition-colors duration-150 hover:text-[#006b26] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f] focus-visible:ring-offset-2"
+                >
                   Esqueci minha senha
                 </button>
               </form>
@@ -108,6 +166,17 @@ export default function LoginPage() {
         </div>
       </div>
       <Footer />
+
+      {/* Bloqueio temporário (3ª falha): cronômetro ao vivo; Ok fecha, Entrar segue desabilitado */}
+      {tempLockOpen && (
+        <BloqueioTemporarioModal remaining={lockRemaining} onOk={() => setTempLockOpen(false)} />
+      )}
+
+      {/* Bloqueio definitivo (5ª falha): Entrar desabilitado até recarregar a página */}
+      {permLockOpen && <BloqueioDefinitivoModal onOk={() => setPermLockOpen(false)} />}
+
+      {/* Fluxo de recuperação de senha */}
+      {showRecuperar && <RecuperarSenhaFlow onClose={() => setShowRecuperar(false)} />}
     </div>
   );
 }

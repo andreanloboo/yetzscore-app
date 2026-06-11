@@ -1,0 +1,15 @@
+// get_design_context — nó 8185:14414 "Cadastrar Nova Delegação / Gerente de Negócios" (resumo dos valores relevantes)
+//
+// Container do modal: bg white, padding 32px, border-radius 12px; conteúdo interno w-325px, gap 24px, items-center.
+// Título: ícone edit 24px + "Cadastrar Nova Delegação" — Lato Bold 22px / line-height 26px, cor #00842f, centralizado.
+// Campos (gap 8px entre campos; label→campo gap 8px):
+//   - Label: Lato Regular 14px / lh 17px, cor preto.
+//   - Campo (Select/Input): bg white, border 1px #cacaca, radius 6px, padding 16px (inline e block),
+//     placeholder Lato Regular 16px / lh 16px cor #8e8e8e ("Buscar Usuário", "Selecionar motivo",
+//     "Selecionar período", "Observação Adicional"), chevron-down/calendar 16px à direita.
+//   - Textarea Observação: mesmo estilo, pt 16px pb 68px (≈ h alto).
+// Chips substitutos (linha abaixo do campo, gap 6px): bg #eee, h 21px, px 8px py 4px, radius 6px,
+//   texto Lato Regular 12px / lh 17px cor #4b4b4b ("Kaique") + ícone close 12px.
+// Botões (gap 8px, full width, h 48px, radius 6px, padding 12px 32px):
+//   - Salvar: bg #00842f, texto Lato Bold 16px branco.
+//   - Voltar: bg transparente, border 1px #00842f, texto Lato Bold 16px #00842f.

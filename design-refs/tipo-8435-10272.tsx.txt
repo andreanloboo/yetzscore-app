@@ -1,0 +1,6 @@
+﻿// valor-fixo: resultado CPF (8435:10272)
+// Header: LinkIcon + "Vincular" (22px bold #00842f)
+// Label: "Vincule o Vendedor"; input com "893.470.130-72"
+// Result row bg #dffbe8, 3 cells h-54.667 px-16 py-12, text 14px #015e22:
+//   "Jéssica Silva Luz" | "893.470.130-72" | "R$ 300,00"   (SEM badge)
+// Buttons: [Selecionar primary #00842f] [Adicionar novo funcionário outline] [Sair ghost]

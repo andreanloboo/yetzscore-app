@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { ModalBackdrop } from "../Modals";
+import type { CampaignType } from "../types";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 export type VincularEntry = "vincular" | "alterar" | "confirmar";
@@ -11,13 +12,18 @@ export interface Funcionario {
   cpf: string;
 }
 
-// Mock directory used by the CPF search (per flow spec)
+// Mock directory used by the CPF search (per flow spec — financiamento)
 const FUNCIONARIOS: Funcionario[] = [
   { nome: "Andrean Rafael Lobo", cpf: "893.470.130-72" },
   { nome: "Eduardo Gomes", cpf: "453.470.130-72" },
 ];
 
-const VINCULO_ATUAL_DEFAULT: Funcionario = FUNCIONARIOS[0];
+// Mock directory for valor-fixo / numero-sorte (per Figma 8435:10272 / 8428:18518)
+const FUNCIONARIOS_VALOR: Funcionario[] = [
+  { nome: "Jéssica Silva Luz", cpf: "893.470.130-72" },
+];
+
+const VALOR_FIXO = "R$ 300,00";
 
 // ─── CPF / CNPJ mask helpers ─────────────────────────────────────────────────
 const onlyDigits = (s: string) => s.replace(/\D/g, "");
@@ -224,12 +230,16 @@ function QuemStep({ onSelecionar, onClose }: { onSelecionar: (role: VincularRole
 // ─── Step: CPF search ────────────────────────────────────────────────────────
 function CpfSearchStep({
   role,
+  funcionarios,
+  resultCells,
   onSelect,
   onAddFuncionario,
   onExit,
   onClose,
 }: {
   role: VincularRole;
+  funcionarios: Funcionario[];
+  resultCells: (pessoa: Funcionario) => string[];
   onSelect: (pessoa: Funcionario) => void;
   onAddFuncionario: () => void;
   onExit: () => void; // Sair (Vendedor) / Pular (Gerente)
@@ -242,7 +252,7 @@ function CpfSearchStep({
   const digits = onlyDigits(value);
   const matches =
     digits.length >= 6
-      ? FUNCIONARIOS.filter((f) => onlyDigits(f.cpf).startsWith(digits))
+      ? funcionarios.filter((f) => onlyDigits(f.cpf).startsWith(digits))
       : [];
   const liveInvalid = digits.length === 11 && matches.length === 0;
   const showInvalid = liveInvalid || feedback === "invalido";
@@ -292,7 +302,7 @@ function CpfSearchStep({
           {matches.map((m) => (
             <ResultRow
               key={m.cpf}
-              cells={[m.nome, m.cpf, "Não cadastrado"]}
+              cells={resultCells(m)}
               onClick={() => onSelect(m)}
             />
           ))}
@@ -340,16 +350,63 @@ function CardStep({
   );
 }
 
+// ─── Step: selected person card — valor-fixo / numero-sorte ──────────────────
+// Per Figma 8435:10285 (com valor) / 8428:18569 (sem valor): label "Vendedor"
+// acima do card com nome + CPF + refresh; valor em campo desabilitado ao lado.
+function CardStepValor({
+  pessoa,
+  valor,
+  onVincular,
+  onRedo,
+  onClose,
+}: {
+  pessoa: Funcionario;
+  valor: string | null;
+  onVincular: () => void;
+  onRedo: () => void;
+  onClose: () => void;
+}) {
+  return (
+    <WizardCard onClose={onClose}>
+      <WizardHeader icon={<LinkIcon />} title="Vincular" />
+      <div className="flex w-full items-end gap-4">
+        <div className="flex min-w-0 flex-1 flex-col gap-2">
+          <p className="text-sm leading-[17px] text-black">Vendedor</p>
+          <div className="flex items-center justify-between gap-3 rounded-md border border-[#cacaca] bg-white px-4 py-4">
+            <p className="truncate text-base leading-4 text-black">{pessoa.nome}</p>
+            <p className="whitespace-nowrap text-base leading-4 text-black">{pessoa.cpf}</p>
+            <button onClick={onRedo} aria-label="Refazer busca" className="cursor-pointer">
+              <RefreshIcon />
+            </button>
+          </div>
+        </div>
+        {valor !== null && (
+          <div className="rounded-md border border-[#e1e1e1] bg-[#f5f5f5] px-4 py-4">
+            <p className="whitespace-nowrap text-base leading-4 text-[#8e8e8e]">{valor}</p>
+          </div>
+        )}
+      </div>
+      <div className="flex w-full flex-col gap-2">
+        <BtnPrimary onClick={onVincular}>Vincular</BtnPrimary>
+        <BtnOutline onClick={onClose}>Sair</BtnOutline>
+      </div>
+    </WizardCard>
+  );
+}
+
 // ─── Step: confirm vínculo (Sim / Não) ───────────────────────────────────────
 function ConfirmaStep({
   role,
   pessoa,
+  valorLine,
   onSim,
   onNao,
   onClose,
 }: {
   role: VincularRole;
   pessoa: Funcionario;
+  /** 2ª linha "No valor: R$ 300,00" (apenas valor-fixo, ref 8435:10302) */
+  valorLine?: string | null;
   onSim: () => void;
   onNao: () => void;
   onClose: () => void;
@@ -361,11 +418,14 @@ function ConfirmaStep({
         <p>{pessoa.nome}</p>
         <p>Doc: {pessoa.cpf}</p>
       </div>
-      <p className="w-[297px] text-center text-sm text-[#4b4b4b]">
-        {role === "Vendedor"
-          ? "Deseja confirmar o vínculo do Vendedor?"
-          : "Deseja confirmar o vínculo do Gerente/F&I?"}
-      </p>
+      <div className="w-[297px] text-center text-sm text-[#4b4b4b]">
+        <p>
+          {role === "Vendedor"
+            ? "Deseja confirmar o vínculo do Vendedor?"
+            : "Deseja confirmar o vínculo do Gerente/F&I?"}
+        </p>
+        {valorLine && <p>No valor: {valorLine}</p>}
+      </div>
       <div className="flex w-full flex-col gap-2">
         <BtnPrimary onClick={onSim}>Sim</BtnPrimary>
         <BtnOutline onClick={onNao}>Não</BtnOutline>
@@ -491,18 +551,19 @@ function AddConfirmaStep({
 
 // ─── Step: alterar vínculo ───────────────────────────────────────────────────
 function AlterarStep({
-  vinculoAtual,
+  cells,
   onAlterar,
   onClose,
 }: {
-  vinculoAtual: Funcionario;
+  /** Linha do vínculo atual (formato varia por tipo de campanha) */
+  cells: string[];
   onAlterar: () => void;
   onClose: () => void;
 }) {
   return (
     <WizardCard onClose={onClose}>
       <WizardHeader icon={<LinkIcon />} title="Alterar vinculo" />
-      <ResultRow cells={[vinculoAtual.nome, vinculoAtual.cpf, "Não cadastrado"]} />
+      <ResultRow cells={cells} />
       <p className="w-[297px] text-center text-sm text-[#4b4b4b]">Deseja substituir o vinculo atual?</p>
       <div className="flex w-full flex-col gap-2">
         <BtnPrimary onClick={onAlterar}>Alterar</BtnPrimary>
@@ -562,12 +623,14 @@ function SucessoOkStep({
 
 // ─── Step: completar dados do vendedor ───────────────────────────────────────
 const COMPLETAR_CPF = "893.470.130-72";
-const COMPLETAR_VALOR = "R$ 300,00";
 
 function CompletarDadosStep({
+  valor,
   onConfirmar,
   onClose,
 }: {
+  /** "R$ 300,00" (financiamento / valor-fixo) ou null (numero-sorte) */
+  valor: string | null;
   onConfirmar: (nome: string) => void;
   onClose: () => void;
 }) {
@@ -581,9 +644,11 @@ function CompletarDadosStep({
         <div className="flex h-[54.667px] flex-1 items-center px-4 py-3">
           <p className="whitespace-nowrap text-sm leading-[17px] text-[#015e22]">{COMPLETAR_CPF}</p>
         </div>
-        <div className="flex h-[54.667px] items-center px-4 py-3">
-          <p className="whitespace-nowrap text-sm leading-[17px] text-[#015e22]">{COMPLETAR_VALOR}</p>
-        </div>
+        {valor !== null && (
+          <div className="flex h-[54.667px] items-center px-4 py-3">
+            <p className="whitespace-nowrap text-sm leading-[17px] text-[#015e22]">{valor}</p>
+          </div>
+        )}
       </div>
       <div className="flex w-full flex-col gap-2">
         <p className="text-sm leading-[17px] text-black">Nome do vendedor</p>
@@ -608,11 +673,14 @@ function CompletarDadosStep({
 // ─── Step: completar dados — painel de confirmação (3 botões) ────────────────
 function CompletarConfirmaStep({
   nome,
+  valor,
   onAtualizarEVincular,
   onAtualizarESair,
   onClose,
 }: {
   nome: string;
+  /** "R$ 300,00" (financiamento / valor-fixo) ou null (numero-sorte) */
+  valor: string | null;
   onAtualizarEVincular: () => void;
   onAtualizarESair: () => void;
   onClose: () => void;
@@ -620,7 +688,7 @@ function CompletarConfirmaStep({
   return (
     <WizardCard onClose={onClose}>
       <WizardHeader icon={<LinkIcon />} title="Completar dados do vendedor" />
-      <ResultRow cells={[nome, COMPLETAR_CPF, COMPLETAR_VALOR]} />
+      <ResultRow cells={valor !== null ? [nome, COMPLETAR_CPF, valor] : [nome, COMPLETAR_CPF]} />
       <div className="w-[297px] text-center text-sm text-[#4b4b4b]">
         <p>Confirma a atualização dos dados do vendedor e deseja continuar para vinculação do contrato?</p>
         <p>&nbsp;</p>
@@ -653,6 +721,8 @@ type Step =
 
 export interface VincularWizardProps {
   entry: VincularEntry;
+  /** Tipo da campanha selecionada — muda as particularidades do fluxo */
+  campaignType?: CampaignType;
   /** Current link shown in the "Alterar vinculo" step */
   vinculoAtual?: Funcionario;
   /** Marks the contract as having an incomplete cadastro (Confirmar vínculo flow) */
@@ -668,16 +738,38 @@ export interface VincularWizardProps {
 
 export default function VincularWizard({
   entry,
-  vinculoAtual = VINCULO_ATUAL_DEFAULT,
+  campaignType = "financiamento",
+  vinculoAtual,
   cadastroIncompleto = false,
   onVincular,
   onConfirmarVinculo,
   onAtualizarDados,
   onClose,
 }: VincularWizardProps) {
+  // ── Particularidades por tipo ──────────────────────────────────────────────
+  const isFinanciamento = campaignType === "financiamento";
+  // Valor exibido nas etapas (card / confirmação): apenas valor-fixo
+  const valorEtapas = campaignType === "valor-fixo" ? VALOR_FIXO : null;
+  // Valor do "Completar dados": financiamento e valor-fixo têm R$; numero-sorte não
+  const valorCompletar = campaignType === "numero-sorte" ? null : VALOR_FIXO;
+  const funcionarios = isFinanciamento ? FUNCIONARIOS : FUNCIONARIOS_VALOR;
+  const vinculoAtualResolved = vinculoAtual ?? funcionarios[0];
+
+  // Linha de resultado da busca / vínculo atual:
+  // financiamento: nome + CPF + badge "Não cadastrado"
+  // valor-fixo:    nome + CPF + "R$ 300,00"
+  // numero-sorte:  nome + CPF
+  const resultCells = (pessoa: Funcionario): string[] => {
+    if (isFinanciamento) return [pessoa.nome, pessoa.cpf, "Não cadastrado"];
+    if (campaignType === "valor-fixo") return [pessoa.nome, pessoa.cpf, VALOR_FIXO];
+    return [pessoa.nome, pessoa.cpf];
+  };
+
   const [step, setStep] = useState<Step>(() => {
     if (entry === "alterar") return { id: "alterar" };
     if (entry === "confirmar") return { id: "atencaoConfirmar" };
+    // valor-fixo / numero-sorte: sem "Quem deseja vincular?" — direto ao Vendedor
+    if (campaignType !== "financiamento") return { id: "cpf", role: "Vendedor" };
     return { id: "quem" };
   });
 
@@ -695,6 +787,8 @@ export default function VincularWizard({
         <CpfSearchStep
           key={step.role}
           role={step.role}
+          funcionarios={funcionarios}
+          resultCells={resultCells}
           onSelect={(pessoa) => setStep({ id: "card", role: step.role, pessoa })}
           onAddFuncionario={() => setStep({ id: "addFuncionario", role: step.role })}
           onExit={
@@ -707,9 +801,17 @@ export default function VincularWizard({
       );
 
     case "card":
-      return (
+      return isFinanciamento ? (
         <CardStep
           pessoa={step.pessoa}
+          onVincular={() => setStep({ id: "confirma", role: step.role, pessoa: step.pessoa })}
+          onRedo={() => setStep({ id: "cpf", role: step.role })}
+          onClose={onClose}
+        />
+      ) : (
+        <CardStepValor
+          pessoa={step.pessoa}
+          valor={valorEtapas}
           onVincular={() => setStep({ id: "confirma", role: step.role, pessoa: step.pessoa })}
           onRedo={() => setStep({ id: "cpf", role: step.role })}
           onClose={onClose}
@@ -721,6 +823,7 @@ export default function VincularWizard({
         <ConfirmaStep
           role={step.role}
           pessoa={step.pessoa}
+          valorLine={valorEtapas}
           onSim={() => setStep({ id: "sucesso", role: step.role, pessoa: step.pessoa })}
           onNao={() => setStep({ id: "card", role: step.role, pessoa: step.pessoa })}
           onClose={onClose}
@@ -730,7 +833,7 @@ export default function VincularWizard({
     case "sucesso":
       return (
         <SucessoVinculoStep
-          showVincularGerente={step.role === "Vendedor" && step.pessoa !== null}
+          showVincularGerente={isFinanciamento && step.role === "Vendedor" && step.pessoa !== null}
           onFinalizar={() => {
             if (step.pessoa) onVincular(step.role, step.pessoa.nome);
             onClose();
@@ -766,7 +869,7 @@ export default function VincularWizard({
     case "alterar":
       return (
         <AlterarStep
-          vinculoAtual={vinculoAtual}
+          cells={resultCells(vinculoAtualResolved)}
           onAlterar={() => setStep({ id: "cpf", role: "Vendedor" })}
           onClose={onClose}
         />
@@ -798,6 +901,7 @@ export default function VincularWizard({
     case "completarDados":
       return (
         <CompletarDadosStep
+          valor={valorCompletar}
           onConfirmar={(nome) => setStep({ id: "completarConfirma", nome })}
           onClose={onClose}
         />
@@ -807,6 +911,7 @@ export default function VincularWizard({
       return (
         <CompletarConfirmaStep
           nome={step.nome}
+          valor={valorCompletar}
           onAtualizarEVincular={() =>
             setStep({ id: "atualizadoSucesso", nome: step.nome, vinculado: true })
           }

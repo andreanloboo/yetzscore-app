@@ -1,0 +1,11 @@
+// get_design_context — nó 8241:16011 "Modal nova delegação ativa" (resumo dos valores relevantes)
+//
+// Container: bg white, padding 32px, border-radius 12px; conteúdo w-327px, gap 40px, centralizado.
+// Bloco superior (gap 24px, centralizado):
+//   - Ícone info (status/check-circle → _base/icon/info) 32px.
+//   - Título: Lato Bold 18px, preto, centralizado, w 297px — "Você possui uma delegação ativa".
+//   - Texto: Lato Regular 14px, #4b4b4b, centralizado, w 297px —
+//     "Você designou como José Aldo responsável substituto por uma delegação até 20/06/2026."
+// Bloco inferior (gap 16px, centralizado):
+//   - Botão primário full width h 48px radius 6px bg #00842f, texto Lato Bold 16px branco — "Ver delegação".
+//   - "Fechar": texto simples Lato Regular 16px preto, centralizado (link/botão de texto).

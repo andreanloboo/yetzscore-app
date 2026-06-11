@@ -4,6 +4,30 @@ export type ContratoStatus =
   | "Reprovado"
   | "Aguardando vínculo";
 
+// ─── Campanha (seletor por tipo) ─────────────────────────────────────────────
+export type CampaignType = "financiamento" | "valor-fixo" | "numero-sorte";
+
+export interface Campanha {
+  id: string;
+  nome: string;
+  status: "Ativo" | "Inativo";
+  tipo: CampaignType;
+}
+
+export const CAMPAIGN_TYPE_LABELS: Record<CampaignType, string> = {
+  financiamento: "Valor / Financiamento",
+  "valor-fixo": "Valor Fixo",
+  "numero-sorte": "Valor Fixo - Número da Sorte",
+};
+
+export const MOCK_CAMPANHAS: Campanha[] = [
+  { id: "dezembro", nome: "Campanha Dezembro", status: "Ativo", tipo: "financiamento" },
+  { id: "dezembro-vf", nome: "Campanha Dezembro Valor Fixo", status: "Ativo", tipo: "valor-fixo" },
+  { id: "sorte-2026", nome: "Campanha Sorte Premiada 2026", status: "Ativo", tipo: "numero-sorte" },
+  { id: "novembro", nome: "Campanha Novembro", status: "Inativo", tipo: "financiamento" },
+  { id: "setembro-vf", nome: "Campanha Setembro Valor Fixo", status: "Inativo", tipo: "valor-fixo" },
+];
+
 export interface Contrato {
   id: string;
   codigoRevenda: string;

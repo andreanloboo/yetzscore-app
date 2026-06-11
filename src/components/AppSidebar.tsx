@@ -52,38 +52,6 @@ function UsersIcon({ className }: { className?: string }) {
   );
 }
 
-function MenuIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width="20"
-      height="20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  );
-}
-
-function ChevronsLeftIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width="20"
-      height="20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M11 17l-5-5 5-5M18 17l-5-5 5-5" />
-    </svg>
-  );
-}
-
 export default function AppSidebar() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -160,12 +128,8 @@ export default function AppSidebar() {
     >
       <div className="flex w-full flex-1 flex-col justify-between">
         <div className="flex w-full flex-col gap-4">
-          {/* Logo + alternar expansão */}
-          <div
-            className={`flex w-full items-center py-4 ${
-              collapsed ? "flex-col gap-3" : "justify-between"
-            }`}
-          >
+          {/* Logo (retração via arraste/duplo clique no handle da borda) */}
+          <div className={`flex w-full items-center py-4 ${collapsed ? "justify-center" : ""}`}>
             <div className="flex items-center gap-1.5 overflow-hidden">
               <img src={logoScoreY} alt="" className="h-7 w-7 shrink-0" />
               <img
@@ -176,16 +140,6 @@ export default function AppSidebar() {
                 }`}
               />
             </div>
-            <button
-              type="button"
-              title={collapsed ? "Expandir menu" : "Recolher menu"}
-              aria-label={collapsed ? "Expandir menu" : "Recolher menu"}
-              aria-expanded={!collapsed}
-              onClick={toggleWidth}
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-[#4b4b4b] transition-colors hover:bg-[#e6f3ea] hover:text-[#00842f]"
-            >
-              {collapsed ? <MenuIcon /> : <ChevronsLeftIcon />}
-            </button>
           </div>
 
           {/* Navegação */}

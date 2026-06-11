@@ -1,0 +1,4 @@
+﻿// valor-fixo: popover linha "Aguardando vínculo" (8435:10258)
+// Container: bg white, border #cacaca, rounded-4, p-16, shadow-xs, gap-16 entre opcoes
+// Opcao 1: link icon 16px + "Vincular" (12px #4b4b4b)
+// Opcao 2: eye icon 16px + "Ver detalhes" (12px #4b4b4b)

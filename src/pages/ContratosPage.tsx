@@ -14,17 +14,21 @@ import {
 import {
   AcoesPopover,
   VincularPopover,
+  VincularDiretoPopover,
   StatusDropdown,
   GerentesDropdown,
 } from "../components/contratos/Popovers";
 import VincularWizard from "../components/contratos/vincular/VincularWizard";
-import type { VincularRole } from "../components/contratos/vincular/VincularWizard";
+import type { VincularEntry, VincularRole } from "../components/contratos/vincular/VincularWizard";
+import CampanhaSelector from "../components/contratos/CampanhaSelector";
 import CalendarPopover from "../components/campanhas/CalendarPopover";
 import type { DateRange } from "../components/campanhas/CalendarPopover";
 import {
   MOCK_CONTRATOS,
+  MOCK_CAMPANHAS,
   DEFAULT_COLUMNS,
   GERENTES,
+  type Campanha,
   type Contrato,
   type ColumnConfig,
   type ContratoStatus,
@@ -44,7 +48,7 @@ type ActiveOverlay =
   | { kind: "sucessoDesvinculado" }
   | { kind: "acoes"; id: string; x: number; y: number }
   | { kind: "verDetalhes"; id: string; x: number; y: number }
-  | { kind: "vincular"; id: string; entry: "alterar" | "confirmar" }
+  | { kind: "vincular"; id: string; entry: VincularEntry }
   | { kind: "statusDropdown"; tableGroup: string; x: number; y: number }
   | null;
 
@@ -60,6 +64,10 @@ export default function ContratosPage() {
   // ─── Data state ────────────────────────────────────────────────────────────
   const [contratos, setContratos] = useState<Contrato[]>(MOCK_CONTRATOS);
   const [columns, setColumns] = useState<ColumnConfig[]>(DEFAULT_COLUMNS);
+
+  // ─── Campanha selecionada (define o tipo de campanha da tela) ─────────────
+  const [campanha, setCampanha] = useState<Campanha | null>(MOCK_CAMPANHAS[0]);
+  const campaignType = campanha?.tipo ?? null;
 
   // ─── Filter state ──────────────────────────────────────────────────────────
   const [selectedGerentes, setSelectedGerentes] = useState<string[]>(["kaique"]);
@@ -289,22 +297,12 @@ export default function ContratosPage() {
             {/* Campaign info row */}
             <div className="flex w-full items-center justify-between border-b border-[#e1e1e1] p-6">
               {/* Campaign selector */}
-              <div className="flex h-12 w-[400px] items-center justify-between rounded-md border border-[#cacaca] bg-white px-4 py-4">
-                <div className="flex items-center gap-2">
-                  <span className="text-base text-[#8e8e8e]">Campanha Dezembro</span>
-                  <span className="rounded-md bg-[#dcfce7] px-2 py-1 text-sm leading-[17px] text-[#22c55e]">
-                    Ativo
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="size-4 text-[#8e8e8e]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-                  </svg>
-                  <svg className="size-4 text-[#8e8e8e]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <polyline points="6,9 12,15 18,9" />
-                  </svg>
-                </div>
-              </div>
+              <CampanhaSelector
+                campanhas={MOCK_CAMPANHAS}
+                selected={campanha}
+                onSelect={setCampanha}
+                onClear={() => setCampanha(null)}
+              />
 
               {/* Summary cards */}
               <div className="flex items-center gap-2">
@@ -448,6 +446,13 @@ export default function ContratosPage() {
                 </div>
               </div>
 
+              {campanha === null ? (
+                /* Estado vazio — nenhuma campanha selecionada */
+                <div className="flex w-full flex-col items-center justify-center rounded-lg bg-[#f5f5f5] py-20">
+                  <p className="text-base text-[#8e8e8e]">Nenhum resultado encontrado</p>
+                </div>
+              ) : (
+              <>
               {/* Tables */}
               <div className="flex flex-col gap-10">
                 {showKaique && (
@@ -571,6 +576,8 @@ export default function ContratosPage() {
                   </button>
                 </div>
               </div>
+              </>
+              )}
             </div>
           </div>
 
@@ -673,20 +680,38 @@ export default function ContratosPage() {
         />
       )}
 
-      {overlay?.kind === "verDetalhes" && (
-        <VincularPopover
-          x={overlay.x}
-          y={overlay.y}
-          onAlterarVinculo={() => setOverlay({ kind: "vincular", id: overlay.id, entry: "alterar" })}
-          onConfirmarVinculo={() => setOverlay({ kind: "vincular", id: overlay.id, entry: "confirmar" })}
-          onVerDetalhes={() => setOverlay({ kind: "detalhes", contratoId: overlay.id })}
-          onClose={() => setOverlay(null)}
-        />
-      )}
+      {overlay?.kind === "verDetalhes" && (() => {
+        // valor-fixo / numero-sorte: linhas "Aguardando vínculo" ganham a opção
+        // "Vincular" direta (ref 8435:10258); demais linhas mantêm o popover atual.
+        const row = findContrato(overlay.id);
+        const vincularDireto =
+          campaignType !== null &&
+          campaignType !== "financiamento" &&
+          row?.status === "Aguardando vínculo";
+        return vincularDireto ? (
+          <VincularDiretoPopover
+            x={overlay.x}
+            y={overlay.y}
+            onVincular={() => setOverlay({ kind: "vincular", id: overlay.id, entry: "vincular" })}
+            onVerDetalhes={() => setOverlay({ kind: "detalhes", contratoId: overlay.id })}
+            onClose={() => setOverlay(null)}
+          />
+        ) : (
+          <VincularPopover
+            x={overlay.x}
+            y={overlay.y}
+            onAlterarVinculo={() => setOverlay({ kind: "vincular", id: overlay.id, entry: "alterar" })}
+            onConfirmarVinculo={() => setOverlay({ kind: "vincular", id: overlay.id, entry: "confirmar" })}
+            onVerDetalhes={() => setOverlay({ kind: "detalhes", contratoId: overlay.id })}
+            onClose={() => setOverlay(null)}
+          />
+        );
+      })()}
 
       {overlay?.kind === "vincular" && (
         <VincularWizard
           entry={overlay.entry}
+          campaignType={campaignType ?? "financiamento"}
           cadastroIncompleto={overlay.id === CADASTRO_INCOMPLETO_ID}
           onVincular={(role, nome) => vincularFuncionario(overlay.id, role, nome)}
           onConfirmarVinculo={() => updateStatus([overlay.id], "Aguardando aprovação")}
