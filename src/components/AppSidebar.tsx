@@ -128,10 +128,17 @@ export default function AppSidebar() {
     >
       <div className="flex w-full flex-1 flex-col justify-between">
         <div className="flex w-full flex-col gap-4">
-          {/* Logo (retração via arraste/duplo clique no handle da borda) */}
+          {/* Logo (retração via arraste/duplo clique no handle da borda).
+              Colapsado, o Y ocupa o mesmo footprint de 48px dos botões de nav. */}
           <div className={`flex w-full items-center py-4 ${collapsed ? "justify-center" : ""}`}>
             <div className="flex items-center gap-1.5 overflow-hidden">
-              <img src={logoScoreY} alt="" className="h-7 w-7 shrink-0" />
+              <img
+                src={logoScoreY}
+                alt=""
+                className={`shrink-0 transition-all duration-200 ${
+                  collapsed ? "h-12 w-12" : "h-7 w-7"
+                }`}
+              />
               <img
                 src={logoScoreText}
                 alt="score"
