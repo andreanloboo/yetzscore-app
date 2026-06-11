@@ -12,10 +12,12 @@ import {
 } from "../components/contratos/Modals";
 import {
   AcoesPopover,
-  VerDetalhesPopover,
+  VincularPopover,
   StatusDropdown,
   GerentesDropdown,
 } from "../components/contratos/Popovers";
+import VincularWizard from "../components/contratos/vincular/VincularWizard";
+import type { VincularRole } from "../components/contratos/vincular/VincularWizard";
 import CalendarPopover from "../components/campanhas/CalendarPopover";
 import type { DateRange } from "../components/campanhas/CalendarPopover";
 import {
@@ -41,10 +43,15 @@ type ActiveOverlay =
   | { kind: "sucessoDesvinculado" }
   | { kind: "acoes"; id: string; x: number; y: number }
   | { kind: "verDetalhes"; id: string; x: number; y: number }
+  | { kind: "vincular"; id: string; entry: "alterar" | "confirmar" }
   | { kind: "statusDropdown"; tableGroup: string; x: number; y: number }
   | null;
 
 const ITEMS_PER_PAGE = 10;
+
+// Exactly one mock row of the "Vinculados - Confirmar Vendedor" table is
+// treated as having cadastro incompleto (Confirmar vínculo flow F).
+const CADASTRO_INCOMPLETO_ID = "v2";
 
 export default function ContratosPage() {
   const navigate = useNavigate();
@@ -193,6 +200,33 @@ export default function ContratosPage() {
   function confirmDesvincular(id: string) {
     removeContratos([id]);
     setOverlay({ kind: "sucessoDesvinculado" });
+  }
+
+  // ─── Vincular Vendedor flow ────────────────────────────────────────────────
+  function vincularFuncionario(id: string, role: VincularRole, nome: string) {
+    setContratos((prev) =>
+      prev.map((c) =>
+        c.id === id
+          ? role === "Vendedor"
+            ? { ...c, vendedor: nome, status: "Aguardando aprovação" as ContratoStatus }
+            : { ...c, gerente: nome }
+          : c
+      )
+    );
+  }
+
+  function atualizarDadosVendedor(id: string, nome: string, vincular: boolean) {
+    setContratos((prev) =>
+      prev.map((c) =>
+        c.id === id
+          ? {
+              ...c,
+              vendedor: nome,
+              ...(vincular ? { status: "Aguardando aprovação" as ContratoStatus } : {}),
+            }
+          : c
+      )
+    );
   }
 
   function openStatusDropdown(group: string, x: number, y: number) {
@@ -616,10 +650,23 @@ export default function ContratosPage() {
       )}
 
       {overlay?.kind === "verDetalhes" && (
-        <VerDetalhesPopover
+        <VincularPopover
           x={overlay.x}
           y={overlay.y}
+          onAlterarVinculo={() => setOverlay({ kind: "vincular", id: overlay.id, entry: "alterar" })}
+          onConfirmarVinculo={() => setOverlay({ kind: "vincular", id: overlay.id, entry: "confirmar" })}
           onVerDetalhes={() => setOverlay({ kind: "detalhes", contratoId: overlay.id })}
+          onClose={() => setOverlay(null)}
+        />
+      )}
+
+      {overlay?.kind === "vincular" && (
+        <VincularWizard
+          entry={overlay.entry}
+          cadastroIncompleto={overlay.id === CADASTRO_INCOMPLETO_ID}
+          onVincular={(role, nome) => vincularFuncionario(overlay.id, role, nome)}
+          onConfirmarVinculo={() => updateStatus([overlay.id], "Aguardando aprovação")}
+          onAtualizarDados={(nome, vincular) => atualizarDadosVendedor(overlay.id, nome, vincular)}
           onClose={() => setOverlay(null)}
         />
       )}

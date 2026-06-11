@@ -1,0 +1,38 @@
+const imgLink = "https://www.figma.com/api/mcp/asset/0782a571-3c35-4313-8d49-27cdd3340059";
+
+export default function Frame1171275822() {
+  return (
+    <div className="bg-white content-stretch flex flex-col gap-[40px] items-center justify-center p-[32px] relative rounded-[8px] size-full" data-node-id="8428:18496">
+      <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0" data-node-id="8428:18497">
+        <div className="overflow-clip relative shrink-0 size-[24px]" data-name="interface-devices/link">
+          <img alt="" src={imgLink} />
+        </div>
+        <div className="font-bold text-[#00842f] text-[22px] leading-[26px]" data-node-id="8428:18499">
+          <p>Vincular</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8428:18500" data-name="Text input">
+        <div className="flex h-[24px] items-center w-full" data-name="_Label">
+          <p className="text-black text-[14px] leading-[17px]">{`Vincule o Gerente / F&I`}</p>
+        </div>
+        <div className="bg-white border border-[#cacaca] border-solid flex gap-[8px] items-center px-[16px] py-[16px] rounded-[6px] w-full" data-name="Input">
+          <p className="text-[#8e8e8e] text-[16px] leading-[16px]">{`Digite o CPF do Gerente / F&I`}</p>
+        </div>
+        <div className="flex h-[17px] items-center w-full" data-name="_Hint text">
+          <p className="text-[#4b4b4b] text-[12px] leading-[17px]">Digite pelo menos 6 digitos do CPF para buscar</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8428:18501">
+        <div className="bg-[#00842f] flex h-[48px] items-center justify-center rounded-[6px] w-full" data-name="Button">
+          <p className="font-bold text-white text-[16px] leading-[16px]">Selecionar</p>
+        </div>
+        <div className="border border-[#00842f] border-solid flex h-[48px] items-center justify-center rounded-[6px] w-full" data-name="Button">
+          <p className="font-bold text-[#00842f] text-[16px] leading-[16px]">Adicionar novo funcionário</p>
+        </div>
+        <div className="flex h-[48px] items-center justify-center rounded-[6px] w-full" data-name="Button">
+          <p className="font-bold text-[#00842f] text-[16px] leading-[16px]">Pular</p>
+        </div>
+      </div>
+    </div>
+  );
+}

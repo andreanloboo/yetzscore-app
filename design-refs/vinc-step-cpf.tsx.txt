@@ -1,0 +1,54 @@
+const imgLink = "https://www.figma.com/api/mcp/asset/22a73849-0191-4b24-8414-1a18dc6384b3";
+
+export default function Frame1171275818() {
+  return (
+    <div className="bg-white content-stretch flex flex-col gap-[40px] items-center justify-center p-[var(--spacing\/inset\/xl,32px)] relative rounded-[8px] size-full" data-node-id="8433:18794">
+      <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0" data-node-id="8433:18795">
+        <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="8433:18796" data-name="interface-devices/link">
+          <div className="absolute inset-[0_0.52%_-4.43%_0]" data-node-id="I8433:18796;1079:900" data-name="_base/icon/link">
+            <div className="absolute inset-[4.44%_4.4%]" data-node-id="I8433:18796;1079:900;1028:2102" data-name="link">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLink} />
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)] text-center whitespace-nowrap" data-node-id="8433:18797">
+          <p className="leading-[var(--type\/heading\/s\/line-height,26px)]">Vincular</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8433:18798" data-name="Text input">
+        <div className="content-stretch flex gap-[var(--form-field\/label\/gap\/medium,8px)] h-[24px] items-center overflow-clip p-[var(--spacing\/scale\/0,0px)] relative shrink-0 w-full" data-node-id="I8433:18798;1147:1198" data-name="_Label">
+          <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--form-field\/label\/color\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8433:18798;1147:1198;1141:1534">
+            Vincule o Vendedor
+          </p>
+        </div>
+        <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex gap-[8px] items-center px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I8433:18798;1147:1144" data-name="Input">
+          <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--color\/text\/disabled\/default,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="I8433:18798;1142:15">
+            Digite o CPF do vendedor
+          </p>
+        </div>
+        <div className="content-stretch flex gap-[var(--spacing\/scale\/100,0px)] h-[17px] items-center p-[var(--spacing\/scale\/0,0px)] relative shrink-0 w-full" data-node-id="I8433:18798;1147:1205" data-name="_Hint text">
+          <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/caption\/default\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--form-field\/hint-text\/color\/default,#4b4b4b)] text-[length:var(--type\/caption\/default\/size,12px)] whitespace-nowrap" data-node-id="I8433:18798;1147:1205;1141:1675">
+            Dados inválidos, tenta novamente.
+          </p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8433:18799">
+        <div className="bg-[var(--button\/primary\/disabled\/background-color,#e1e1e1)] content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="8433:18800" data-name="Button">
+          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--button\/primary\/disabled\/text-color,#8e8e8e)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I8433:18800;1098:147">
+            <p className="leading-[var(--type\/interface\/line-height,16px)]">Selecionar</p>
+          </div>
+        </div>
+        <div className="border-[length:var(--button\/shape\/border-width,1px)] border-[var(--color\/action\/primary\/default,#00842f)] border-solid content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="8433:18801" data-name="Button">
+          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I8433:18801;1109:399">
+            <p className="leading-[var(--type\/interface\/line-height,16px)]">Adicionar novo funcionário</p>
+          </div>
+        </div>
+        <div className="content-stretch flex gap-[var(--button\/spacing\/gap\/default,8px)] h-[48px] items-center justify-center overflow-clip px-[var(--button\/spacing\/padding-inline\/large,32px)] py-[var(--button\/spacing\/padding-block\/large,12px)] relative rounded-[var(--button\/shape\/border-radius,6px)] shrink-0 w-full" data-node-id="8433:18802" data-name="Button">
+          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/interface\/standard\/size,16px)] text-center whitespace-nowrap" data-node-id="I8433:18802;2630:794">
+            <p className="leading-[var(--type\/interface\/line-height,16px)]">Sair</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

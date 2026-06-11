@@ -1,0 +1,29 @@
+const imgGroup = "https://www.figma.com/api/mcp/asset/b1504a70-4141-4a4b-ba75-b40e3ad76d46";
+
+export default function Frame1171275837() {
+  return (
+    <div className="bg-white content-stretch flex flex-col gap-[40px] items-center justify-center p-[32px] relative rounded-[8px] size-full" data-node-id="8433:18827">
+      <div className="inline-grid place-items-start relative shrink-0" data-node-id="8433:18828">
+        {/* green check icon 32x32 (_x30_5_Accept) */}
+        <div className="h-[32px] w-[31.999px]" data-node-id="8433:18831" data-name="Group">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+        </div>
+      </div>
+      <div className="flex flex-col font-bold text-[16px] text-black text-center w-[297px]" data-node-id="8433:18834">
+        <p className="leading-[normal] mb-0">Contrato vinculado</p>
+        <p className="leading-[normal]">com sucesso!</p>
+      </div>
+      <div className="flex flex-col text-[14px] text-[#4b4b4b] text-center w-[297px]" data-node-id="8433:18835">
+        <p className="leading-[normal]">O contrato foi vinculado com êxito.</p>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8433:18836">
+        <div className="bg-[#00842f] flex h-[48px] items-center justify-center rounded-[6px] w-full" data-node-id="8433:18838" data-name="Button">
+          <p className="font-bold text-white text-[16px] leading-[16px]">Finalizar</p>
+        </div>
+        <div className="border border-[#00842f] border-solid flex h-[48px] items-center justify-center rounded-[6px] w-full" data-node-id="8433:18839" data-name="Button">
+          <p className="font-bold text-[#00842f] text-[16px] leading-[16px]">Vincular gerente</p>
+        </div>
+      </div>
+    </div>
+  );
+}

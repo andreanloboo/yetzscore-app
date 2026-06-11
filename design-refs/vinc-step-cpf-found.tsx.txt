@@ -1,0 +1,54 @@
+const imgLink = "https://www.figma.com/api/mcp/asset/1c783adc-4a58-42c0-8426-a6370617d83e";
+
+export default function Frame1171275823() {
+  return (
+    <div className="bg-white content-stretch flex flex-col gap-[40px] items-center p-[var(--spacing\/inset\/xl,32px)] relative rounded-[8px] size-full" data-node-id="8433:18845">
+      <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0" data-node-id="8433:18846">
+        <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="8433:18847" data-name="interface-devices/link">
+          <div className="absolute inset-[0_0.52%_-4.43%_0]" data-node-id="I8433:18847;1079:900" data-name="_base/icon/link">
+            <div className="absolute inset-[4.44%_4.4%]" data-node-id="I8433:18847;1079:900;1028:2102" data-name="link">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLink} />
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] flex flex-col font-[family-name:var(--type\/family\/brand,'Lato:Bold')] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--color\/action\/primary\/default,#00842f)] text-[length:var(--type\/heading\/s\/size,22px)] text-center whitespace-nowrap" data-node-id="8433:18848">
+          <p className="leading-[var(--type\/heading\/s\/line-height,26px)]">Vincular</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8433:18849" data-name="Text input">
+        <div className="content-stretch flex gap-[var(--form-field\/label\/gap\/medium,8px)] h-[24px] items-center overflow-clip p-[var(--spacing\/scale\/0,0px)] relative shrink-0 w-full" data-node-id="I8433:18849;1160:811" data-name="_Label">
+          <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/body\/s\/line-height,17px)] not-italic relative shrink-0 text-[color:var(--form-field\/label\/color\/default,black)] text-[length:var(--type\/body\/s\/size,14px)] whitespace-nowrap" data-node-id="I8433:18849;1160:811;1141:1534">
+            Vincule o Vendedor
+          </p>
+        </div>
+        <div className="bg-[var(--form-field\/background\/color\/default,white)] border-[length:var(--form-field\/border\/width\/default,1px)] border-[var(--form-field\/border\/color\/default,#cacaca)] border-solid content-stretch flex gap-[8px] items-center px-[var(--form-field\/spacing\/padding-inline\/large,16px)] py-[var(--form-field\/spacing\/padding-block\/large,16px)] relative rounded-[var(--form-field\/shape\/border-radius\/default,6px)] shrink-0 w-full" data-node-id="I8433:18849;1160:812" data-name="Input">
+          <p className="[word-break:break-word] font-[family-name:var(--type\/family\/brand,'Lato:Regular')] leading-[var(--type\/interface\/line-height,16px)] not-italic relative shrink-0 text-[color:var(--color\/text\/primary\/default,black)] text-[length:var(--type\/interface\/standard\/size,16px)] whitespace-nowrap" data-node-id="I8433:18849;1160:814">
+            893.470.130-72
+          </p>
+        </div>
+      </div>
+      <div className="bg-[var(--color\/action\/primary\/subtle,#dffbe8)] content-stretch flex items-start relative shrink-0" data-node-id="8433:18850">
+        <div className="content-stretch flex h-[54.667px] items-center px-[var(--table\/cell\/padding-inline,16px)] py-[var(--table\/cell\/padding-block,12px)] relative shrink-0" data-node-id="8433:18851" data-name="Table Cell">
+          <p className="text-[color:var(--color\/action\/primary\/hover,#015e22)] text-[14px]">Andrean Rafael Lobo</p>
+        </div>
+        <div className="content-stretch flex h-[54.667px] items-center px-[16px] py-[12px] relative shrink-0" data-node-id="8433:18852" data-name="Table Cell">
+          <p className="text-[color:var(--color\/action\/primary\/hover,#015e22)] text-[14px]">893.470.130-72</p>
+        </div>
+        <div className="content-stretch flex h-[54.667px] items-center px-[16px] py-[12px] relative shrink-0" data-node-id="8433:18853" data-name="Table Cell">
+          <p className="text-[color:var(--color\/action\/primary\/hover,#015e22)] text-[14px]">Não cadastrado</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8433:18854">
+        <div className="bg-[var(--color\/action\/primary\/default,#00842f)] flex h-[48px] items-center justify-center rounded-[6px] w-full" data-node-id="8433:18855" data-name="Button">
+          <p className="font-bold text-white text-[16px]">Selecionar</p>
+        </div>
+        <div className="border border-[#00842f] flex h-[48px] items-center justify-center rounded-[6px] w-full" data-node-id="8433:18856" data-name="Button">
+          <p className="font-bold text-[#00842f] text-[16px]">Adicionar novo funcionário</p>
+        </div>
+        <div className="flex h-[48px] items-center justify-center rounded-[6px] w-full" data-node-id="8433:18857" data-name="Button">
+          <p className="font-bold text-[#00842f] text-[16px]">Sair</p>
+        </div>
+      </div>
+    </div>
+  );
+}

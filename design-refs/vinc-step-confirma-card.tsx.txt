@@ -1,0 +1,34 @@
+const imgLink = "https://www.figma.com/api/mcp/asset/a9a8b98f-c3e1-4b19-a494-508ab52036d2";
+const imgRefresh = "https://www.figma.com/api/mcp/asset/ee89ec51-6e2d-4396-8512-b69d7889141f";
+
+export default function Frame1171275827() {
+  return (
+    <div className="bg-white content-stretch flex flex-col gap-[40px] items-center justify-center p-[32px] relative rounded-[8px] size-full" data-node-id="8433:18803">
+      <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0" data-node-id="8433:18804">
+        <div className="overflow-clip relative shrink-0 size-[24px]" data-name="interface-devices/link">
+          <img alt="" src={imgLink} />
+        </div>
+        <div className="font-bold text-[#00842f] text-[22px] leading-[26px]" data-node-id="8433:18806">
+          <p>Vincular</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[24px] h-[48px] items-start relative shrink-0" data-node-id="8433:18807" data-name="Text input">
+        <div className="bg-white border border-[#cacaca] border-solid content-stretch flex gap-[40px] items-center px-[16px] py-[16px] relative rounded-[6px] shrink-0" data-node-id="8433:18809" data-name="Input">
+          <p className="text-black text-[16px] leading-[16px]" data-node-id="8433:18811">Andrean Rafael Lobo</p>
+          <p className="text-black text-[16px] leading-[16px]" data-node-id="8433:18812">893.470.130-72</p>
+          <div className="overflow-clip relative shrink-0 size-[16px]" data-node-id="8433:18813" data-name="action/refresh">
+            <img alt="" src={imgRefresh} />
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="8433:18815">
+        <div className="bg-[#00842f] flex h-[48px] items-center justify-center rounded-[6px] w-full" data-node-id="8433:18816" data-name="Button">
+          <p className="font-bold text-white text-[16px] leading-[16px]">Vincular</p>
+        </div>
+        <div className="border border-[#00842f] border-solid flex h-[48px] items-center justify-center rounded-[6px] w-full" data-node-id="8433:18817" data-name="Button">
+          <p className="font-bold text-[#00842f] text-[16px] leading-[16px]">Sair</p>
+        </div>
+      </div>
+    </div>
+  );
+}

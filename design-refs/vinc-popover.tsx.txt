@@ -1,0 +1,34 @@
+const imgTail = "https://www.figma.com/api/mcp/asset/f67bd0cb-7c84-4f01-9354-47e59b8a76fa";
+const imgLink = "https://www.figma.com/api/mcp/asset/47e02ffe-783f-4512-bef2-cf492df2d730";
+const imgCheckCircle = "https://www.figma.com/api/mcp/asset/1464f90c-149f-4647-be74-b3ed99511cf4";
+const imgEye = "https://www.figma.com/api/mcp/asset/e651e831-622e-47c3-80e2-f519da736f1a";
+
+export default function Popover() {
+  return (
+    <div className="content-stretch flex flex-col items-center justify-center relative size-full" data-node-id="8433:13586" data-name="Popover">
+      {/* arrow/tail omitted */}
+      <div className="bg-white border border-[#cacaca] border-solid drop-shadow-[0px_1px_1px_rgba(13,13,13,0.04)] flex flex-col gap-[4px] items-end p-[16px] relative rounded-[4px]" data-node-id="8433:13590" data-name="Popover">
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="8433:13592">
+          <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="8433:13593">
+            <div className="h-[24px] w-[16px]" data-name="interface-devices/link (icon)">
+              <img alt="" src={imgLink} />
+            </div>
+            <p className="text-[12px] text-[#4b4b4b] leading-[1.1]">Alterar vinculo</p>
+          </div>
+          <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="8433:13596">
+            <div className="h-[24px] w-[16px]" data-name="status/check-circle (icon)">
+              <img alt="" src={imgCheckCircle} />
+            </div>
+            <p className="text-[12px] text-[#4b4b4b] leading-[1.1]">Confirmar vinculo</p>
+          </div>
+          <div className="content-stretch flex gap-[8px] items-start relative shrink-0" data-node-id="8433:13599">
+            <div className="h-[24px] w-[16px]" data-name="interface-devices/eye (icon)">
+              <img alt="" src={imgEye} />
+            </div>
+            <p className="text-[12px] text-[#4b4b4b] leading-[1.1]">Ver detalhes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
