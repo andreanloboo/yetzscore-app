@@ -15,6 +15,26 @@ export function useEntryTransition(): boolean {
   return entered;
 }
 
+interface DropdownPanelProps {
+  children: ReactNode;
+  /** Posicionamento/tamanho (ex.: "left-0 top-[calc(100%+4px)] w-full"). */
+  className?: string;
+}
+
+/** Painel de dropdown com entrada em fade + slide (200ms). */
+export function DropdownPanel({ children, className = "" }: DropdownPanelProps) {
+  const entered = useEntryTransition();
+  return (
+    <div
+      className={`absolute z-30 overflow-hidden rounded-md border border-[#cacaca] bg-white shadow-lg transition-[opacity,transform] duration-200 ${
+        entered ? "translate-y-0 opacity-100" : "-translate-y-1 opacity-0"
+      } ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
 interface ModalShellProps {
   onClose: () => void;
   children: ReactNode;

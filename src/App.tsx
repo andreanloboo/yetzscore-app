@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import CampanhasPage from "./pages/CampanhasPage";
 import ContratosPage from "./pages/ContratosPage";
+import DelegacoesPage from "./pages/DelegacoesPage";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/campanhas" element={<CampanhasPage />} />
       <Route path="/contratos" element={<ContratosPage />} />
+      <Route path="/delegacoes" element={<DelegacoesPage />} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );

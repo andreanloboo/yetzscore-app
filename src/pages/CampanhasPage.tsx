@@ -9,6 +9,7 @@ import FilterDropdown from "../components/campanhas/FilterDropdown";
 import type { FilterOption } from "../components/campanhas/FilterDropdown";
 import { CAMPAIGNS } from "../components/campanhas/data";
 import type { CampaignStatus, CampaignValueType } from "../components/campanhas/data";
+import { AvisoDelegacaoModal } from "../components/delegacoes/DelegacaoModals";
 import {
   CalendarIcon,
   ChevronDownIcon,
@@ -20,6 +21,9 @@ import {
 } from "../components/campanhas/icons";
 
 const PAGE_SIZE = 12;
+
+/** Aviso de delegação ativa pós-login: exibido uma única vez por sessão. */
+const AVISO_DELEGACAO_KEY = "yetzscore:aviso-delegacao-ativa";
 
 type TypeFilterValue = "todos" | CampaignValueType;
 type StatusFilterValue = "todos" | CampaignStatus;
@@ -78,8 +82,16 @@ export default function CampanhasPage() {
   const [openPanel, setOpenPanel] = useState<OpenPanel>(null);
   const [openCardMenuId, setOpenCardMenuId] = useState<number | null>(null);
   const [page, setPage] = useState(1);
+  const [showAvisoDelegacao, setShowAvisoDelegacao] = useState(
+    () => sessionStorage.getItem(AVISO_DELEGACAO_KEY) === null
+  );
 
   const filtersRef = useRef<HTMLDivElement>(null);
+
+  // Marca o aviso como visto na sessão assim que a página monta
+  useEffect(() => {
+    sessionStorage.setItem(AVISO_DELEGACAO_KEY, "1");
+  }, []);
 
   // Click-away fecha qualquer dropdown/popover aberto
   useEffect(() => {
@@ -367,6 +379,20 @@ export default function CampanhasPage() {
           <Footer />
         </main>
       </div>
+
+      {/* Aviso pós-login: delegação ativa (ref 8241:16011) */}
+      {showAvisoDelegacao && (
+        <AvisoDelegacaoModal
+          title="Você possui uma delegação ativa"
+          message="Você designou como José Aldo responsável substituto por uma delegação até 20/06/2026."
+          primaryLabel="Ver delegação"
+          onPrimary={() => {
+            setShowAvisoDelegacao(false);
+            navigate("/delegacoes");
+          }}
+          onClose={() => setShowAvisoDelegacao(false)}
+        />
+      )}
     </div>
   );
 }

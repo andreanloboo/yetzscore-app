@@ -118,7 +118,7 @@ export default function AppSidebar() {
   const items = [
     { label: "Campanhas", path: "/campanhas", icon: <LineChartIcon size={24} /> },
     { label: "Contratos", path: "/contratos", icon: <FileIcon size={24} /> },
-    { label: "Delegações", path: null, icon: <UsersIcon className="size-6" /> },
+    { label: "Delegações", path: "/delegacoes", icon: <UsersIcon className="size-6" /> },
   ];
 
   return (

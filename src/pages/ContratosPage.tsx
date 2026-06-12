@@ -255,6 +255,22 @@ export default function ContratosPage() {
     setSortStates((prev) => ({ ...prev, [group]: sort }));
   }
 
+  // Arrastar um cabeçalho sobre outro move a coluna para a posição dele,
+  // reatribuindo o campo `order` (mesma ordem usada pelo Gerenciar colunas).
+  function reorderColumns(fromId: string, toId: string) {
+    if (fromId === toId) return;
+    setColumns((prev) => {
+      const ordered = [...prev].sort((a, b) => a.order - b.order);
+      const fi = ordered.findIndex((c) => c.id === fromId);
+      const ti = ordered.findIndex((c) => c.id === toId);
+      if (fi < 0 || ti < 0) return prev;
+      const [moved] = ordered.splice(fi, 1);
+      ordered.splice(ti, 0, moved);
+      const orderById = new Map(ordered.map((c, i) => [c.id, i]));
+      return prev.map((c) => ({ ...c, order: orderById.get(c.id) ?? c.order }));
+    });
+  }
+
   const findContrato = (id: string) => contratos.find((c) => c.id === id);
 
   // ─── Refs ──────────────────────────────────────────────────────────────────
@@ -472,6 +488,7 @@ export default function ContratosPage() {
                       onStatusFilterOpen={(x, y) => openStatusDropdown("kaique", x, y)}
                       sort={sortStates.kaique ?? null}
                       onSortChange={(s) => updateSort("kaique", s)}
+                      onReorder={reorderColumns}
                     />
                     <ContratosTable
                       groupLabel="Vinculados - Confirmar Vendedor"
@@ -489,6 +506,7 @@ export default function ContratosPage() {
                       onStatusFilterOpen={(x, y) => openStatusDropdown("vinculados", x, y)}
                       sort={sortStates.vinculados ?? null}
                       onSortChange={(s) => updateSort("vinculados", s)}
+                      onReorder={reorderColumns}
                     />
                   </>
                 )}
@@ -508,6 +526,7 @@ export default function ContratosPage() {
                     onStatusFilterOpen={(x, y) => openStatusDropdown("maria", x, y)}
                     sort={sortStates.maria ?? null}
                     onSortChange={(s) => updateSort("maria", s)}
+                      onReorder={reorderColumns}
                   />
                 )}
                 {showJoao && (
@@ -526,6 +545,7 @@ export default function ContratosPage() {
                     onStatusFilterOpen={(x, y) => openStatusDropdown("joao", x, y)}
                     sort={sortStates.joao ?? null}
                     onSortChange={(s) => updateSort("joao", s)}
+                      onReorder={reorderColumns}
                   />
                 )}
                 {showJunior && (
@@ -544,6 +564,7 @@ export default function ContratosPage() {
                     onStatusFilterOpen={(x, y) => openStatusDropdown("junior", x, y)}
                     sort={sortStates.junior ?? null}
                     onSortChange={(s) => updateSort("junior", s)}
+                      onReorder={reorderColumns}
                   />
                 )}
               </div>

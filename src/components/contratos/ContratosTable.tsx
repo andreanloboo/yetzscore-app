@@ -1,4 +1,4 @@
-import { useRef, type KeyboardEvent } from "react";
+import { useRef, useState, type DragEvent, type KeyboardEvent } from "react";
 import StatusBadge from "./StatusBadge";
 import type { Contrato, ColumnConfig, ContratoStatus } from "./types";
 
@@ -27,6 +27,8 @@ interface ContratosTableProps {
   onStatusFilterOpen: (x: number, y: number) => void;
   sort: SortState | null;
   onSortChange: (sort: SortState | null) => void;
+  /** Arrastar o grip do cabeçalho reordena a coluna (mesma ordem do Gerenciar colunas). */
+  onReorder: (fromId: string, toId: string) => void;
 }
 
 function getColumnValue(colId: string, row: Contrato): string {
@@ -92,8 +94,12 @@ export default function ContratosTable({
   onStatusFilterOpen,
   sort,
   onSortChange,
+  onReorder,
 }: ContratosTableProps) {
   const statusHeaderRef = useRef<HTMLTableCellElement>(null);
+  // Drag-and-drop de colunas via grip do cabeçalho
+  const [dragColId, setDragColId] = useState<string | null>(null);
+  const [dropTargetId, setDropTargetId] = useState<string | null>(null);
   const cols = visibleColumns(columns);
   const allSelected = contratos.length > 0 && contratos.every((c) => selectedIds.has(c.id));
   const anySelected = contratos.some((c) => selectedIds.has(c.id));
@@ -189,20 +195,55 @@ export default function ContratosTable({
                   tabIndex={0}
                   onClick={() => onSortChange(nextSort(sort, col.id))}
                   onKeyDown={handleSortKeyDown(col.id)}
-                  className={`group bg-[#00842f] h-[54px] cursor-pointer select-none px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap ${
+                  onDragOver={(e: DragEvent<HTMLTableCellElement>) => {
+                    if (dragColId && dragColId !== col.id) {
+                      e.preventDefault();
+                      e.dataTransfer.dropEffect = "move";
+                      setDropTargetId(col.id);
+                    }
+                  }}
+                  onDragLeave={() => {
+                    setDropTargetId((cur) => (cur === col.id ? null : cur));
+                  }}
+                  onDrop={(e: DragEvent<HTMLTableCellElement>) => {
+                    e.preventDefault();
+                    const fromId = dragColId ?? e.dataTransfer.getData("text/plain");
+                    if (fromId && fromId !== col.id) onReorder(fromId, col.id);
+                    setDragColId(null);
+                    setDropTargetId(null);
+                  }}
+                  className={`group bg-[#00842f] h-[54px] cursor-pointer select-none px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap transition-opacity ${
                     !showAprovarAction && ci === 0 ? "rounded-tl-lg rounded-bl-lg" : ""
+                  } ${dragColId === col.id ? "opacity-50" : ""} ${
+                    dropTargetId === col.id ? "shadow-[inset_3px_0_0_0_#dffbe8]" : ""
                   }`}
                 >
                   <div className="flex items-center gap-2">
-                    {/* drag indicator */}
-                    <svg className="size-5 shrink-0 opacity-60" fill="currentColor" viewBox="0 0 24 24">
-                      <circle cx="9" cy="6" r="1.5" />
-                      <circle cx="15" cy="6" r="1.5" />
-                      <circle cx="9" cy="12" r="1.5" />
-                      <circle cx="15" cy="12" r="1.5" />
-                      <circle cx="9" cy="18" r="1.5" />
-                      <circle cx="15" cy="18" r="1.5" />
-                    </svg>
+                    {/* grip: arraste para reordenar a coluna */}
+                    <span
+                      draggable
+                      title="Arraste para reordenar"
+                      onClick={(e) => e.stopPropagation()}
+                      onDragStart={(e: DragEvent<HTMLSpanElement>) => {
+                        e.dataTransfer.setData("text/plain", col.id);
+                        e.dataTransfer.effectAllowed = "move";
+                        setDragColId(col.id);
+                      }}
+                      onDragEnd={() => {
+                        setDragColId(null);
+                        setDropTargetId(null);
+                      }}
+                      className="cursor-grab opacity-60 transition-opacity hover:opacity-100 active:cursor-grabbing"
+                    >
+                      <svg className="size-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <circle cx="9" cy="6" r="1.5" />
+                        <circle cx="15" cy="6" r="1.5" />
+                        <circle cx="9" cy="12" r="1.5" />
+                        <circle cx="15" cy="12" r="1.5" />
+                        <circle cx="9" cy="18" r="1.5" />
+                        <circle cx="15" cy="18" r="1.5" />
+                      </svg>
+                    </span>
                     {col.label}
                     <SortArrow direction={sortDirectionOf(col.id)} />
                   </div>
