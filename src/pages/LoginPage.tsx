@@ -152,15 +152,6 @@ export default function LoginPage() {
                   clique aqui.
                 </a>
               </p>
-              <div className="h-px w-[327px] bg-[#cacaca]" />
-              <p className="text-center text-xs leading-[17px] text-[#4b4b4b]">
-                Para mais informações sobre como seus
-                <br />
-                dados são tratados{" "}
-                <a href="#" className="font-bold text-[#00842f]">
-                  clique aqui.
-                </a>
-              </p>
             </div>
           </div>
         </div>
