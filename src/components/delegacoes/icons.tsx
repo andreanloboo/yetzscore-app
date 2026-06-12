@@ -129,6 +129,7 @@ export function XIcon({ size = 16, className }: IconProps) {
   );
 }
 
+/** Info (ℹ): ponto em cima, haste embaixo — conforme Figma 8241:16011. */
 export function InfoCircleIcon({ size = 32, className }: IconProps) {
   return (
     <svg
@@ -142,8 +143,28 @@ export function InfoCircleIcon({ size = 32, className }: IconProps) {
       aria-hidden="true"
     >
       <circle cx="12" cy="12" r="10" />
-      <line x1="12" y1="8" x2="12" y2="12" />
-      <line x1="12" y1="16" x2="12.01" y2="16" strokeWidth={3} />
+      <line x1="12" y1="11" x2="12" y2="16" strokeLinecap="round" />
+      <line x1="12" y1="7.5" x2="12" y2="7.51" strokeWidth={3} strokeLinecap="round" />
+    </svg>
+  );
+}
+
+/** Alerta (!): haste em cima, ponto embaixo — para modais de Atenção. */
+export function AlertCircleIcon({ size = 32, className }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <line x1="12" y1="8" x2="12" y2="13" strokeLinecap="round" />
+      <line x1="12" y1="16.5" x2="12" y2="16.51" strokeWidth={3} strokeLinecap="round" />
     </svg>
   );
 }

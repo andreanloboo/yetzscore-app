@@ -41,6 +41,8 @@ interface ModalShellProps {
   /** Largura do painel (padrão ~390px conforme o design). */
   widthClass?: string;
   ariaLabel?: string;
+  /** Exibe o X no canto superior (alguns modais do design não têm). */
+  showClose?: boolean;
 }
 
 /**
@@ -52,6 +54,7 @@ export default function ModalShell({
   children,
   widthClass = "w-[390px]",
   ariaLabel,
+  showClose = true,
 }: ModalShellProps) {
   const entered = useEntryTransition();
 
@@ -80,14 +83,16 @@ export default function ModalShell({
           entered ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
       >
-        <button
-          type="button"
-          aria-label="Fechar"
-          onClick={onClose}
-          className="absolute right-3 top-3 z-10 flex size-8 items-center justify-center rounded-md text-[#8e8e8e] transition-colors duration-150 hover:bg-[#f5f5f5] hover:text-[#4b4b4b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f]"
-        >
-          <XIcon size={16} />
-        </button>
+        {showClose && (
+          <button
+            type="button"
+            aria-label="Fechar"
+            onClick={onClose}
+            className="absolute right-3 top-3 z-10 flex size-8 items-center justify-center rounded-md text-[#8e8e8e] transition-colors duration-150 hover:bg-[#f5f5f5] hover:text-[#4b4b4b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f]"
+          >
+            <XIcon size={16} />
+          </button>
+        )}
         {children}
       </div>
     </div>

@@ -1,5 +1,5 @@
 import ModalShell from "./ModalShell";
-import { CheckCircleIcon, InfoCircleIcon } from "./icons";
+import { AlertCircleIcon, CheckCircleIcon, InfoCircleIcon } from "./icons";
 
 const primaryButton =
   "flex h-12 w-full cursor-pointer items-center justify-center rounded-md bg-[#00842f] text-base font-bold text-white transition-[background-color,transform] duration-150 hover:bg-[#006b26] active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f] focus-visible:ring-offset-2";
@@ -23,7 +23,7 @@ export function AtencaoDelegacaoModal({
     <ModalShell onClose={onCancel} ariaLabel="Atenção">
       <div className="flex w-full flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-6">
-          <InfoCircleIcon size={32} className="text-[#f59e0b]" />
+          <AlertCircleIcon size={32} className="text-[#f59e0b]" />
           <p className="text-center text-[22px] font-bold leading-normal text-black">Atenção</p>
           <p className="text-center text-sm leading-normal text-[#4b4b4b]">{question}</p>
         </div>
@@ -85,10 +85,10 @@ export function AvisoDelegacaoModal({
   onClose,
 }: AvisoDelegacaoModalProps) {
   return (
-    <ModalShell onClose={onClose} ariaLabel={title}>
+    <ModalShell onClose={onClose} ariaLabel={title} showClose={false}>
       <div className="flex w-full flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-6">
-          <InfoCircleIcon size={32} className="text-[#00842f]" />
+          <InfoCircleIcon size={32} className="text-[#0369a1]" />
           <p className="text-center text-lg font-bold leading-normal text-black">{title}</p>
           <p className="text-center text-sm leading-normal text-[#4b4b4b]">{message}</p>
         </div>
