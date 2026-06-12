@@ -4,7 +4,8 @@ import Footer from "../components/Footer";
 import loginY from "../assets/login-y.svg";
 import logoScore1 from "../assets/logo-score-1.svg";
 import logoScore2 from "../assets/logo-score-2.svg";
-import { isLoginValid, isSenhaValid } from "../components/login/validation";
+import { isSenhaValid } from "../components/login/validation";
+import { profileFromLogin, setProfile } from "../lib/profile";
 import { useCountdown } from "../components/login/useCountdown";
 import { inputBase, inputBorder, primaryButton } from "../components/login/ui";
 import { FadeSlideIn } from "../components/login/ModalShell";
@@ -41,7 +42,12 @@ export default function LoginPage() {
     e.preventDefault();
     if (entrarDisabled) return;
 
-    if (isLoginValid(login) && isSenhaValid(senha)) {
+    // Perfil derivado do conteúdo do login: só números → Gerente de Negócios,
+    // só letras → Gerente de Contas. Alfanumérico (Usuário Master) ainda não
+    // está implementado e conta como falha.
+    const profile = profileFromLogin(login);
+    if (profile !== null && isSenhaValid(senha)) {
+      setProfile(profile);
       navigate("/campanhas");
       return;
     }

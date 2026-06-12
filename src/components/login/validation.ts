@@ -1,8 +1,12 @@
 // ─── Validações e helpers do login / recuperação de senha ────────────────────
 
-/** Login: válido somente se for EXCLUSIVAMENTE números, com no mínimo 8 dígitos. */
+/**
+ * Login: válido se for EXCLUSIVAMENTE números (mín. 8 dígitos) OU
+ * EXCLUSIVAMENTE letras (mín. 8 letras). Conteúdo misto é inválido
+ * (perfil Usuário Master, ainda não implementado).
+ */
 export function isLoginValid(login: string): boolean {
-  return /^\d{8,}$/.test(login);
+  return /^\d{8,}$/.test(login) || /^[A-Za-zÀ-ÿ]{8,}$/.test(login);
 }
 
 /** Senha do login: válida somente se for EXCLUSIVAMENTE letras, com no mínimo 8 letras. */

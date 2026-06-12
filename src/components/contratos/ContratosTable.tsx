@@ -2,7 +2,7 @@ import { useRef, useState, type DragEvent, type KeyboardEvent } from "react";
 import StatusBadge from "./StatusBadge";
 import type { Contrato, ColumnConfig, ContratoStatus } from "./types";
 
-type StatusFilter = "Todos" | "Aguardando aprovação" | "Aprovado" | "Aguardando vínculo";
+export type StatusFilter = "Todos" | "Aguardando aprovação" | "Aprovado" | "Aguardando vínculo";
 
 export type SortDirection = "asc" | "desc";
 
@@ -23,6 +23,10 @@ interface ContratosTableProps {
   onDetalhes: (id: string, x: number, y: number) => void;
   showAprovarAction: boolean;
   showDetalhes?: boolean;
+  /** Exibe a barra do grupo (título + seleção em massa). Padrão: true. */
+  showGroupHeader?: boolean;
+  /** Sobrescreve o rótulo da última coluna ("Ações"/"Detalhes"), ex.: "Ação". */
+  actionsLabel?: string;
   statusFilter: StatusFilter;
   onStatusFilterOpen: (x: number, y: number) => void;
   sort: SortState | null;
@@ -90,6 +94,8 @@ export default function ContratosTable({
   onDetalhes,
   showAprovarAction,
   showDetalhes = false,
+  showGroupHeader = true,
+  actionsLabel,
   statusFilter,
   onStatusFilterOpen,
   sort,
@@ -143,6 +149,7 @@ export default function ContratosTable({
   return (
     <div className="flex flex-col gap-6">
       {/* Group header bar */}
+      {showGroupHeader && (
       <div className="flex items-center justify-between">
         <p className="text-xl font-black text-black">{groupLabel}</p>
         {showAprovarAction && (
@@ -179,6 +186,7 @@ export default function ContratosTable({
           </div>
         )}
       </div>
+      )}
 
       {/* Table */}
       <div className="overflow-x-auto rounded-lg">
@@ -279,7 +287,7 @@ export default function ContratosTable({
               </th>
               {/* Ações / Detalhes */}
               <th className="bg-[#00842f] h-[54px] px-4 py-3 text-left text-sm font-bold text-white whitespace-nowrap rounded-tr-lg rounded-br-lg">
-                {showDetalhes ? "Detalhes" : "Ações"}
+                {actionsLabel ?? (showDetalhes ? "Detalhes" : "Ações")}
               </th>
             </tr>
           </thead>

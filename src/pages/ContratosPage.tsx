@@ -15,9 +15,12 @@ import {
   AcoesPopover,
   VincularPopover,
   VincularDiretoPopover,
+  VerDetalhesPopover,
   StatusDropdown,
   GerentesDropdown,
 } from "../components/contratos/Popovers";
+import GcContratosTable from "../components/contratos/GcContratosTable";
+import { getProfile } from "../lib/profile";
 import VincularWizard from "../components/contratos/vincular/VincularWizard";
 import type { VincularEntry, VincularRole } from "../components/contratos/vincular/VincularWizard";
 import CampanhaSelector from "../components/contratos/CampanhaSelector";
@@ -25,8 +28,10 @@ import CalendarPopover from "../components/campanhas/CalendarPopover";
 import type { DateRange } from "../components/campanhas/CalendarPopover";
 import {
   MOCK_CONTRATOS,
+  MOCK_CONTRATOS_GC,
   MOCK_CAMPANHAS,
   DEFAULT_COLUMNS,
+  DEFAULT_COLUMNS_GC,
   GERENTES,
   type Campanha,
   type Contrato,
@@ -61,9 +66,19 @@ const CADASTRO_INCOMPLETO_ID = "v2";
 export default function ContratosPage() {
   const navigate = useNavigate();
 
+  // ─── Perfil (define a variante da tela) ────────────────────────────────────
+  // Gerente de Contas: tabela única sem agrupamento/seleção; Gerente de
+  // Negócios: experiência original com tabelas agrupadas (inalterada).
+  const isGerenteContas = getProfile() === "gerente-contas";
+
   // ─── Data state ────────────────────────────────────────────────────────────
-  const [contratos, setContratos] = useState<Contrato[]>(MOCK_CONTRATOS);
-  const [columns, setColumns] = useState<ColumnConfig[]>(DEFAULT_COLUMNS);
+  const [contratos, setContratos] = useState<Contrato[]>(
+    isGerenteContas ? MOCK_CONTRATOS_GC : MOCK_CONTRATOS
+  );
+  const [columns, setColumns] = useState<ColumnConfig[]>(
+    isGerenteContas ? DEFAULT_COLUMNS_GC : DEFAULT_COLUMNS
+  );
+  const defaultColumns = isGerenteContas ? DEFAULT_COLUMNS_GC : DEFAULT_COLUMNS;
 
   // ─── Campanha selecionada (define o tipo de campanha da tela) ─────────────
   // Sempre há uma campanha selecionada — a tela não tem estado "sem campanha".
@@ -84,6 +99,7 @@ export default function ContratosPage() {
     maria: "Todos",
     joao: "Todos",
     junior: "Todos",
+    gc: "Todos",
   });
 
   // ─── Sort state (independent per table group) ──────────────────────────────
@@ -93,6 +109,7 @@ export default function ContratosPage() {
     maria: null,
     joao: null,
     junior: null,
+    gc: null,
   });
 
   // ─── Selection state ───────────────────────────────────────────────────────
@@ -147,6 +164,7 @@ export default function ContratosPage() {
   const maria = filteredByGroup("maria");
   const joao = filteredByGroup("joao");
   const junior = filteredByGroup("junior");
+  const gc = filteredByGroup("gc");
 
   const showKaique = selectedGerentes.includes("kaique");
   const showMaria = selectedGerentes.includes("maria");
@@ -154,13 +172,14 @@ export default function ContratosPage() {
   const showJunior = selectedGerentes.includes("junior");
 
   const allVisible = useMemo(() => {
+    if (isGerenteContas) return gc;
     const rows: Contrato[] = [];
     if (showKaique) rows.push(...kaique, ...vinculados);
     if (showMaria) rows.push(...maria);
     if (showJoao) rows.push(...joao);
     if (showJunior) rows.push(...junior);
     return rows;
-  }, [showKaique, showMaria, showJoao, showJunior, kaique, vinculados, maria, joao, junior]);
+  }, [isGerenteContas, gc, showKaique, showMaria, showJoao, showJunior, kaique, vinculados, maria, joao, junior]);
 
   const totalPages = Math.max(1, Math.ceil(allVisible.length / ITEMS_PER_PAGE));
 
@@ -366,7 +385,8 @@ export default function ContratosPage() {
               {/* Filter row */}
               <div className="flex w-full items-center justify-between">
                 <div className="flex items-center gap-4">
-                  {/* Gerentes dropdown */}
+                  {/* Gerentes dropdown (apenas Gerente de Negócios) */}
+                  {!isGerenteContas && (
                   <div className="relative">
                     <button
                       onClick={() => setShowGerentesDropdown((v) => !v)}
@@ -407,6 +427,7 @@ export default function ContratosPage() {
                       />
                     )}
                   </div>
+                  )}
 
                   {/* Search input */}
                   <div className="flex h-12 w-[500px] items-center justify-between rounded-md border border-[#cacaca] bg-white px-4 py-4">
@@ -438,6 +459,7 @@ export default function ContratosPage() {
                     </svg>
                   </button>
 
+                  {!isGerenteContas && (
                   <button className="flex h-10 items-center gap-2 rounded-md px-3 text-base font-bold text-[#00842f] hover:bg-[#e6f3ea]">
                     <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
@@ -447,6 +469,7 @@ export default function ContratosPage() {
                       <polyline points="6,9 12,15 18,9" />
                     </svg>
                   </button>
+                  )}
 
                   <div ref={calendarRef} className="relative">
                     <button
@@ -476,6 +499,19 @@ export default function ContratosPage() {
 
               <>
               {/* Tables */}
+              {isGerenteContas ? (
+                /* Variante Gerente de Contas: tabela única, sem agrupamento */
+                <GcContratosTable
+                  contratos={gc}
+                  columns={columns}
+                  onAction={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
+                  statusFilter={statusFilters.gc}
+                  onStatusFilterOpen={(x, y) => openStatusDropdown("gc", x, y)}
+                  sort={sortStates.gc ?? null}
+                  onSortChange={(s) => updateSort("gc", s)}
+                  onReorder={reorderColumns}
+                />
+              ) : (
               <div className="flex flex-col gap-10">
                 {showKaique && (
                   <>
@@ -574,6 +610,7 @@ export default function ContratosPage() {
                   />
                 )}
               </div>
+              )}
 
               {/* Pagination */}
               <div className="flex w-full items-center justify-between">
@@ -619,7 +656,7 @@ export default function ContratosPage() {
           <div className="fixed inset-0 z-30 bg-black/20" onClick={() => setOverlay(null)} />
           <GerenciarColunasPanel
             columns={columns}
-            defaultColumns={DEFAULT_COLUMNS}
+            defaultColumns={defaultColumns}
             onApply={(cols) => { setColumns(cols); setOverlay(null); }}
             onCancel={() => setOverlay(null)}
           />
@@ -710,8 +747,20 @@ export default function ContratosPage() {
         // valor-fixo / numero-sorte: linhas "Aguardando vínculo" ganham a opção
         // "Vincular" direta (ref 8435:10258); demais linhas mantêm o popover atual.
         const row = findContrato(overlay.id);
-        const vincularDireto =
-          campaignType !== "financiamento" && row?.status === "Aguardando vínculo";
+        const aguardandoVinculo = row?.status === "Aguardando vínculo";
+        // Gerente de Contas: linhas fora de "Aguardando vínculo" só oferecem
+        // "Ver detalhes" (frame 8428:18867). GN mantém o comportamento atual.
+        if (isGerenteContas && !aguardandoVinculo) {
+          return (
+            <VerDetalhesPopover
+              x={overlay.x}
+              y={overlay.y}
+              onVerDetalhes={() => setOverlay({ kind: "detalhes", contratoId: overlay.id })}
+              onClose={() => setOverlay(null)}
+            />
+          );
+        }
+        const vincularDireto = campaignType !== "financiamento" && aguardandoVinculo;
         return vincularDireto ? (
           <VincularDiretoPopover
             x={overlay.x}

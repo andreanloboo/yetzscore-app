@@ -6,6 +6,7 @@ import logoScoreText from "../assets/contratos/logo-score-text.svg";
 import avatar from "../assets/campanhas/avatar.svg";
 import { FileIcon, LineChartIcon } from "./campanhas/icons";
 import { UserMenuPopover } from "./contratos/Popovers";
+import { PROFILE_LABELS, getProfile } from "../lib/profile";
 
 const WIDTH_STORAGE_KEY = "yetzscore:sidebar-width";
 const LEGACY_STORAGE_KEY = "yetzscore:sidebar-expanded";
@@ -196,7 +197,7 @@ export default function AppSidebar() {
             {!collapsed && (
               <span className="flex min-w-0 flex-col items-start gap-0.5 overflow-hidden">
                 <span className="truncate text-sm font-bold text-black">Izabela</span>
-                <span className="truncate text-xs text-[#8e8e8e]">Gerente de Negócios</span>
+                <span className="truncate text-xs text-[#8e8e8e]">{PROFILE_LABELS[getProfile()]}</span>
               </span>
             )}
           </button>
