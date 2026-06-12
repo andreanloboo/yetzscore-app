@@ -66,8 +66,9 @@ export default function ContratosPage() {
   const [columns, setColumns] = useState<ColumnConfig[]>(DEFAULT_COLUMNS);
 
   // ─── Campanha selecionada (define o tipo de campanha da tela) ─────────────
-  const [campanha, setCampanha] = useState<Campanha | null>(MOCK_CAMPANHAS[0]);
-  const campaignType = campanha?.tipo ?? null;
+  // Sempre há uma campanha selecionada — a tela não tem estado "sem campanha".
+  const [campanha, setCampanha] = useState<Campanha>(MOCK_CAMPANHAS[0]);
+  const campaignType = campanha.tipo;
 
   // ─── Filter state ──────────────────────────────────────────────────────────
   const [selectedGerentes, setSelectedGerentes] = useState<string[]>(["kaique"]);
@@ -329,7 +330,6 @@ export default function ContratosPage() {
                 campanhas={MOCK_CAMPANHAS}
                 selected={campanha}
                 onSelect={setCampanha}
-                onClear={() => setCampanha(null)}
               />
 
               {/* Summary cards */}
@@ -474,12 +474,6 @@ export default function ContratosPage() {
                 </div>
               </div>
 
-              {campanha === null ? (
-                /* Estado vazio — nenhuma campanha selecionada */
-                <div className="flex w-full flex-col items-center justify-center rounded-lg bg-[#f5f5f5] py-20">
-                  <p className="text-base text-[#8e8e8e]">Nenhum resultado encontrado</p>
-                </div>
-              ) : (
               <>
               {/* Tables */}
               <div className="flex flex-col gap-10">
@@ -610,7 +604,6 @@ export default function ContratosPage() {
                 </div>
               </div>
               </>
-              )}
             </div>
           </div>
 
@@ -718,9 +711,7 @@ export default function ContratosPage() {
         // "Vincular" direta (ref 8435:10258); demais linhas mantêm o popover atual.
         const row = findContrato(overlay.id);
         const vincularDireto =
-          campaignType !== null &&
-          campaignType !== "financiamento" &&
-          row?.status === "Aguardando vínculo";
+          campaignType !== "financiamento" && row?.status === "Aguardando vínculo";
         return vincularDireto ? (
           <VincularDiretoPopover
             x={overlay.x}
@@ -744,7 +735,7 @@ export default function ContratosPage() {
       {overlay?.kind === "vincular" && (
         <VincularWizard
           entry={overlay.entry}
-          campaignType={campaignType ?? "financiamento"}
+          campaignType={campaignType}
           cadastroIncompleto={overlay.id === CADASTRO_INCOMPLETO_ID}
           onVincular={(role, nome) => vincularFuncionario(overlay.id, role, nome)}
           onConfirmarVinculo={() => updateStatus([overlay.id], "Aguardando aprovação")}

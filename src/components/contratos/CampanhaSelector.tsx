@@ -15,12 +15,12 @@ function StatusPill({ status }: { status: Campanha["status"] }) {
   );
 }
 
-// ─── Combobox de campanha (nome + badge + × + chevron) ───────────────────────
+// ─── Combobox de campanha (nome + badge + chevron) ───────────────────────────
+// Sempre há uma campanha selecionada nesta tela — não existe ação de limpar.
 export interface CampanhaSelectorProps {
   campanhas: Campanha[];
-  selected: Campanha | null;
+  selected: Campanha;
   onSelect: (campanha: Campanha) => void;
-  onClear: () => void;
 }
 
 const normalise = (s: string) =>
@@ -30,7 +30,6 @@ export default function CampanhaSelector({
   campanhas,
   selected,
   onSelect,
-  onClear,
 }: CampanhaSelectorProps) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -97,33 +96,10 @@ export default function CampanhaSelector({
         className="flex h-12 w-full cursor-pointer items-center justify-between gap-2 rounded-md border border-[#cacaca] bg-white px-4 py-4 transition-colors duration-150 hover:border-[#8e8e8e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f]/40"
       >
         <div className="flex min-w-0 flex-1 items-center gap-2">
-          {selected ? (
-            <>
-              <span className="truncate text-base text-[#4b4b4b]">{selected.nome}</span>
-              <StatusPill status={selected.status} />
-            </>
-          ) : (
-            <span className="truncate text-base text-[#8e8e8e]">Selecionar campanha</span>
-          )}
+          <span className="truncate text-base text-[#4b4b4b]">{selected.nome}</span>
+          <StatusPill status={selected.status} />
         </div>
         <div className="flex shrink-0 items-center gap-2">
-          {selected && (
-            <button
-              type="button"
-              aria-label="Limpar campanha selecionada"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClear();
-                close();
-              }}
-              className="cursor-pointer rounded-sm text-[#8e8e8e] transition-colors duration-150 hover:text-[#4b4b4b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f]/40"
-            >
-              <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-          )}
           <svg
             className={`size-4 text-[#8e8e8e] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
             fill="none"
