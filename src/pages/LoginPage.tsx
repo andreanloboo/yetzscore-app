@@ -25,7 +25,8 @@ export default function LoginPage() {
   // ─── Máquina de estados das tentativas ──────────────────────────────────────
   // failCount: 0..2 livre | 3 → bloqueio temporário (59s) | 5 → bloqueio definitivo
   const [failCount, setFailCount] = useState(0);
-  const [showError, setShowError] = useState(false);
+  const [erros, setErros] = useState({ login: false, senha: false });
+  const showError = erros.login || erros.senha;
   const [tempLockOpen, setTempLockOpen] = useState(false);
   const [permLocked, setPermLocked] = useState(false);
   const [permLockOpen, setPermLockOpen] = useState(false);
@@ -56,7 +57,7 @@ export default function LoginPage() {
 
     const next = failCount + 1;
     setFailCount(next);
-    setShowError(true);
+    setErros({ login: profile === null, senha: !isSenhaValid(senha) });
     if (next === 3) {
       startLock(59);
       setTempLockOpen(true);
@@ -106,14 +107,13 @@ export default function LoginPage() {
                       <input
                         id="login"
                         type="text"
-                        inputMode="numeric"
                         value={login}
                         onChange={(e) => {
                           setLogin(e.target.value);
-                          setShowError(false);
+                          setErros({ login: false, senha: false });
                         }}
                         placeholder="Digite sua funcional"
-                        className={`${inputBase} ${inputBorder(showError)} placeholder:text-[#4b4b4b]`}
+                        className={`${inputBase} ${inputBorder(erros.login)} placeholder:text-[#4b4b4b]`}
                       />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -127,10 +127,10 @@ export default function LoginPage() {
                           value={senha}
                           onChange={(e) => {
                             setSenha(e.target.value);
-                            setShowError(false);
+                            setErros({ login: false, senha: false });
                           }}
                           placeholder="Digite sua senha"
-                          className={`${inputBase} ${inputBorder(showError)} pr-12 placeholder:text-[#4b4b4b]`}
+                          className={`${inputBase} ${inputBorder(erros.senha)} pr-12 placeholder:text-[#4b4b4b]`}
                         />
                         <button
                           type="button"
@@ -144,9 +144,16 @@ export default function LoginPage() {
                     </div>
                     {showError && (
                       <FadeSlideIn>
-                        <p className="text-sm leading-[17px] text-[#cc0000]">
-                          Dados inválidos. Verifique e tente novamente.
-                        </p>
+                        <div className="flex flex-col gap-1 text-sm leading-[17px] text-[#cc0000]">
+                          <p>Dados inválidos. Verifique e tente novamente.</p>
+                          {erros.login && (
+                            <p>
+                              Login: use só números (Gerente de Negócios) ou só letras
+                              (Gerente de Contas), com no mínimo 8 caracteres.
+                            </p>
+                          )}
+                          {erros.senha && <p>Senha: use apenas letras, com no mínimo 8 caracteres.</p>}
+                        </div>
                       </FadeSlideIn>
                     )}
                   </div>
