@@ -198,10 +198,22 @@ export default function ContratosPage() {
   }
 
   // ─── Overlay actions ───────────────────────────────────────────────────────
-  function handleAprovarSelecionados() {
-    const selectedContratos = kaique.filter((c) => selectedIds.has(c.id));
+  function handleAprovarSelecionados(rows: Contrato[]) {
+    const selectedContratos = rows.filter((c) => selectedIds.has(c.id));
     setModalSelectedIds(new Set(selectedContratos.map((c) => c.id)));
     setOverlay({ kind: "contratosSelecionados" });
+  }
+
+  // "Selecionar todos": ao marcar, seleciona o grupo e abre o modal
+  // "Contratos selecionados" para revisar a lista (conector do Figma);
+  // ao desmarcar, apenas limpa a seleção do grupo.
+  function selectAllInGroup(rows: Contrato[]) {
+    const allSel = rows.length > 0 && rows.every((r) => selectedIds.has(r.id));
+    toggleAllInGroup(rows);
+    if (!allSel && rows.length > 0) {
+      setModalSelectedIds(new Set(rows.map((r) => r.id)));
+      setOverlay({ kind: "contratosSelecionados" });
+    }
   }
 
   function confirmAprovar(ids: string[]) {
@@ -479,8 +491,8 @@ export default function ContratosPage() {
                       columns={columns}
                       selectedIds={selectedIds}
                       onToggle={toggleSelection}
-                      onSelectAll={() => toggleAllInGroup(kaique)}
-                      onAprovarSelected={handleAprovarSelecionados}
+                      onSelectAll={() => selectAllInGroup(kaique)}
+                      onAprovarSelected={() => handleAprovarSelecionados(kaique)}
                       onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                       onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                       showAprovarAction
@@ -496,7 +508,7 @@ export default function ContratosPage() {
                       columns={columns}
                       selectedIds={selectedIds}
                       onToggle={toggleSelection}
-                      onSelectAll={() => toggleAllInGroup(vinculados)}
+                      onSelectAll={() => selectAllInGroup(vinculados)}
                       onAprovarSelected={() => {}}
                       onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                       onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
@@ -517,8 +529,8 @@ export default function ContratosPage() {
                     columns={columns}
                     selectedIds={selectedIds}
                     onToggle={toggleSelection}
-                    onSelectAll={() => toggleAllInGroup(maria)}
-                    onAprovarSelected={handleAprovarSelecionados}
+                    onSelectAll={() => selectAllInGroup(maria)}
+                    onAprovarSelected={() => handleAprovarSelecionados(maria)}
                     onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                     onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                     showAprovarAction
@@ -536,8 +548,8 @@ export default function ContratosPage() {
                     columns={columns}
                     selectedIds={selectedIds}
                     onToggle={toggleSelection}
-                    onSelectAll={() => toggleAllInGroup(joao)}
-                    onAprovarSelected={handleAprovarSelecionados}
+                    onSelectAll={() => selectAllInGroup(joao)}
+                    onAprovarSelected={() => handleAprovarSelecionados(joao)}
                     onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                     onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                     showAprovarAction
@@ -555,8 +567,8 @@ export default function ContratosPage() {
                     columns={columns}
                     selectedIds={selectedIds}
                     onToggle={toggleSelection}
-                    onSelectAll={() => toggleAllInGroup(junior)}
-                    onAprovarSelected={handleAprovarSelecionados}
+                    onSelectAll={() => selectAllInGroup(junior)}
+                    onAprovarSelected={() => handleAprovarSelecionados(junior)}
                     onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                     onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                     showAprovarAction
