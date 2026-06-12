@@ -14,11 +14,13 @@ import {
   BloqueioTemporarioModal,
 } from "../components/login/BloqueioModals";
 import RecuperarSenhaFlow from "../components/login/RecuperarSenhaFlow";
+import { EyeIcon, EyeOffIcon } from "../components/login/icons";
 
 export default function LoginPage() {
   const navigate = useNavigate();
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
+  const [showSenha, setShowSenha] = useState(false);
 
   // ─── Máquina de estados das tentativas ──────────────────────────────────────
   // failCount: 0..2 livre | 3 → bloqueio temporário (59s) | 5 → bloqueio definitivo
@@ -118,17 +120,27 @@ export default function LoginPage() {
                       <label htmlFor="senha" className="flex h-6 items-center text-sm leading-[17px] text-black">
                         Senha
                       </label>
-                      <input
-                        id="senha"
-                        type="password"
-                        value={senha}
-                        onChange={(e) => {
-                          setSenha(e.target.value);
-                          setShowError(false);
-                        }}
-                        placeholder="Digite sua senha"
-                        className={`${inputBase} ${inputBorder(showError)} placeholder:text-[#4b4b4b]`}
-                      />
+                      <div className="relative w-full">
+                        <input
+                          id="senha"
+                          type={showSenha ? "text" : "password"}
+                          value={senha}
+                          onChange={(e) => {
+                            setSenha(e.target.value);
+                            setShowError(false);
+                          }}
+                          placeholder="Digite sua senha"
+                          className={`${inputBase} ${inputBorder(showError)} pr-12 placeholder:text-[#4b4b4b]`}
+                        />
+                        <button
+                          type="button"
+                          aria-label={showSenha ? "Ocultar senha" : "Mostrar senha"}
+                          onClick={() => setShowSenha((v) => !v)}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer rounded p-0.5 text-[#4b4b4b] transition-colors duration-150 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f]"
+                        >
+                          {showSenha ? <EyeOffIcon className="size-4" /> : <EyeIcon className="size-4" />}
+                        </button>
+                      </div>
                     </div>
                     {showError && (
                       <FadeSlideIn>
