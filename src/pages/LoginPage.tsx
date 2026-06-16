@@ -14,7 +14,10 @@ import {
   BloqueioTemporarioModal,
 } from "../components/login/BloqueioModals";
 import RecuperarSenhaFlow from "../components/login/RecuperarSenhaFlow";
+import TokenVerificacaoModal from "../components/login/TokenVerificacaoModal";
+import CriarNovaSenhaFlow from "../components/login/CriarNovaSenhaFlow";
 import { EyeIcon, EyeOffIcon } from "../components/login/icons";
+import type { UserProfile } from "../lib/profile";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -31,6 +34,11 @@ export default function LoginPage() {
   const [permLocked, setPermLocked] = useState(false);
   const [permLockOpen, setPermLockOpen] = useState(false);
   const [showRecuperar, setShowRecuperar] = useState(false);
+  // Login "00000000": usuário sem senha → fluxo de criação de nova senha.
+  const [showCriarSenha, setShowCriarSenha] = useState(false);
+  // Após "Entrar" com credenciais válidas, exibe o código de verificação;
+  // o perfil só é aplicado e a navegação só ocorre após validar o código.
+  const [pendingProfile, setPendingProfile] = useState<UserProfile | null>(null);
 
   const { remaining: lockRemaining, restart: startLock } = useCountdown(0);
   const tempLocked = lockRemaining > 0;
@@ -45,13 +53,19 @@ export default function LoginPage() {
     e.preventDefault();
     if (entrarDisabled) return;
 
+    // Login "00000000": conta sem senha criada → inicia a criação de nova senha.
+    if (login === "00000000") {
+      setShowCriarSenha(true);
+      return;
+    }
+
     // Perfil derivado do conteúdo do login: só números → Gerente de Negócios,
     // só letras → Gerente de Contas. Alfanumérico (Usuário Master) ainda não
     // está implementado e conta como falha.
     const profile = profileFromLogin(login);
     if (profile !== null && isSenhaValid(senha)) {
-      setProfile(profile);
-      navigate("/campanhas");
+      // Credenciais válidas → fluxo de código de verificação (token).
+      setPendingProfile(profile);
       return;
     }
 
@@ -78,7 +92,7 @@ export default function LoginPage() {
               alt=""
               className="pointer-events-none absolute -bottom-[31%] -left-[55%] -right-[72%] -top-[68%] h-[200%] w-[227%] max-w-none"
             />
-            <div className="absolute left-[9.57%] top-[50px] flex w-[29.4%] items-center gap-[4%]">
+            <div className="absolute left-10 top-10 flex w-[20%] items-center gap-[4%]">
               <img src={logoScore1} alt="" className="w-[24.6%]" />
               <img src={logoScore2} alt="score" className="w-[66%]" />
             </div>
@@ -193,6 +207,20 @@ export default function LoginPage() {
 
       {/* Fluxo de recuperação de senha */}
       {showRecuperar && <RecuperarSenhaFlow onClose={() => setShowRecuperar(false)} />}
+
+      {/* Fluxo de criação de nova senha (login 00000000) */}
+      {showCriarSenha && <CriarNovaSenhaFlow onClose={() => setShowCriarSenha(false)} />}
+
+      {/* Código de verificação (token) após login válido */}
+      {pendingProfile && (
+        <TokenVerificacaoModal
+          onVerified={() => {
+            setProfile(pendingProfile);
+            navigate("/campanhas");
+          }}
+          onClose={() => setPendingProfile(null)}
+        />
+      )}
     </div>
   );
 }

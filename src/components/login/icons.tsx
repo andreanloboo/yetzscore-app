@@ -105,6 +105,25 @@ export function MailIcon({ className = "size-6 text-[#4b4b4b]" }: IconProps) {
   );
 }
 
+export function InfoIcon({ className = "size-8 text-[#00842f]" }: IconProps) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.7} viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 11v5" />
+      <circle cx="12" cy="8" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function FileIcon({ className = "size-8 text-[#00842f]" }: IconProps) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.7} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14 3.5H7.5A1.5 1.5 0 006 5v14a1.5 1.5 0 001.5 1.5h9A1.5 1.5 0 0018 19V7.5L14 3.5z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 3.5V8h4.5" />
+    </svg>
+  );
+}
+
 export function CloseIcon({ className = "size-5" }: IconProps) {
   return (
     <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">

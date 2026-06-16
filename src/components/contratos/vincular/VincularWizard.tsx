@@ -156,11 +156,18 @@ function ResultRow({ cells, onClick }: { cells: string[]; onClick?: () => void }
   return (
     <div
       onClick={onClick}
-      className={`flex items-start bg-[#dffbe8] ${onClick ? "cursor-pointer hover:bg-[#c9f5d8]" : ""}`}
+      className={`flex w-full items-stretch overflow-hidden rounded-md bg-[#dffbe8] ${onClick ? "cursor-pointer hover:bg-[#c9f5d8]" : ""}`}
     >
       {cells.map((cell, i) => (
-        <div key={i} className="flex h-[54.667px] items-center px-4 py-3">
-          <p className="whitespace-nowrap text-sm leading-[17px] text-[#015e22]">{cell}</p>
+        <div
+          key={i}
+          className={`flex h-[54.667px] items-center px-4 py-3 ${i === 0 ? "min-w-0 flex-1" : "shrink-0"}`}
+        >
+          <p
+            className={`text-sm leading-[17px] text-[#015e22] ${i === 0 ? "truncate" : "whitespace-nowrap"}`}
+          >
+            {cell}
+          </p>
         </div>
       ))}
     </div>
@@ -298,7 +305,7 @@ function CpfSearchStep({
       </div>
 
       {matches.length > 0 && (
-        <div className="flex flex-col gap-2">
+        <div className="flex w-full flex-col gap-2">
           {matches.map((m) => (
             <ResultRow
               key={m.cpf}

@@ -519,7 +519,7 @@ interface PasswordFieldProps {
   error: boolean;
 }
 
-function PasswordField({ id, label, value, onChange, show, onToggleShow, error }: PasswordFieldProps) {
+export function PasswordField({ id, label, value, onChange, show, onToggleShow, error }: PasswordFieldProps) {
   return (
     <div className="flex w-full flex-col gap-2">
       <label htmlFor={id} className="flex h-6 items-center text-sm leading-[17px] text-black">
@@ -547,7 +547,7 @@ function PasswordField({ id, label, value, onChange, show, onToggleShow, error }
   );
 }
 
-function ChecklistItem({ ok, label }: { ok: boolean; label: string }) {
+export function ChecklistItem({ ok, label }: { ok: boolean; label: string }) {
   return (
     <div className="flex items-center gap-1">
       {ok ? (

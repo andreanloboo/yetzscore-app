@@ -527,26 +527,6 @@ export default function ContratosPage() {
                       onSortChange={(s) => updateSort("kaique", s)}
                       onReorder={reorderColumns}
                     />
-                    <ContratosTable
-                      groupLabel="Vinculados - Confirmar Vendedor"
-                      contratos={vinculados}
-                      columns={columns}
-                      selectedIds={selectedIds}
-                      onToggle={toggleSelection}
-                      onToggleAll={() => toggleAllInGroup(vinculados)}
-                      onSelectAll={() => selectAllInGroup(vinculados)}
-                      onAprovarSelected={() => {}}
-                      actionsDisabled={campanhaInativa}
-                      onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
-                      onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
-                      showAprovarAction={false}
-                      showDetalhes
-                      statusFilter={statusFilters.vinculados}
-                      onStatusFilterOpen={(x, y) => openStatusDropdown("vinculados", x, y)}
-                      sort={sortStates.vinculados ?? null}
-                      onSortChange={(s) => updateSort("vinculados", s)}
-                      onReorder={reorderColumns}
-                    />
                   </>
                 )}
                 {showMaria && (
@@ -610,6 +590,29 @@ export default function ContratosPage() {
                     sort={sortStates.junior ?? null}
                     onSortChange={(s) => updateSort("junior", s)}
                       onReorder={reorderColumns}
+                  />
+                )}
+                {/* "Aguardando vínculo" (Confirmar Vendedor): sempre por último */}
+                {showKaique && (
+                  <ContratosTable
+                    groupLabel="Vinculados - Confirmar Vendedor"
+                    contratos={vinculados}
+                    columns={columns}
+                    selectedIds={selectedIds}
+                    onToggle={toggleSelection}
+                    onToggleAll={() => toggleAllInGroup(vinculados)}
+                    onSelectAll={() => selectAllInGroup(vinculados)}
+                    onAprovarSelected={() => {}}
+                    actionsDisabled={campanhaInativa}
+                    onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
+                    onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
+                    showAprovarAction={false}
+                    showDetalhes
+                    statusFilter={statusFilters.vinculados}
+                    onStatusFilterOpen={(x, y) => openStatusDropdown("vinculados", x, y)}
+                    sort={sortStates.vinculados ?? null}
+                    onSortChange={(s) => updateSort("vinculados", s)}
+                    onReorder={reorderColumns}
                   />
                 )}
               </div>
