@@ -54,6 +54,7 @@ export default function GcContratosTable({
         columns={columns}
         selectedIds={NO_SELECTION}
         onToggle={noop}
+        onToggleAll={noop}
         onSelectAll={noop}
         onAprovarSelected={noop}
         onAcoes={onAction}

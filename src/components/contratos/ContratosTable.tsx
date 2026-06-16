@@ -17,8 +17,13 @@ interface ContratosTableProps {
   columns: ColumnConfig[];
   selectedIds: Set<string>;
   onToggle: (id: string) => void;
+  /** Checkbox "Selecionar todos": apenas (des)marca o grupo, sem abrir modal. */
+  onToggleAll: () => void;
+  /** Texto "Selecionar todos": seleciona o grupo e abre o modal de revisão. */
   onSelectAll: () => void;
   onAprovarSelected: () => void;
+  /** Campanha inativa: desabilita seleção e aprovação em massa. */
+  actionsDisabled?: boolean;
   onAcoes: (id: string, x: number, y: number) => void;
   onDetalhes: (id: string, x: number, y: number) => void;
   showAprovarAction: boolean;
@@ -88,8 +93,10 @@ export default function ContratosTable({
   columns,
   selectedIds,
   onToggle,
+  onToggleAll,
   onSelectAll,
   onAprovarSelected,
+  actionsDisabled = false,
   onAcoes,
   onDetalhes,
   showAprovarAction,
@@ -153,11 +160,11 @@ export default function ContratosTable({
       <div className="flex items-center justify-between">
         <p className="text-xl font-black text-black">{groupLabel}</p>
         {showAprovarAction && (
-          <div className="flex items-center gap-6">
-            <label className="flex cursor-pointer items-center gap-2">
+          <div className={`flex items-center gap-6 ${actionsDisabled ? "opacity-40" : ""}`}>
+            <label className={`flex items-center gap-2 ${actionsDisabled ? "cursor-not-allowed" : "cursor-pointer"}`}>
               <div
-                className={`relative shrink-0 size-[15px] cursor-pointer rounded-[3px] ${allSelected ? "bg-[#00842f]" : "border-[1.8px] border-[#909191]"}`}
-                onClick={onSelectAll}
+                className={`relative shrink-0 size-[15px] rounded-[3px] ${actionsDisabled ? "cursor-not-allowed" : "cursor-pointer"} ${allSelected ? "bg-[#00842f]" : "border-[1.8px] border-[#909191]"}`}
+                onClick={actionsDisabled ? undefined : onToggleAll}
               >
                 {allSelected && (
                   <svg className="absolute inset-[2px]" fill="none" stroke="white" strokeWidth={3} viewBox="0 0 12 12">
@@ -165,24 +172,21 @@ export default function ContratosTable({
                   </svg>
                 )}
               </div>
-              <span className="cursor-pointer text-sm font-bold text-[#8e8e8e] underline" onClick={onSelectAll}>
+              <span
+                className={`text-sm font-bold text-[#8e8e8e] underline ${actionsDisabled ? "cursor-not-allowed" : "cursor-pointer"}`}
+                onClick={actionsDisabled ? undefined : onSelectAll}
+              >
                 Selecionar todos
               </span>
             </label>
-            <label className="flex items-center gap-2">
-              <div
-                className={`relative flex h-6 w-12 items-center rounded-full p-1 transition-colors ${anySelected ? "bg-[#00842f]" : "bg-[#c6c6c6]"}`}
-                onClick={anySelected ? onAprovarSelected : undefined}
-                style={{ cursor: anySelected ? "pointer" : "default" }}
-              >
-                <div
-                  className={`size-4 rounded-full bg-white shadow transition-transform ${anySelected ? "translate-x-6" : "translate-x-0"}`}
-                />
-              </div>
-              <span className="text-base text-black">
-                Aprovar{anySelected ? ` (${selectedCount})` : ""}
-              </span>
-            </label>
+            <button
+              onClick={anySelected && !actionsDisabled ? onAprovarSelected : undefined}
+              disabled={!anySelected || actionsDisabled}
+              className="h-[42px] px-3 text-base font-bold text-white rounded-[6px] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              style={{ backgroundColor: "#00842f" }}
+            >
+              Aprovar{anySelected ? ` (${selectedCount})` : ""}
+            </button>
           </div>
         )}
       </div>
@@ -297,8 +301,8 @@ export default function ContratosTable({
                 {showAprovarAction && (
                   <td className="rounded-tl-lg rounded-bl-lg w-12 px-4 py-3 text-center">
                     <div
-                      className={`relative shrink-0 size-[15px] cursor-pointer rounded-[3px] ${selectedIds.has(row.id) ? "bg-[#00842f]" : "border-[1.8px] border-[#909191]"}`}
-                      onClick={() => onToggle(row.id)}
+                      className={`relative shrink-0 size-[15px] rounded-[3px] ${actionsDisabled ? "cursor-not-allowed opacity-40" : "cursor-pointer"} ${selectedIds.has(row.id) ? "bg-[#00842f]" : "border-[1.8px] border-[#909191]"}`}
+                      onClick={actionsDisabled ? undefined : () => onToggle(row.id)}
                     >
                       {selectedIds.has(row.id) && (
                         <svg className="absolute inset-[2px]" fill="none" stroke="white" strokeWidth={3} viewBox="0 0 12 12">

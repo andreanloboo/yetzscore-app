@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import type { ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import type { ReactNode, RefObject } from "react";
 
 // ─── Generic popover wrapper (positioned absolute, closes on click-away/Esc) ──
 interface PopoverProps {
@@ -51,6 +51,8 @@ interface AcoesPopoverProps {
   onDesvincular: () => void;
   onVerDetalhes: () => void;
   onClose: () => void;
+  /** Campanha inativa: desabilita as ações, mantendo apenas "Ver detalhes". */
+  actionsDisabled?: boolean;
 }
 
 export function AcoesPopover({
@@ -61,25 +63,32 @@ export function AcoesPopover({
   onDesvincular,
   onVerDetalhes,
   onClose,
+  actionsDisabled = false,
 }: AcoesPopoverProps) {
+  // Ícones neutros (herdam a cor do texto), iguais ao item "Ver detalhes".
+  const actionCls = actionsDisabled
+    ? "flex items-center gap-2 text-xs text-[#cacaca] cursor-not-allowed"
+    : "flex cursor-pointer items-center gap-2 text-xs text-[#4b4b4b] hover:text-[#00842f]";
   return (
     <PopoverWrapper x={x} y={y} onClose={onClose}>
       <div className="flex flex-col gap-4 rounded-md border border-[#cacaca] bg-white p-4 shadow-md">
         <button
-          onClick={onAprovar}
-          className="flex cursor-pointer items-center gap-2 text-xs text-[#4b4b4b] hover:text-[#00842f]"
+          onClick={actionsDisabled ? undefined : onAprovar}
+          disabled={actionsDisabled}
+          className={actionCls}
         >
-          <svg className="size-4 text-[#22c55e]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <polyline points="8,12 11,15 16,9" />
           </svg>
           Aprovar Contrato
         </button>
         <button
-          onClick={onReprovar}
-          className="flex cursor-pointer items-center gap-2 text-xs text-[#4b4b4b] hover:text-red-500"
+          onClick={actionsDisabled ? undefined : onReprovar}
+          disabled={actionsDisabled}
+          className={actionCls}
         >
-          <svg className="size-4 text-red-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <line x1="15" y1="9" x2="9" y2="15" />
             <line x1="9" y1="9" x2="15" y2="15" />
@@ -87,10 +96,11 @@ export function AcoesPopover({
           Reprovar Contrato
         </button>
         <button
-          onClick={onDesvincular}
-          className="flex cursor-pointer items-center gap-2 text-xs text-[#4b4b4b] hover:text-orange-500"
+          onClick={actionsDisabled ? undefined : onDesvincular}
+          disabled={actionsDisabled}
+          className={actionCls}
         >
-          <svg className="size-4 text-[#4b4b4b]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+          <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
           </svg>
           Desvincular
@@ -280,6 +290,9 @@ export function StatusDropdown({ x, y, current, onSelect, onClose }: StatusDropd
 
 // ─── User menu popover ────────────────────────────────────────────────────────
 interface UserMenuPopoverProps {
+  /** Botão do avatar — ancora o menu acima dele com posição fixa, evitando
+      que o overflow-hidden da sidebar (sobretudo colapsada) corte o "Sair". */
+  anchorRef: RefObject<HTMLElement | null>;
   onEditarPerfil: () => void;
   onRecuperarSenha: () => void;
   onSair: () => void;
@@ -287,16 +300,32 @@ interface UserMenuPopoverProps {
 }
 
 export function UserMenuPopover({
+  anchorRef,
   onEditarPerfil,
   onRecuperarSenha,
   onSair,
   onClose,
 }: UserMenuPopoverProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState<{ left: number; bottom: number } | null>(null);
+
+  // Posiciona o menu logo acima do avatar (equivale a bottom-full + mb-2).
+  useLayoutEffect(() => {
+    const el = anchorRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    setPos({ left: rect.left, bottom: window.innerHeight - rect.top + 8 });
+  }, [anchorRef]);
 
   useEffect(() => {
     function handle(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) onClose();
+      if (
+        ref.current &&
+        !ref.current.contains(e.target as Node) &&
+        !anchorRef.current?.contains(e.target as Node)
+      ) {
+        onClose();
+      }
     }
     function handleKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -307,13 +336,13 @@ export function UserMenuPopover({
       document.removeEventListener("mousedown", handle);
       document.removeEventListener("keydown", handleKey);
     };
-  }, [onClose]);
+  }, [onClose, anchorRef]);
 
   return (
     <div
       ref={ref}
-      className="absolute bottom-full left-0 z-60 mb-2 w-52 rounded-md border border-[#cacaca] bg-white shadow-md"
-      style={{ zIndex: 60 }}
+      className="w-52 rounded-md border border-[#cacaca] bg-white shadow-md"
+      style={{ position: "fixed", left: pos?.left, bottom: pos?.bottom, zIndex: 60, visibility: pos ? "visible" : "hidden" }}
     >
       {[
         { label: "Editar perfil", action: onEditarPerfil },

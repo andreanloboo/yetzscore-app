@@ -84,6 +84,9 @@ export default function ContratosPage() {
   // Sempre há uma campanha selecionada — a tela não tem estado "sem campanha".
   const [campanha, setCampanha] = useState<Campanha>(MOCK_CAMPANHAS[0]);
   const campaignType = campanha.tipo;
+  // Regra: campanha inativa congela todas as ações (seleção, aprovar, reprovar,
+  // desvincular, vincular). Apenas a visualização ("Ver detalhes") permanece.
+  const campanhaInativa = campanha.status === "Inativo";
 
   // ─── Filter state ──────────────────────────────────────────────────────────
   const [selectedGerentes, setSelectedGerentes] = useState<string[]>(["kaique"]);
@@ -228,12 +231,14 @@ export default function ContratosPage() {
   // "Contratos selecionados" para revisar a lista (conector do Figma);
   // ao desmarcar, apenas limpa a seleção do grupo.
   function selectAllInGroup(rows: Contrato[]) {
-    const allSel = rows.length > 0 && rows.every((r) => selectedIds.has(r.id));
-    toggleAllInGroup(rows);
-    if (!allSel && rows.length > 0) {
-      setModalSelectedIds(new Set(rows.map((r) => r.id)));
-      setOverlay({ kind: "contratosSelecionados" });
-    }
+    if (rows.length === 0) return;
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      rows.forEach((r) => next.add(r.id));
+      return next;
+    });
+    setModalSelectedIds(new Set(rows.map((r) => r.id)));
+    setOverlay({ kind: "contratosSelecionados" });
   }
 
   function confirmAprovar(ids: string[]) {
@@ -309,13 +314,13 @@ export default function ContratosPage() {
   const calendarRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-white font-[Lato,sans-serif] text-[#4b4b4b]">
-      <div className="flex flex-1 items-start">
-        {/* Sidebar */}
+    <div className="flex h-screen w-full flex-col overflow-hidden bg-white font-[Lato,sans-serif] text-[#4b4b4b]">
+      <div className="flex min-h-0 flex-1 items-stretch">
+        {/* Sidebar — altura fixa de tela; rola apenas o conteúdo principal */}
         <AppSidebar />
 
         {/* Main content */}
-        <main className="flex flex-1 flex-col min-w-0">
+        <main className="flex min-h-0 flex-1 flex-col overflow-y-auto min-w-0">
           {/* Page header */}
           <div className="flex items-center border-b border-[#e1e1e1] px-16 py-16">
             <div className="flex items-center gap-4">
@@ -459,18 +464,6 @@ export default function ContratosPage() {
                     </svg>
                   </button>
 
-                  {!isGerenteContas && (
-                  <button className="flex h-10 items-center gap-2 rounded-md px-3 text-base font-bold text-[#00842f] hover:bg-[#e6f3ea]">
-                    <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                    </svg>
-                    Gerente
-                    <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                      <polyline points="6,9 12,15 18,9" />
-                    </svg>
-                  </button>
-                  )}
-
                   <div ref={calendarRef} className="relative">
                     <button
                       onClick={() => setShowCalendar((v) => !v)}
@@ -521,8 +514,10 @@ export default function ContratosPage() {
                       columns={columns}
                       selectedIds={selectedIds}
                       onToggle={toggleSelection}
+                      onToggleAll={() => toggleAllInGroup(kaique)}
                       onSelectAll={() => selectAllInGroup(kaique)}
                       onAprovarSelected={() => handleAprovarSelecionados(kaique)}
+                      actionsDisabled={campanhaInativa}
                       onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                       onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                       showAprovarAction
@@ -538,8 +533,10 @@ export default function ContratosPage() {
                       columns={columns}
                       selectedIds={selectedIds}
                       onToggle={toggleSelection}
+                      onToggleAll={() => toggleAllInGroup(vinculados)}
                       onSelectAll={() => selectAllInGroup(vinculados)}
                       onAprovarSelected={() => {}}
+                      actionsDisabled={campanhaInativa}
                       onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                       onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                       showAprovarAction={false}
@@ -559,8 +556,10 @@ export default function ContratosPage() {
                     columns={columns}
                     selectedIds={selectedIds}
                     onToggle={toggleSelection}
+                    onToggleAll={() => toggleAllInGroup(maria)}
                     onSelectAll={() => selectAllInGroup(maria)}
                     onAprovarSelected={() => handleAprovarSelecionados(maria)}
+                    actionsDisabled={campanhaInativa}
                     onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                     onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                     showAprovarAction
@@ -578,8 +577,10 @@ export default function ContratosPage() {
                     columns={columns}
                     selectedIds={selectedIds}
                     onToggle={toggleSelection}
+                    onToggleAll={() => toggleAllInGroup(joao)}
                     onSelectAll={() => selectAllInGroup(joao)}
                     onAprovarSelected={() => handleAprovarSelecionados(joao)}
+                    actionsDisabled={campanhaInativa}
                     onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                     onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                     showAprovarAction
@@ -597,8 +598,10 @@ export default function ContratosPage() {
                     columns={columns}
                     selectedIds={selectedIds}
                     onToggle={toggleSelection}
+                    onToggleAll={() => toggleAllInGroup(junior)}
                     onSelectAll={() => selectAllInGroup(junior)}
                     onAprovarSelected={() => handleAprovarSelecionados(junior)}
+                    actionsDisabled={campanhaInativa}
                     onAcoes={(id, x, y) => setOverlay({ kind: "acoes", id, x, y })}
                     onDetalhes={(id, x, y) => setOverlay({ kind: "verDetalhes", id, x, y })}
                     showAprovarAction
@@ -740,6 +743,7 @@ export default function ContratosPage() {
           onDesvincular={() => setOverlay({ kind: "atencaoDesvincular", id: overlay.id })}
           onVerDetalhes={() => setOverlay({ kind: "detalhes", contratoId: overlay.id })}
           onClose={() => setOverlay(null)}
+          actionsDisabled={campanhaInativa}
         />
       )}
 
@@ -748,6 +752,17 @@ export default function ContratosPage() {
         // "Vincular" direta (ref 8435:10258); demais linhas mantêm o popover atual.
         const row = findContrato(overlay.id);
         const aguardandoVinculo = row?.status === "Aguardando vínculo";
+        // Campanha inativa: nenhuma ação de vínculo; apenas "Ver detalhes".
+        if (campanhaInativa) {
+          return (
+            <VerDetalhesPopover
+              x={overlay.x}
+              y={overlay.y}
+              onVerDetalhes={() => setOverlay({ kind: "detalhes", contratoId: overlay.id })}
+              onClose={() => setOverlay(null)}
+            />
+          );
+        }
         // Gerente de Contas: linhas fora de "Aguardando vínculo" só oferecem
         // "Ver detalhes" (frame 8428:18867). GN mantém o comportamento atual.
         if (isGerenteContas && !aguardandoVinculo) {

@@ -140,11 +140,11 @@ export default function DelegacoesPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-white font-[Lato,sans-serif]">
+    <div className="flex h-screen flex-col overflow-hidden bg-white font-[Lato,sans-serif]">
       <div className="flex min-h-0 flex-1 items-stretch">
         <AppSidebar />
 
-        <main className="flex min-w-0 flex-1 flex-col bg-white">
+        <main className="flex min-h-0 min-w-0 flex-1 flex-col overflow-y-auto bg-white">
           {/* Cabeçalho */}
           <div className="flex w-full items-center border-b border-[#e1e1e1] p-16">
             <div className="flex items-center gap-4">

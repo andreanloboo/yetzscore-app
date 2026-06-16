@@ -60,6 +60,7 @@ export default function AppSidebar() {
   const [dragging, setDragging] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const dragStateRef = useRef<{ startX: number; startWidth: number } | null>(null);
+  const userButtonRef = useRef<HTMLButtonElement>(null);
 
   const collapsed = width < COLLAPSE_THRESHOLD;
 
@@ -127,8 +128,10 @@ export default function AppSidebar() {
       className="relative flex shrink-0 flex-col self-stretch overflow-hidden border-r border-[#cacaca] bg-white p-4"
       style={{ width, transition: dragging ? "none" : "width 0.25s ease" }}
     >
-      <div className="flex w-full flex-1 flex-col justify-between">
-        <div className="flex w-full flex-col gap-4">
+      <div className="flex w-full flex-1 flex-col min-h-0">
+        {/* Logo + navegação: rolam se a tela for muito baixa, mantendo o
+            bloco do usuário (avatar/sair) sempre visível na base. */}
+        <div className="flex w-full flex-1 flex-col gap-4 min-h-0 overflow-y-auto overflow-x-hidden">
           {/* Logo (retração via arraste/duplo clique no handle da borda).
               Colapsado, o Y ocupa o mesmo footprint de 48px dos botões de nav. */}
           <div className={`flex w-full items-center py-4 ${collapsed ? "justify-center" : ""}`}>
@@ -183,9 +186,10 @@ export default function AppSidebar() {
           </nav>
         </div>
 
-        {/* Área do usuário */}
-        <div className="relative w-full border-t border-[#cacaca] pt-4">
+        {/* Área do usuário — fixa na base, sempre visível para facilitar o "Sair" */}
+        <div className="relative w-full shrink-0 border-t border-[#cacaca] pt-4">
           <button
+            ref={userButtonRef}
             type="button"
             title="Perfil"
             onClick={() => setShowUserMenu((v) => !v)}
@@ -203,6 +207,7 @@ export default function AppSidebar() {
           </button>
           {showUserMenu && (
             <UserMenuPopover
+              anchorRef={userButtonRef}
               onEditarPerfil={() => {}}
               onRecuperarSenha={() => {}}
               onSair={() => navigate("/login")}
