@@ -39,15 +39,20 @@ export function BloqueioTemporarioModal({ remaining, onOk }: BloqueioTemporarioM
 // ─── Modal: bloqueio definitivo (5ª falha) ────────────────────────────────────
 interface BloqueioDefinitivoModalProps {
   onOk: () => void;
+  /** Título do modal. Padrão mantém o texto do fluxo Gerente de Negócios. */
+  title?: string;
 }
 
-export function BloqueioDefinitivoModal({ onOk }: BloqueioDefinitivoModalProps) {
+export function BloqueioDefinitivoModal({
+  onOk,
+  title = "Acesso temporariamente bloqueado.",
+}: BloqueioDefinitivoModalProps) {
   return (
     <ModalShell onClose={onOk}>
       <div className="flex flex-col items-center gap-6">
         <XCircleIcon className="size-8 shrink-0 text-[#cc0000]" />
         <p className="w-full text-center text-[22px] font-bold leading-[26px] text-black">
-          Acesso temporariamente bloqueado.
+          {title}
         </p>
         <p className="w-[297px] whitespace-pre-line text-center text-sm leading-[17px] text-[#4b4b4b]">
           {"Você excedeu o máximo de tentativas de Login e, por segurança, sua conta foi bloqueada.\n\nFale com o responsável pela campanha para efetuar o desbloqueio."}

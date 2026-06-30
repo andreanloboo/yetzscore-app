@@ -24,6 +24,20 @@ export function isFuncionalValid(funcional: string): boolean {
   return /^\d+$/.test(funcional.trim());
 }
 
+/** Mantém só dígitos e aplica a máscara de CPF (000.000.000-00) progressivamente. */
+export function formatCpf(value: string): string {
+  const d = value.replace(/\D/g, "").slice(0, 11);
+  if (d.length <= 3) return d;
+  if (d.length <= 6) return `${d.slice(0, 3)}.${d.slice(3)}`;
+  if (d.length <= 9) return `${d.slice(0, 3)}.${d.slice(3, 6)}.${d.slice(6)}`;
+  return `${d.slice(0, 3)}.${d.slice(3, 6)}.${d.slice(6, 9)}-${d.slice(9)}`;
+}
+
+/** CPF (login do admscore): válido quando tem 11 dígitos. */
+export function isCpfValid(cpf: string): boolean {
+  return cpf.replace(/\D/g, "").length === 11;
+}
+
 /**
  * Mascara o e-mail digitado: 2 primeiros caracteres do usuário + asteriscos,
  * 2 primeiros do domínio + asteriscos e o TLD. Ex.: joao@gmail.com.br → jo****@gm***.br
