@@ -12,6 +12,7 @@ import {
   BloqueioTemporarioModal,
 } from "../components/login/BloqueioModals";
 import CodigoVerificacaoModal from "../components/login/CodigoVerificacaoModal";
+import RecuperarSenhaFlow from "../components/login/RecuperarSenhaFlow";
 import { EyeIcon, EyeOffIcon } from "../components/login/icons";
 import AdmscoreFooter from "../components/admscore/AdmscoreFooter";
 
@@ -35,6 +36,7 @@ export default function AdmscoreLoginPage() {
   const [permLocked, setPermLocked] = useState(false);
   const [permLockOpen, setPermLockOpen] = useState(false);
   const [show2fa, setShow2fa] = useState(false);
+  const [showRecuperar, setShowRecuperar] = useState(false);
 
   const { remaining: lockRemaining, restart: startLock } = useCountdown(0);
   const tempLocked = lockRemaining > 0;
@@ -159,6 +161,7 @@ export default function AdmscoreLoginPage() {
               </button>
               <button
                 type="button"
+                onClick={() => setShowRecuperar(true)}
                 className="cursor-pointer rounded text-center text-base font-bold leading-4 text-[#00842f] transition-colors duration-150 hover:text-[#006b26] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00842f] focus-visible:ring-offset-2"
               >
                 Esqueci minha senha
@@ -192,6 +195,9 @@ export default function AdmscoreLoginPage() {
           onClose={() => setShow2fa(false)}
         />
       )}
+
+      {/* Fluxo de recuperação de senha */}
+      {showRecuperar && <RecuperarSenhaFlow onClose={() => setShowRecuperar(false)} />}
     </div>
   );
 }
