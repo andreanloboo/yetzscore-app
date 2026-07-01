@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import loginY from "../assets/login-y.svg";
 import logoScore1 from "../assets/logo-score-1.svg";
 import logoScore2 from "../assets/logo-score-2.svg";
-import { formatCpf, isCpfValid } from "../components/login/validation";
+import { isAdmLoginValid, isAdmSenhaValid } from "../components/login/validation";
 import { useCountdown } from "../components/login/useCountdown";
 import { inputBase, inputBorder, primaryButton } from "../components/login/ui";
 import { FadeSlideIn } from "../components/login/ModalShell";
@@ -16,11 +16,8 @@ import RecuperarSenhaFlow from "../components/login/RecuperarSenhaFlow";
 import { EyeIcon, EyeOffIcon } from "../components/login/icons";
 import AdmscoreFooter from "../components/admscore/AdmscoreFooter";
 
-// E-mail (mock) usado na verificação 2FA após o login por CPF.
+// E-mail (mock) usado na verificação 2FA (token) após o login.
 const MOCK_EMAIL = "joao@gmail.com.br";
-
-// Senha do login: mínimo de 8 caracteres.
-const isSenhaValid = (senha: string) => senha.length >= 8;
 
 export default function AdmscoreLoginPage() {
   const navigate = useNavigate();
@@ -51,7 +48,7 @@ export default function AdmscoreLoginPage() {
     e.preventDefault();
     if (entrarDisabled) return;
 
-    if (isCpfValid(login) && isSenhaValid(senha)) {
+    if (isAdmLoginValid(login) && isAdmSenhaValid(senha)) {
       setShowError(false);
       setShow2fa(true);
       return;
@@ -111,10 +108,10 @@ export default function AdmscoreLoginPage() {
                   inputMode="numeric"
                   value={login}
                   onChange={(e) => {
-                    setLogin(formatCpf(e.target.value));
+                    setLogin(e.target.value.replace(/\D/g, ""));
                     setShowError(false);
                   }}
-                  placeholder="111.111.111-11"
+                  placeholder="Digite seu login"
                   className={`${inputBase} ${inputBorder(showError)} placeholder:text-[#8e8e8e]`}
                 />
               </div>
@@ -190,7 +187,8 @@ export default function AdmscoreLoginPage() {
       {show2fa && (
         <CodigoVerificacaoModal
           email={MOCK_EMAIL}
-          onVerified={() => navigate("/admscore")}
+          acceptAny
+          onVerified={() => navigate("/admscore/usuarios")}
           onVoltar={() => setShow2fa(false)}
           onClose={() => setShow2fa(false)}
         />

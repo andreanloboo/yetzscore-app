@@ -4,7 +4,7 @@ import CampanhasPage from "./pages/CampanhasPage";
 import ContratosPage from "./pages/ContratosPage";
 import DelegacoesPage from "./pages/DelegacoesPage";
 import AdmscoreLoginPage from "./pages/AdmscoreLoginPage";
-import AdmscoreHomePage from "./pages/AdmscoreHomePage";
+import AdmscoreUsuariosPage from "./pages/AdmscoreUsuariosPage";
 
 export default function App() {
   return (
@@ -15,7 +15,8 @@ export default function App() {
       <Route path="/contratos" element={<ContratosPage />} />
       <Route path="/delegacoes" element={<DelegacoesPage />} />
       <Route path="/admscore/login" element={<AdmscoreLoginPage />} />
-      <Route path="/admscore" element={<AdmscoreHomePage />} />
+      <Route path="/admscore/usuarios" element={<AdmscoreUsuariosPage />} />
+      <Route path="/admscore" element={<Navigate to="/admscore/usuarios" replace />} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );

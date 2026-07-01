@@ -21,6 +21,8 @@ interface CodigoVerificacaoModalProps {
   onClose: () => void;
   /** Código esperado (mock). Padrão: "123456". */
   expectedCode?: string;
+  /** Quando true, qualquer código numérico completo (6 dígitos) é aceito. */
+  acceptAny?: boolean;
 }
 
 // ─── Verificação por código (6 dígitos) enviado ao e-mail ─────────────────────
@@ -31,6 +33,7 @@ export default function CodigoVerificacaoModal({
   onVoltar,
   onClose,
   expectedCode = DEFAULT_CODIGO,
+  acceptAny = false,
 }: CodigoVerificacaoModalProps) {
   const [digits, setDigits] = useState<string[]>(Array(6).fill(""));
   const [codeError, setCodeError] = useState(false);
@@ -47,10 +50,10 @@ export default function CodigoVerificacaoModal({
   // Verifica automaticamente quando os 6 dígitos estiverem preenchidos
   useEffect(() => {
     if (digits.every((d) => d !== "")) {
-      if (digits.join("") === expectedCode) onVerified();
+      if (acceptAny || digits.join("") === expectedCode) onVerified();
       else setCodeError(true);
     }
-  }, [digits, onVerified, expectedCode]);
+  }, [digits, onVerified, expectedCode, acceptAny]);
 
   function setDigit(index: number, value: string) {
     setCodeError(false);

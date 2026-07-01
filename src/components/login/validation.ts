@@ -38,6 +38,16 @@ export function isCpfValid(cpf: string): boolean {
   return cpf.replace(/\D/g, "").length === 11;
 }
 
+/** Login do admscore: somente números, com mais de 8 dígitos (9+). */
+export function isAdmLoginValid(login: string): boolean {
+  return /^\d{9,}$/.test(login);
+}
+
+/** Senha do admscore: mais de 8 caracteres, contendo ao menos 1 letra e 1 número. */
+export function isAdmSenhaValid(senha: string): boolean {
+  return senha.length > 8 && /[A-Za-z]/.test(senha) && /\d/.test(senha);
+}
+
 /**
  * Mascara o e-mail digitado: 2 primeiros caracteres do usuário + asteriscos,
  * 2 primeiros do domínio + asteriscos e o TLD. Ex.: joao@gmail.com.br → jo****@gm***.br
