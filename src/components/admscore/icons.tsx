@@ -106,3 +106,29 @@ export function ChevronRightIcon({ className = "size-5" }: IconProps) {
     </svg>
   );
 }
+
+export function CalendarIcon({ className = "size-5" }: IconProps) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+      <rect x="3.5" y="5" width="17" height="16" rx="2" />
+      <path strokeLinecap="round" d="M3.5 9.5h17M8 3v4m8-4v4" />
+    </svg>
+  );
+}
+
+export function SessoesIcon({ className = "size-6" }: IconProps) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="14" rx="2" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 21h8m-4-3v3" />
+    </svg>
+  );
+}
+
+export function EyeOffIcon({ className = "size-5" }: IconProps) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A9.6 9.6 0 0 1 12 5c4.6 0 8.6 3 10 7.2a10.6 10.6 0 0 1-2.6 3.9M6.6 6.6A10.7 10.7 0 0 0 2 12.2 10.6 10.6 0 0 0 12 19a9.8 9.8 0 0 0 3.4-.6" />
+    </svg>
+  );
+}

@@ -11,6 +11,13 @@ import {
   SearchIcon,
   UsuariosIcon,
 } from "../components/admscore/icons";
+import {
+  AtencaoModal,
+  CadastrarUsuarioModal,
+  EditarUsuarioModal,
+  MotivoInativacaoModal,
+  SucessoModal,
+} from "../components/admscore/UsuarioModals";
 
 type Status = "Ativo" | "Inativo" | "Bloqueio";
 type Tipo = "Gerente de Negócios" | "Gerente de Contas";
@@ -71,10 +78,19 @@ function Toggle({ on, onToggle }: { on: boolean; onToggle: () => void }) {
   );
 }
 
+type Modal =
+  | { kind: "none" }
+  | { kind: "cadastrar" }
+  | { kind: "editar"; user: Usuario }
+  | { kind: "motivo"; user: Usuario }
+  | { kind: "confirmInativar"; user: Usuario }
+  | { kind: "sucesso"; titulo: string };
+
 export default function AdmscoreUsuariosPage() {
   const navigate = useNavigate();
   const [busca, setBusca] = useState("");
   const [usuarios, setUsuarios] = useState<Usuario[]>(DADOS);
+  const [modal, setModal] = useState<Modal>({ kind: "none" });
 
   const filtrados = useMemo(() => {
     const q = busca.trim().toLowerCase();
@@ -84,11 +100,20 @@ export default function AdmscoreUsuariosPage() {
     );
   }, [busca, usuarios]);
 
-  function toggleStatus(id: number) {
-    setUsuarios((prev) =>
-      prev.map((u) => (u.id === id ? { ...u, status: u.status === "Ativo" ? "Inativo" : "Ativo" } : u)),
-    );
+  function setStatus(id: number, status: Status) {
+    setUsuarios((prev) => prev.map((u) => (u.id === id ? { ...u, status } : u)));
   }
+
+  // Ativo → pede confirmação para inativar; caso contrário, ativa direto.
+  function onToggle(user: Usuario) {
+    if (user.status === "Ativo") {
+      setModal({ kind: "confirmInativar", user });
+    } else {
+      setStatus(user.id, "Ativo");
+    }
+  }
+
+  const tipoDe = (u: Usuario): "Gerente de Negócios" | "Gerente de Contas" => u.tipo;
 
   const thClass = "px-4 py-3 text-left text-xs font-bold text-[#4b4b4b] whitespace-nowrap";
   const tdClass = "px-4 py-4 text-sm text-black whitespace-nowrap";
@@ -105,14 +130,23 @@ export default function AdmscoreUsuariosPage() {
               <UsuariosIcon className="size-6 text-[#00842f]" />
               <h1 className="text-xl font-bold text-[#00842f]">Gerenciamento de usuários</h1>
             </div>
-            <button
-              type="button"
-              onClick={() => navigate("/admscore/login")}
-              className="flex items-center gap-1 text-sm text-[#4b4b4b] transition-colors hover:text-black"
-            >
-              <ChevronLeftIcon className="size-4" />
-              Voltar
-            </button>
+            <div className="flex items-center gap-5">
+              <button
+                type="button"
+                onClick={() => navigate("/admscore/sessoes")}
+                className="text-sm font-bold text-[#00842f] transition-colors hover:text-[#006b26] hover:underline"
+              >
+                Gerenciamento de sessões
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate("/admscore/login")}
+                className="flex items-center gap-1 text-sm text-[#4b4b4b] transition-colors hover:text-black"
+              >
+                <ChevronLeftIcon className="size-4" />
+                Voltar
+              </button>
+            </div>
           </div>
 
           {/* Barra de ferramentas */}
@@ -139,6 +173,7 @@ export default function AdmscoreUsuariosPage() {
               </button>
               <button
                 type="button"
+                onClick={() => setModal({ kind: "cadastrar" })}
                 className="flex h-11 items-center justify-center rounded-md bg-[#00842f] px-6 text-sm font-bold text-white transition-colors hover:bg-[#006b26]"
               >
                 Cadastrar
@@ -179,6 +214,7 @@ export default function AdmscoreUsuariosPage() {
                         <button
                           type="button"
                           aria-label={`Editar ${u.nome}`}
+                          onClick={() => setModal({ kind: "editar", user: u })}
                           className="mx-auto flex size-8 items-center justify-center rounded text-[#00842f] transition-colors hover:bg-[#e6f3ea]"
                         >
                           <PencilIcon className="size-5" />
@@ -188,6 +224,7 @@ export default function AdmscoreUsuariosPage() {
                         <button
                           type="button"
                           disabled={ativo}
+                          onClick={() => setModal({ kind: "motivo", user: u })}
                           className={`mx-auto flex items-center gap-1 rounded px-2 py-1 text-sm transition-colors ${
                             ativo
                               ? "cursor-not-allowed text-[#cacaca]"
@@ -200,7 +237,7 @@ export default function AdmscoreUsuariosPage() {
                       </td>
                       <td className={`${tdClass} text-center`}>
                         <div className="flex justify-center">
-                          <Toggle on={ativo} onToggle={() => toggleStatus(u.id)} />
+                          <Toggle on={ativo} onToggle={() => onToggle(u)} />
                         </div>
                       </td>
                     </tr>
@@ -238,6 +275,43 @@ export default function AdmscoreUsuariosPage() {
 
         <Footer />
       </div>
+
+      {/* Modais */}
+      {modal.kind === "cadastrar" && (
+        <CadastrarUsuarioModal
+          onClose={() => setModal({ kind: "none" })}
+          onSalvar={() => setModal({ kind: "sucesso", titulo: "Usuário cadastrado com sucesso" })}
+        />
+      )}
+      {modal.kind === "editar" && (
+        <EditarUsuarioModal
+          nomeInicial={modal.user.nome}
+          emailInicial="alexandre.araujo@email.com"
+          tipoInicial={tipoDe(modal.user)}
+          onClose={() => setModal({ kind: "none" })}
+          onSalvar={() => setModal({ kind: "sucesso", titulo: "Atualização realizada com sucesso" })}
+        />
+      )}
+      {modal.kind === "motivo" && (
+        <MotivoInativacaoModal
+          funcional={modal.user.funcional}
+          motivo="Funcionário foi desligado"
+          observacao=""
+          onClose={() => setModal({ kind: "none" })}
+        />
+      )}
+      {modal.kind === "confirmInativar" && (
+        <AtencaoModal
+          onCancelar={() => setModal({ kind: "none" })}
+          onConfirmar={() => {
+            setStatus(modal.user.id, "Inativo");
+            setModal({ kind: "sucesso", titulo: "Usuário desativado com sucesso" });
+          }}
+        />
+      )}
+      {modal.kind === "sucesso" && (
+        <SucessoModal titulo={modal.titulo} onOk={() => setModal({ kind: "none" })} />
+      )}
     </div>
   );
 }

@@ -18,7 +18,7 @@ interface NavItem {
 
 // Sidebar da sessão do administrador. Apenas "Usuários" está implementado;
 // os demais itens são placeholders visuais.
-export default function AdmscoreSidebar() {
+export default function AdmscoreSidebar({ forceActive }: { forceActive?: string }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -40,7 +40,9 @@ export default function AdmscoreSidebar() {
 
         <nav className="flex flex-col gap-1">
           {items.map((item) => {
-            const active = item.path != null && pathname.startsWith(item.path);
+            const active = forceActive
+              ? item.label === forceActive
+              : item.path != null && pathname.startsWith(item.path);
             return (
               <button
                 key={item.label}
