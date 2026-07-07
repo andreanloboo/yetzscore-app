@@ -67,7 +67,7 @@ export default function AdmscoreSidebar({ forceActive }: { forceActive?: string 
         <img src={avatar} alt="Avatar" className="size-8 shrink-0 rounded-full" />
         <span className="flex min-w-0 flex-col gap-0.5">
           <span className="truncate text-sm font-bold text-black">Izabela</span>
-          <span className="truncate text-xs text-[#8e8e8e]">Usuário Master</span>
+          <span className="truncate text-xs text-[#8e8e8e]">Administrador</span>
         </span>
       </div>
     </aside>
