@@ -47,7 +47,7 @@ export default function AdmscoreSessoesPage() {
 
   return (
     <div className="flex min-h-screen bg-white">
-      <AdmscoreSidebar forceActive="Usuários" />
+      <AdmscoreSidebar />
 
       <div className="flex min-w-0 flex-1 flex-col">
         <main className="flex flex-1 flex-col gap-6 p-8">

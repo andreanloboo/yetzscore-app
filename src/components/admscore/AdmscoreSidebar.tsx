@@ -7,6 +7,7 @@ import {
   CargasIcon,
   CatalogosIcon,
   ClientesIcon,
+  SessoesIcon,
   UsuariosIcon,
 } from "./icons";
 
@@ -16,18 +17,18 @@ interface NavItem {
   path?: string;
 }
 
-// Sidebar da sessão do administrador. Apenas "Usuários" está implementado;
-// os demais itens são placeholders visuais.
+// Sidebar da sessão do administrador.
 export default function AdmscoreSidebar({ forceActive }: { forceActive?: string }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
   const items: NavItem[] = [
-    { label: "Campanhas", icon: <CampanhasIcon className="size-6" /> },
-    { label: "Cargas", icon: <CargasIcon className="size-6" /> },
-    { label: "Catálogos", icon: <CatalogosIcon className="size-6" /> },
-    { label: "Clientes", icon: <ClientesIcon className="size-6" /> },
+    { label: "Campanhas", icon: <CampanhasIcon className="size-6" />, path: "/admscore/campanhas" },
+    { label: "Cargas", icon: <CargasIcon className="size-6" />, path: "/admscore/cargas" },
+    { label: "Catálogos", icon: <CatalogosIcon className="size-6" />, path: "/admscore/catalogos" },
+    { label: "Clientes", icon: <ClientesIcon className="size-6" />, path: "/admscore/clientes" },
     { label: "Usuários", icon: <UsuariosIcon className="size-6" />, path: "/admscore/usuarios" },
+    { label: "Sessões", icon: <SessoesIcon className="size-6" />, path: "/admscore/sessoes" },
   ];
 
   return (

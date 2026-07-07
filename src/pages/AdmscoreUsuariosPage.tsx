@@ -130,23 +130,14 @@ export default function AdmscoreUsuariosPage() {
               <UsuariosIcon className="size-6 text-[#00842f]" />
               <h1 className="text-xl font-bold text-[#00842f]">Gerenciamento de usuários</h1>
             </div>
-            <div className="flex items-center gap-5">
-              <button
-                type="button"
-                onClick={() => navigate("/admscore/sessoes")}
-                className="text-sm font-bold text-[#00842f] transition-colors hover:text-[#006b26] hover:underline"
-              >
-                Gerenciamento de sessões
-              </button>
-              <button
-                type="button"
-                onClick={() => navigate("/admscore/login")}
-                className="flex items-center gap-1 text-sm text-[#4b4b4b] transition-colors hover:text-black"
-              >
-                <ChevronLeftIcon className="size-4" />
-                Voltar
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => navigate("/admscore/login")}
+              className="flex items-center gap-1 text-sm text-[#4b4b4b] transition-colors hover:text-black"
+            >
+              <ChevronLeftIcon className="size-4" />
+              Voltar
+            </button>
           </div>
 
           {/* Barra de ferramentas */}
